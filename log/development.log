@@ -1374,3 +1374,202 @@ Migrating to ChangeName (20160408193920)
             WHERE name='index_users_on_email' AND type='index'
 [0m
   [1m[36mQuestion Load (3.3ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveLastUpdatedFromQuestions (20160408203031)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mCREATE TEMPORARY TABLE "aquestions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subject_id" integer, "question" text, "correct_answer" varchar, "last_updated" datetime, "version" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "wrong_answer1" varchar, "wrong_answer2" varchar, "wrong_answer3" varchar) [0m
+  [1m[35m (0.5ms)[0m  SELECT * FROM "questions"
+  [1m[36m (1.8ms)[0m  [1mDROP TABLE "questions"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subject_id" integer, "question" text, "correct_answer" varchar, "version" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "wrong_answer1" varchar, "wrong_answer2" varchar, "wrong_answer3" varchar) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "aquestions"[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "aquestions"
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160408203031"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddLanguageToQuestions (20160408204934)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.5ms)[0m  [1mALTER TABLE "questions" ADD "language" varchar[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160408204934"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddLanguageToSubject (20160408205210)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "subjects" ADD "language" varchar[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160408205210"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.9ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddExplanationToQuestions (20160409161947)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.6ms)[0m  [1mALTER TABLE "questions" ADD "explanation" text[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160409161947"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "subjects" ("name", "subsection", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "US Naturalization Test"], ["subsection", "Civics (History and Government)"], ["language", "English"], ["created_at", "2016-04-09 17:02:05.122516"], ["updated_at", "2016-04-09 17:02:05.122516"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "questions" ("subject_id", "question", "correct_answer", "wrong_answer1", "wrong_answer2", "wrong_answer3", "explanation", "version", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["subject_id", 1], ["question", "What do we call the first ten amendments to the Constitution?"], ["correct_answer", "The Bill of Rights"], ["wrong_answer1", "The Bill of Wrongs"], ["wrong_answer2", "The Bill of Chances"], ["wrong_answer3", "The Bill of Junk"], ["explanation", "The first ten (10) amendments to the US Constitution are called the \"Bill of Rights.\" These amendments were ratified on December 15, 1791."], ["version", "rev. 02/16"], ["language", "English"], ["created_at", "2016-04-09 17:02:05.153143"], ["updated_at", "2016-04-09 17:02:05.153143"]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "questions" ("subject_id", "question", "correct_answer", "wrong_answer1", "wrong_answer2", "wrong_answer3", "explanation", "version", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["subject_id", 1], ["question", "What is the economic system in the United States?"], ["correct_answer", "Capitalist economy"], ["wrong_answer1", "Communist economy"], ["wrong_answer2", "Socialist economy"], ["wrong_answer3", "Somebody's economy"], ["explanation", "The US has a Capitalist (or Market) Economy in which individual producers and consumers determine the goods and services produced, along with their prices."], ["version", "rev. 02/16"], ["language", "English"], ["created_at", "2016-04-09 17:02:05.182878"], ["updated_at", "2016-04-09 17:02:05.182878"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "questions" ("subject_id", "question", "correct_answer", "wrong_answer1", "wrong_answer2", "wrong_answer3", "explanation", "version", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["subject_id", 1], ["question", "What stops one branch of government from becoming too powerful?"], ["correct_answer", "Separation of powers"], ["wrong_answer1", "Separation of concerns"], ["wrong_answer2", "Bananas"], ["wrong_answer3", "Donald Trump"], ["explanation", "The Constitution separates the government’s power into 3 branches. This separation of powers means that each branch can block the actions of the other branches."], ["version", "rev. 02/16"], ["language", "English"], ["created_at", "2016-04-09 17:02:05.190773"], ["updated_at", "2016-04-09 17:02:05.190773"]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "questions" ("subject_id", "question", "correct_answer", "wrong_answer1", "wrong_answer2", "wrong_answer3", "explanation", "version", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["subject_id", 1], ["question", "What is an amendment?"], ["correct_answer", "A change to the Constitution"], ["wrong_answer1", "A change to voting"], ["wrong_answer2", "A change to your recipe list"], ["wrong_answer3", "Changing your license"], ["explanation", "An amendment is a change or addition to a legal or statutory document, such as the Constitution."], ["version", "rev. 02/16"], ["language", "English"], ["created_at", "2016-04-09 17:02:05.203192"], ["updated_at", "2016-04-09 17:02:05.203192"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "questions" ("subject_id", "question", "correct_answer", "wrong_answer1", "wrong_answer2", "wrong_answer3", "explanation", "version", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["subject_id", 1], ["question", "According to the \"rule of law,\" no one is above the law."], ["correct_answer", "True"], ["wrong_answer1", "False"], ["wrong_answer2", ""], ["wrong_answer3", ""], ["explanation", "No one is above the law. Leaders, government and citizens must follow the law."], ["version", "rev. 02/16"], ["language", "English"], ["created_at", "2016-04-09 17:02:05.210229"], ["updated_at", "2016-04-09 17:02:05.210229"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("subject_id", "question", "correct_answer", "wrong_answer1", "wrong_answer2", "wrong_answer3", "explanation", "version", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["subject_id", 1], ["question", "Who is in charge of the executive branch?"], ["correct_answer", "The President"], ["wrong_answer1", "The Chief Justice"], ["wrong_answer2", "Congress"], ["wrong_answer3", "The Secretary of State"], ["explanation", "The President of the United States is in charge of the executive branch."], ["version", "rev. 02/16"], ["language", "English"], ["created_at", "2016-04-09 17:02:05.214730"], ["updated_at", "2016-04-09 17:02:05.214730"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "questions" ("subject_id", "question", "correct_answer", "wrong_answer1", "wrong_answer2", "wrong_answer3", "explanation", "version", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["subject_id", 1], ["question", "How many U.S. Senators are there?"], ["correct_answer", "One hundred (100)"], ["wrong_answer1", "Fifty (50)"], ["wrong_answer2", "One hundred and fifty (150)"], ["wrong_answer3", "Two hundred (200)"], ["explanation", "There are one hundred (100) U.S. Senators, two (2) for each state."], ["version", "rev. 02/16"], ["language", "English"], ["created_at", "2016-04-09 17:02:05.219602"], ["updated_at", "2016-04-09 17:02:05.219602"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("subject_id", "question", "correct_answer", "wrong_answer1", "wrong_answer2", "wrong_answer3", "explanation", "version", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["subject_id", 1], ["question", "We elect a U.S. Senator for how many years?"], ["correct_answer", "Six (6)"], ["wrong_answer1", "Four (4)"], ["wrong_answer2", "Two (2)"], ["wrong_answer3", "Three (5)"], ["explanation", "A U.S. Senator can hold office for a six (6) year term, and be relected an unlimited amount of times."], ["version", "rev. 02/16"], ["language", "English"], ["created_at", "2016-04-09 17:02:05.223868"], ["updated_at", "2016-04-09 17:02:05.223868"]]
+  [1m[35m (3.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("subject_id", "question", "correct_answer", "wrong_answer1", "wrong_answer2", "wrong_answer3", "explanation", "version", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["subject_id", 1], ["question", "Who is the Commander in Chief of the military?"], ["correct_answer", "The President"], ["wrong_answer1", "The General"], ["wrong_answer2", "The Colonol"], ["wrong_answer3", "The Lieutenant"], ["explanation", "The President is the Commander in Chief and is in charge of the country's armed forces."], ["version", "rev. 02/16"], ["language", "English"], ["created_at", "2016-04-09 17:02:05.230453"], ["updated_at", "2016-04-09 17:02:05.230453"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("subject_id", "question", "correct_answer", "wrong_answer1", "wrong_answer2", "wrong_answer3", "explanation", "version", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["subject_id", 1], ["question", "New York, Pennsylvannia and Tennessee are all part of the 13 original states."], ["correct_answer", "False"], ["wrong_answer1", "True"], ["wrong_answer2", ""], ["wrong_answer3", ""], ["explanation", "The 13 original states are: New Hampshire, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, Pennsylvania, Delaware, Maryland, Virginia, North Carolina, South Carolina and Georgia."], ["version", "rev. 02/16"], ["language", "English"], ["created_at", "2016-04-09 17:02:05.234507"], ["updated_at", "2016-04-09 17:02:05.234507"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36mSubject Load (2.8ms)[0m  [1mSELECT "subjects".* FROM "subjects"[0m
+  [1m[35mQuestion Load (0.7ms)[0m  SELECT "questions".* FROM "questions"
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (4.7ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mQuestion Load (3.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mQuestion Load (2.9ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mQuestion Load (2.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mQuestion Load (4.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mQuestion Load (4.7ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mQuestion Load (4.5ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 10]]
+
+
+Started GET "/" for ::1 at 2016-04-09 13:25:13 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SinchController#index as HTML
+Completed 401 Unauthorized in 30ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-04-09 13:25:13 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 421ms (Views: 403.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-04-09 13:26:43 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JOexR1u575sgz0y5UlzYd1Jec0rlnFd+BljsJsC88RX8MEgGLc6EmEuCiFudq1alISa8Z6wwQJS7rfYTsQLzrg==", "user"=>{"email"=>"rick2nyce@aol.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "rick2nyce@aol.com"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-04-07 21:54:08.425765"], ["current_sign_in_at", "2016-04-09 17:26:44.028986"], ["sign_in_count", 17], ["updated_at", "2016-04-09 17:26:44.030358"], ["id", 1]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 199ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-09 13:26:44 -0400
+Processing by SinchController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered sinch/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 80ms (Views: 77.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-04-09 13:27:14 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"n43Xx0Ogu8jSOteJ8cgr9ksWH71mIvaTWxLwjMa55YIsCWbsmFsBRz17vG8+Ko6I192T3AP5QmrWJe9OIPzFrg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-04-09 13:27:14 -0400
+Processing by SinchController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-04-09 13:27:14 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 107ms (Views: 104.2ms | ActiveRecord: 0.0ms)

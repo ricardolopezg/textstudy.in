@@ -2,7 +2,7 @@ require 'sinch_sms'
 require "json"
 
 
-smsresult = SinchSms.send(ENV['SINCH_TEXTSTUDY_API_KEY'], ENV['SINCH_TEXTSTUDY_API_SECRET'], 'What is one right or freedom from the First Amendment? \n a)speech \n b)religion \n c)assembly \n d)press', '+19174179542')
+smsresult = SinchSms.send(ENV['SINCH_TEXTSTUDY_API_KEY'], ENV['SINCH_TEXTSTUDY_API_SECRET'], 'What is one right or freedom from the First Amendment? \na) speech \nb) religion \nc) assembly \nd) press', '+19174179542')
 
 puts smsresult
 

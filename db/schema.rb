@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160408193920) do
+ActiveRecord::Schema.define(version: 20160409161947) do
 
   create_table "profiles", force: :cascade do |t|
     t.integer  "user_id"
@@ -32,13 +32,14 @@ ActiveRecord::Schema.define(version: 20160408193920) do
     t.integer  "subject_id"
     t.text     "question"
     t.string   "correct_answer"
-    t.datetime "last_updated"
     t.string   "version"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.string   "wrong_answer1"
     t.string   "wrong_answer2"
     t.string   "wrong_answer3"
+    t.string   "language"
+    t.text     "explanation"
   end
 
   create_table "responses", force: :cascade do |t|
@@ -58,6 +59,7 @@ ActiveRecord::Schema.define(version: 20160408193920) do
     t.string   "subsection"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "language"
   end
 
   create_table "subscriptions", force: :cascade do |t|
