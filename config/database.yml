@@ -24,7 +24,7 @@ production:
   # <<: *default
   # database: db/production.sqlite3
   adapter: postgresql
-  database: lacedny_production
+  database: textstudy_production
   pool: 5
   timeout: 5000
   username: username
