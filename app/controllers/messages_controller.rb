@@ -1,18 +1,19 @@
-require 'sinch_sms'
-require "json"
-
 class MessagesController < ApplicationController
-  skip_before_action :verify_authenticity_token, only: [:create]
+  skip_before_action :verify_authenticity_token
 
   def index
-    @questions = Question.all
   end
 
-  def create
-    message_body = params["Body"]
-    from_number = params["From"]
-    
-    SinchSms.send(ENV['SINCH_TEXTSTUDY_API_KEY'], ENV['SINCH_TEXTSTUDY_API_SECRET'], 'What is one right or freedom from the First Amendment? \na) speech \nb) religion \nc) assembly \nd) press', '+19177087156')
+  def reply
+    # message_body = params["Body"]
+    # from_number = params["From"]
+    content_type 'text/xml' 
+
+    response = Twilio::TwiMl::Response new do |r|
+      r.Message "Hey thanks for your message!"
+    end
+
+    response.to_xml
   end
 
 end
