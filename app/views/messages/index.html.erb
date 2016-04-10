@@ -1,0 +1,6 @@
+<%= h1helper("TEXT RESULTS") %>
+
+<% @questions.each do |q| %>
+  <%= q.question %>
+  <%= q.correct_answer %>
+<% end %>
