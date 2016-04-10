@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :sinch
   resources :messages
-  post 'message' => 'messages#create'
+  post 'messages/reply' => 'messages#create'
 
   
   # You can have the root of your site routed with "root"
