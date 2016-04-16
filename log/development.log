@@ -23675,3 +23675,251 @@ Processing by ReceiveTextsController#response_message as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["question", "What is the economic system in the United States?\n1) Communist economy \n2) Capitalist economy\n3) Socialist economy\n4) Somebody's economy"]]
   Rendered receive_texts/response_message.html.erb within layouts/application (0.2ms)
 Completed 200 OK in 95ms (Views: 64.6ms | ActiveRecord: 1.9ms)
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."active" = ?[0m  [["active", "t"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mProfile Load (0.3ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."mobile_phone" = ?  ORDER BY "profiles"."id" ASC LIMIT 1  [["mobile_phone", "+19174179542"]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."active" = ?[0m  [["active", "t"]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = 3
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["question", "Who is in charge of the executive branch?\n1) The Secretary of State\n2) The President\n3) Congress\n4) The Chief Justice"]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["question", "Who is in charge of the executive branch?\n1) The Secretary of State\n2) The President\n3) Congress\n4) The Chief Justice"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "responses" ("user_id", "to_number", "from_number", "question_id", "question_version", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 1], ["to_number", "+19174179542"], ["from_number", "MG55aae21a9c184ba02cfcaebebd2ea973"], ["question_id", 27], ["question_version", "rev. 02/16"], ["created_at", "2016-04-16 03:52:02.405033"], ["updated_at", "2016-04-16 03:52:02.405033"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/receive_texts/response_message?ToCountry=US&ToState=NJ&SmsMessageSid=SM29db39de9e8278b04a744b80d4e78009&NumMedia=0&ToCity=NEWARK&FromZip=10010&SmsSid=SM29db39de9e8278b04a744b80d4e78009&FromState=NY&SmsStatus=received&FromCity=NEW+YORK&Body=PUTS+BODY+PUTS+BODY+PUTS+BODY&FromCountry=US&To=%2B18624149519&MessagingServiceSid=MG55aae21a9c184ba02cfcaebebd2ea973&ToZip=07102&NumSegments=1&MessageSid=SM29db39de9e8278b04a744b80d4e78009&AccountSid=AC806677407f595b1e8717e0c84d2aa9d8&From=%2B19174179542&ApiVersion=2010-04-01" for 54.152.138.21 at 2016-04-15 23:52:47 -0400
+Cannot render console from 54.152.138.21! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReceiveTextsController#response_message as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"NJ", "SmsMessageSid"=>"SM29db39de9e8278b04a744b80d4e78009", "NumMedia"=>"0", "ToCity"=>"NEWARK", "FromZip"=>"10010", "SmsSid"=>"SM29db39de9e8278b04a744b80d4e78009", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"PUTS BODY PUTS BODY PUTS BODY", "FromCountry"=>"US", "To"=>"+18624149519", "MessagingServiceSid"=>"MG55aae21a9c184ba02cfcaebebd2ea973", "ToZip"=>"07102", "NumSegments"=>"1", "MessageSid"=>"SM29db39de9e8278b04a744b80d4e78009", "AccountSid"=>"AC806677407f595b1e8717e0c84d2aa9d8", "From"=>"+19174179542", "ApiVersion"=>"2010-04-01"}
+  [1m[35mResponse Load (0.7ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["id", 27]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["question", "Who is in charge of the executive branch?\n1) The Secretary of State\n2) The President\n3) Congress\n4) The Chief Justice"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["id", 27]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["question", "Who is in charge of the executive branch?\n1) The Secretary of State\n2) The President\n3) Congress\n4) The Chief Justice"]]
+  Rendered receive_texts/response_message.xml.erb (0.2ms)
+Completed 200 OK in 91ms (Views: 56.3ms | ActiveRecord: 2.2ms)
+  [1m[35mSubscription Load (0.6ms)[0m  SELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."active" = ?  [["active", "t"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mProfile Load (0.5ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 1]]
+  [1m[36mProfile Load (0.3ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."mobile_phone" = ?  ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["mobile_phone", "+19174179542"]]
+  [1m[35mSubscription Load (0.3ms)[0m  SELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."active" = ?  [["active", "t"]]
+  [1m[36mQuestion Load (0.9ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = 3[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["question", "What is an amendment?\n1) A change to the Constitution\n2) A change to your recipe list\n3) A change to voting\n4) Changing your license"]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["question", "What is an amendment?\n1) A change to the Constitution\n2) A change to your recipe list\n3) A change to voting\n4) Changing your license"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (3.6ms)[0m  [1mINSERT INTO "responses" ("user_id", "to_number", "from_number", "question_id", "question_version", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["to_number", "+19174179542"], ["from_number", "MG55aae21a9c184ba02cfcaebebd2ea973"], ["question_id", 25], ["question_version", "rev. 02/16"], ["created_at", "2016-04-16 03:53:46.450990"], ["updated_at", "2016-04-16 03:53:46.450990"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+
+
+Started GET "/receive_texts/response_message?ToCountry=US&ToState=NJ&SmsMessageSid=SM70c5b21701827b5818377a562930c9d2&NumMedia=0&ToCity=NEWARK&FromZip=10010&SmsSid=SM70c5b21701827b5818377a562930c9d2&FromState=NY&SmsStatus=received&FromCity=NEW+YORK&Body=PUTS+BODY+PUTS+BODY+PUTS+BODY&FromCountry=US&To=%2B18624149519&MessagingServiceSid=MG55aae21a9c184ba02cfcaebebd2ea973&ToZip=07102&NumSegments=1&MessageSid=SM70c5b21701827b5818377a562930c9d2&AccountSid=AC806677407f595b1e8717e0c84d2aa9d8&From=%2B19174179542&ApiVersion=2010-04-01" for 54.209.154.231 at 2016-04-15 23:54:08 -0400
+Cannot render console from 54.209.154.231! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReceiveTextsController#response_message as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"NJ", "SmsMessageSid"=>"SM70c5b21701827b5818377a562930c9d2", "NumMedia"=>"0", "ToCity"=>"NEWARK", "FromZip"=>"10010", "SmsSid"=>"SM70c5b21701827b5818377a562930c9d2", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"PUTS BODY PUTS BODY PUTS BODY", "FromCountry"=>"US", "To"=>"+18624149519", "MessagingServiceSid"=>"MG55aae21a9c184ba02cfcaebebd2ea973", "ToZip"=>"07102", "NumSegments"=>"1", "MessageSid"=>"SM70c5b21701827b5818377a562930c9d2", "AccountSid"=>"AC806677407f595b1e8717e0c84d2aa9d8", "From"=>"+19174179542", "ApiVersion"=>"2010-04-01"}
+  [1m[35mResponse Load (0.1ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["id", 25]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["question", "What is an amendment?\n1) A change to the Constitution\n2) A change to your recipe list\n3) A change to voting\n4) Changing your license"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["id", 25]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["question", "What is an amendment?\n1) A change to the Constitution\n2) A change to your recipe list\n3) A change to voting\n4) Changing your license"]]
+  Rendered receive_texts/response_message.xml.erb (0.1ms)
+Completed 200 OK in 80ms (Views: 41.3ms | ActiveRecord: 2.0ms)
+  [1m[36mResponse Load (0.5ms)[0m  [1mSELECT  "responses".* FROM "responses"  ORDER BY "responses"."id" DESC LIMIT 1[0m
+  [1m[35mResponse Load (0.4ms)[0m  SELECT  "responses".* FROM "responses"  ORDER BY "responses"."id" DESC LIMIT 1
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."active" = ?[0m  [["active", "t"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mProfile Load (0.2ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."mobile_phone" = ?  ORDER BY "profiles"."id" ASC LIMIT 1  [["mobile_phone", "+19174179542"]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."active" = ?[0m  [["active", "t"]]
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = 3
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["question", "What do we call the first ten amendments to the Constitution?\n1) The Bill of Rights\n2) The Bill of Wrongs\n3) The Bill of Chances \n4) The Bill of Junk"]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["question", "What do we call the first ten amendments to the Constitution?\n1) The Bill of Rights\n2) The Bill of Wrongs\n3) The Bill of Chances \n4) The Bill of Junk"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "responses" ("user_id", "to_number", "from_number", "question_id", "question_version", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 1], ["to_number", "+19174179542"], ["from_number", "MG55aae21a9c184ba02cfcaebebd2ea973"], ["question_id", 22], ["question_version", "rev. 02/16"], ["created_at", "2016-04-16 03:56:38.428346"], ["updated_at", "2016-04-16 03:56:38.428346"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/receive_texts/response_message?ToCountry=US&ToState=NJ&SmsMessageSid=SM13450a6f2d7bc9531421515176526497&NumMedia=0&ToCity=NEWARK&FromZip=10010&SmsSid=SM13450a6f2d7bc9531421515176526497&FromState=NY&SmsStatus=received&FromCity=NEW+YORK&Body=Codlxodofpufpbxohx&FromCountry=US&To=%2B18624149519&MessagingServiceSid=MG55aae21a9c184ba02cfcaebebd2ea973&ToZip=07102&NumSegments=1&MessageSid=SM13450a6f2d7bc9531421515176526497&AccountSid=AC806677407f595b1e8717e0c84d2aa9d8&From=%2B19174179542&ApiVersion=2010-04-01" for 52.23.227.67 at 2016-04-15 23:56:45 -0400
+Cannot render console from 52.23.227.67! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReceiveTextsController#response_message as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"NJ", "SmsMessageSid"=>"SM13450a6f2d7bc9531421515176526497", "NumMedia"=>"0", "ToCity"=>"NEWARK", "FromZip"=>"10010", "SmsSid"=>"SM13450a6f2d7bc9531421515176526497", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"Codlxodofpufpbxohx", "FromCountry"=>"US", "To"=>"+18624149519", "MessagingServiceSid"=>"MG55aae21a9c184ba02cfcaebebd2ea973", "ToZip"=>"07102", "NumSegments"=>"1", "MessageSid"=>"SM13450a6f2d7bc9531421515176526497", "AccountSid"=>"AC806677407f595b1e8717e0c84d2aa9d8", "From"=>"+19174179542", "ApiVersion"=>"2010-04-01"}
+  [1m[35mResponse Load (0.2ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["id", 22]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["question", "What do we call the first ten amendments to the Constitution?\n1) The Bill of Rights\n2) The Bill of Wrongs\n3) The Bill of Chances \n4) The Bill of Junk"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["id", 22]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["question", "What do we call the first ten amendments to the Constitution?\n1) The Bill of Rights\n2) The Bill of Wrongs\n3) The Bill of Chances \n4) The Bill of Junk"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["id", 22]]
+  Rendered receive_texts/response_message.xml.erb (0.1ms)
+Completed 200 OK in 66ms (Views: 38.1ms | ActiveRecord: 1.6ms)
+  [1m[35mResponse Load (0.4ms)[0m  SELECT  "responses".* FROM "responses"  ORDER BY "responses"."id" DESC LIMIT 1
+  [1m[36mSubscription Load (1.6ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."active" = ?[0m  [["active", "t"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mProfile Load (0.4ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."mobile_phone" = ?  ORDER BY "profiles"."id" ASC LIMIT 1  [["mobile_phone", "+19174179542"]]
+  [1m[36mSubscription Load (0.7ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."active" = ?[0m  [["active", "t"]]
+  [1m[35mQuestion Load (2.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = 3
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["question", "We elect a U.S. Senator for how many years?\n1) Two (2)\n2) Three (5)\n3) Four (4)\n4) Six (6)"]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["question", "We elect a U.S. Senator for how many years?\n1) Two (2)\n2) Three (5)\n3) Four (4)\n4) Six (6)"]]
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.6ms)[0m  INSERT INTO "responses" ("user_id", "to_number", "from_number", "question_id", "question_version", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 1], ["to_number", "+19174179542"], ["from_number", "MG55aae21a9c184ba02cfcaebebd2ea973"], ["question_id", 29], ["question_version", "rev. 02/16"], ["created_at", "2016-04-16 04:02:39.378601"], ["updated_at", "2016-04-16 04:02:39.378601"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/receive_texts/response_message?ToCountry=US&ToState=NJ&SmsMessageSid=SMeb388e8f723117b49f93131290c173ae&NumMedia=0&ToCity=NEWARK&FromZip=10010&SmsSid=SMeb388e8f723117b49f93131290c173ae&FromState=NY&SmsStatus=received&FromCity=NEW+YORK&Body=Ckgi&FromCountry=US&To=%2B18624149519&MessagingServiceSid=MG55aae21a9c184ba02cfcaebebd2ea973&ToZip=07102&NumSegments=1&MessageSid=SMeb388e8f723117b49f93131290c173ae&AccountSid=AC806677407f595b1e8717e0c84d2aa9d8&From=%2B19174179542&ApiVersion=2010-04-01" for 54.172.153.44 at 2016-04-16 00:02:47 -0400
+Cannot render console from 54.172.153.44! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReceiveTextsController#response_message as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"NJ", "SmsMessageSid"=>"SMeb388e8f723117b49f93131290c173ae", "NumMedia"=>"0", "ToCity"=>"NEWARK", "FromZip"=>"10010", "SmsSid"=>"SMeb388e8f723117b49f93131290c173ae", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"Ckgi", "FromCountry"=>"US", "To"=>"+18624149519", "MessagingServiceSid"=>"MG55aae21a9c184ba02cfcaebebd2ea973", "ToZip"=>"07102", "NumSegments"=>"1", "MessageSid"=>"SMeb388e8f723117b49f93131290c173ae", "AccountSid"=>"AC806677407f595b1e8717e0c84d2aa9d8", "From"=>"+19174179542", "ApiVersion"=>"2010-04-01"}
+  [1m[35mResponse Load (0.2ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["id", 29]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["question", "We elect a U.S. Senator for how many years?\n1) Two (2)\n2) Three (5)\n3) Four (4)\n4) Six (6)"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["id", 29]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["question", "We elect a U.S. Senator for how many years?\n1) Two (2)\n2) Three (5)\n3) Four (4)\n4) Six (6)"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["id", 29]]
+  Rendered receive_texts/response_message.xml.erb (0.3ms)
+Completed 200 OK in 87ms (Views: 47.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/receive_texts/response_message?ToCountry=US&ToState=NJ&SmsMessageSid=SM7aa47e187018f1491cd7edc471042be1&NumMedia=0&ToCity=NEWARK&FromZip=10010&SmsSid=SM7aa47e187018f1491cd7edc471042be1&FromState=NY&SmsStatus=received&FromCity=NEW+YORK&Body=2&FromCountry=US&To=%2B18624149519&MessagingServiceSid=MG55aae21a9c184ba02cfcaebebd2ea973&ToZip=07102&NumSegments=1&MessageSid=SM7aa47e187018f1491cd7edc471042be1&AccountSid=AC806677407f595b1e8717e0c84d2aa9d8&From=%2B19174179542&ApiVersion=2010-04-01" for 52.207.225.134 at 2016-04-16 00:03:24 -0400
+Cannot render console from 52.207.225.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReceiveTextsController#response_message as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"NJ", "SmsMessageSid"=>"SM7aa47e187018f1491cd7edc471042be1", "NumMedia"=>"0", "ToCity"=>"NEWARK", "FromZip"=>"10010", "SmsSid"=>"SM7aa47e187018f1491cd7edc471042be1", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"2", "FromCountry"=>"US", "To"=>"+18624149519", "MessagingServiceSid"=>"MG55aae21a9c184ba02cfcaebebd2ea973", "ToZip"=>"07102", "NumSegments"=>"1", "MessageSid"=>"SM7aa47e187018f1491cd7edc471042be1", "AccountSid"=>"AC806677407f595b1e8717e0c84d2aa9d8", "From"=>"+19174179542", "ApiVersion"=>"2010-04-01"}
+  [1m[35mResponse Load (0.1ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["id", 29]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["question", "We elect a U.S. Senator for how many years?\n1) Two (2)\n2) Three (5)\n3) Four (4)\n4) Six (6)"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["id", 29]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["question", "We elect a U.S. Senator for how many years?\n1) Two (2)\n2) Three (5)\n3) Four (4)\n4) Six (6)"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["id", 29]]
+  Rendered receive_texts/response_message.xml.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 35.7ms | ActiveRecord: 0.4ms)
+  [1m[35mResponse Load (1.9ms)[0m  SELECT  "responses".* FROM "responses"  ORDER BY "responses"."id" DESC LIMIT 1
+  [1m[36mResponse Load (2.3ms)[0m  [1mSELECT "responses".* FROM "responses"[0m
+  [1m[35mResponse Load (6.8ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."id" = ? LIMIT 1  [["id", 25]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  UPDATE "responses" SET "user_response" = ?, "updated_at" = ? WHERE "responses"."id" = ?  [["user_response", "test"], ["updated_at", "2016-04-16 04:14:31.596284"], ["id", 25]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mResponse Load (0.3ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."id" = ? LIMIT 1  [["id", 25]]
+  [1m[36mResponse Load (4.3ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35mResponse Load (0.2ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  UPDATE "responses" SET "user_response" = ?, "updated_at" = ? WHERE "responses"."id" = ?  [["user_response", "test"], ["updated_at", "2016-04-16 04:17:56.340168"], ["id", 80]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mResponse Load (1.0ms)[0m  SELECT  "responses".* FROM "responses"  ORDER BY "responses"."id" DESC LIMIT 1
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."active" = ?[0m  [["active", "t"]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mProfile Load (0.3ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mProfile Load (0.3ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."mobile_phone" = ?  ORDER BY "profiles"."id" ASC LIMIT 1  [["mobile_phone", "+19174179542"]]
+  [1m[36mSubscription Load (0.1ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."active" = ?[0m  [["active", "t"]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = 3
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["question", "Who is in charge of the executive branch?\n1) The Secretary of State\n2) The President\n3) Congress\n4) The Chief Justice"]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["question", "Who is in charge of the executive branch?\n1) The Secretary of State\n2) The President\n3) Congress\n4) The Chief Justice"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "responses" ("user_id", "to_number", "from_number", "question_id", "question_version", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 1], ["to_number", "+19174179542"], ["from_number", "MG55aae21a9c184ba02cfcaebebd2ea973"], ["question_id", 27], ["question_version", "rev. 02/16"], ["created_at", "2016-04-16 04:18:48.369926"], ["updated_at", "2016-04-16 04:18:48.369926"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mResponse Load (0.5ms)[0m  SELECT  "responses".* FROM "responses"  ORDER BY "responses"."id" DESC LIMIT 1
+
+
+Started GET "/receive_texts/response_message?ToCountry=US&ToState=NJ&SmsMessageSid=SM1e65a7fbc0bc7511c513387b1900ed42&NumMedia=0&ToCity=NEWARK&FromZip=10010&SmsSid=SM1e65a7fbc0bc7511c513387b1900ed42&FromState=NY&SmsStatus=received&FromCity=NEW+YORK&Body=%26%27dnfbdbdd&FromCountry=US&To=%2B18624149519&MessagingServiceSid=MG55aae21a9c184ba02cfcaebebd2ea973&ToZip=07102&NumSegments=1&MessageSid=SM1e65a7fbc0bc7511c513387b1900ed42&AccountSid=AC806677407f595b1e8717e0c84d2aa9d8&From=%2B19174179542&ApiVersion=2010-04-01" for 52.23.238.64 at 2016-04-16 00:19:16 -0400
+Cannot render console from 52.23.238.64! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReceiveTextsController#response_message as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"NJ", "SmsMessageSid"=>"SM1e65a7fbc0bc7511c513387b1900ed42", "NumMedia"=>"0", "ToCity"=>"NEWARK", "FromZip"=>"10010", "SmsSid"=>"SM1e65a7fbc0bc7511c513387b1900ed42", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"&'dnfbdbdd", "FromCountry"=>"US", "To"=>"+18624149519", "MessagingServiceSid"=>"MG55aae21a9c184ba02cfcaebebd2ea973", "ToZip"=>"07102", "NumSegments"=>"1", "MessageSid"=>"SM1e65a7fbc0bc7511c513387b1900ed42", "AccountSid"=>"AC806677407f595b1e8717e0c84d2aa9d8", "From"=>"+19174179542", "ApiVersion"=>"2010-04-01"}
+  [1m[35mResponse Load (0.2ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["id", 27]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["question", "Who is in charge of the executive branch?\n1) The Secretary of State\n2) The President\n3) Congress\n4) The Chief Justice"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["id", 27]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["question", "Who is in charge of the executive branch?\n1) The Secretary of State\n2) The President\n3) Congress\n4) The Chief Justice"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "user_response" = ?, "updated_at" = ? WHERE "responses"."id" = ?  [["user_response", "test"], ["updated_at", "2016-04-16 04:19:16.615002"], ["id", 81]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  Rendered receive_texts/response_message.xml.erb (0.3ms)
+Completed 200 OK in 115ms (Views: 53.1ms | ActiveRecord: 3.7ms)
+  [1m[36mResponse Load (1.2ms)[0m  [1mSELECT  "responses".* FROM "responses"  ORDER BY "responses"."id" DESC LIMIT 1[0m
+  [1m[35mResponse Load (8.7ms)[0m  SELECT  "responses".* FROM "responses"  ORDER BY "responses"."id" DESC LIMIT 1
+
+
+Started GET "/receive_texts/response_message?ToCountry=US&ToState=NJ&SmsMessageSid=SM205b12f43df4db99d3bdc82c85b042a3&NumMedia=0&ToCity=NEWARK&FromZip=10010&SmsSid=SM205b12f43df4db99d3bdc82c85b042a3&FromState=NY&SmsStatus=received&FromCity=NEW+YORK&Body=1&FromCountry=US&To=%2B18624149519&MessagingServiceSid=MG55aae21a9c184ba02cfcaebebd2ea973&ToZip=07102&NumSegments=1&MessageSid=SM205b12f43df4db99d3bdc82c85b042a3&AccountSid=AC806677407f595b1e8717e0c84d2aa9d8&From=%2B19174179542&ApiVersion=2010-04-01" for 54.209.154.231 at 2016-04-16 00:19:42 -0400
+Cannot render console from 54.209.154.231! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReceiveTextsController#response_message as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"NJ", "SmsMessageSid"=>"SM205b12f43df4db99d3bdc82c85b042a3", "NumMedia"=>"0", "ToCity"=>"NEWARK", "FromZip"=>"10010", "SmsSid"=>"SM205b12f43df4db99d3bdc82c85b042a3", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"1", "FromCountry"=>"US", "To"=>"+18624149519", "MessagingServiceSid"=>"MG55aae21a9c184ba02cfcaebebd2ea973", "ToZip"=>"07102", "NumSegments"=>"1", "MessageSid"=>"SM205b12f43df4db99d3bdc82c85b042a3", "AccountSid"=>"AC806677407f595b1e8717e0c84d2aa9d8", "From"=>"+19174179542", "ApiVersion"=>"2010-04-01"}
+  [1m[35mResponse Load (0.2ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["id", 27]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["question", "Who is in charge of the executive branch?\n1) The Secretary of State\n2) The President\n3) Congress\n4) The Chief Justice"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["id", 27]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["question", "Who is in charge of the executive branch?\n1) The Secretary of State\n2) The President\n3) Congress\n4) The Chief Justice"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  Rendered receive_texts/response_message.xml.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 38.4ms | ActiveRecord: 0.6ms)
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT  "responses".* FROM "responses"  ORDER BY "responses"."id" DESC LIMIT 1[0m
+  [1m[35mResponse Load (1.4ms)[0m  SELECT  "responses".* FROM "responses"  ORDER BY "responses"."id" DESC LIMIT 1
+  [1m[36mSubscription Load (0.5ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."active" = ?[0m  [["active", "t"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mProfile Load (0.3ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."mobile_phone" = ?  ORDER BY "profiles"."id" ASC LIMIT 1  [["mobile_phone", "+19174179542"]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."active" = ?[0m  [["active", "t"]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."subject_id" = 3
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["question", "According to the \"rule of law,\" no one is above the law.\n1) True \n2) False"]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["question", "According to the \"rule of law,\" no one is above the law.\n1) True \n2) False"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "responses" ("user_id", "to_number", "from_number", "question_id", "question_version", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 1], ["to_number", "+19174179542"], ["from_number", "MG55aae21a9c184ba02cfcaebebd2ea973"], ["question_id", 26], ["question_version", "rev. 02/16"], ["created_at", "2016-04-16 04:20:43.594154"], ["updated_at", "2016-04-16 04:20:43.594154"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/receive_texts/response_message?ToCountry=US&ToState=NJ&SmsMessageSid=SM5c6c137867cdb03376009e24239bd38c&NumMedia=0&ToCity=NEWARK&FromZip=10010&SmsSid=SM5c6c137867cdb03376009e24239bd38c&FromState=NY&SmsStatus=received&FromCity=NEW+YORK&Body=Jsjsjd&FromCountry=US&To=%2B18624149519&MessagingServiceSid=MG55aae21a9c184ba02cfcaebebd2ea973&ToZip=07102&NumSegments=1&MessageSid=SM5c6c137867cdb03376009e24239bd38c&AccountSid=AC806677407f595b1e8717e0c84d2aa9d8&From=%2B19174179542&ApiVersion=2010-04-01" for 52.23.227.67 at 2016-04-16 00:20:52 -0400
+Cannot render console from 52.23.227.67! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReceiveTextsController#response_message as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"NJ", "SmsMessageSid"=>"SM5c6c137867cdb03376009e24239bd38c", "NumMedia"=>"0", "ToCity"=>"NEWARK", "FromZip"=>"10010", "SmsSid"=>"SM5c6c137867cdb03376009e24239bd38c", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"Jsjsjd", "FromCountry"=>"US", "To"=>"+18624149519", "MessagingServiceSid"=>"MG55aae21a9c184ba02cfcaebebd2ea973", "ToZip"=>"07102", "NumSegments"=>"1", "MessageSid"=>"SM5c6c137867cdb03376009e24239bd38c", "AccountSid"=>"AC806677407f595b1e8717e0c84d2aa9d8", "From"=>"+19174179542", "ApiVersion"=>"2010-04-01"}
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["id", 26]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["question", "According to the \"rule of law,\" no one is above the law.\n1) True \n2) False"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["question", "According to the \"rule of law,\" no one is above the law.\n1) True \n2) False"]]
+  Rendered receive_texts/response_message.xml.erb (0.1ms)
+Completed 200 OK in 111ms (Views: 41.8ms | ActiveRecord: 2.1ms)
+  [1m[35mResponse Load (0.4ms)[0m  SELECT  "responses".* FROM "responses"  ORDER BY "responses"."id" DESC LIMIT 1
+
+
+Started GET "/receive_texts/response_message?ToCountry=US&ToState=NJ&SmsMessageSid=SM6c888a402117086fb7a3e58231581ea5&NumMedia=0&ToCity=NEWARK&FromZip=10010&SmsSid=SM6c888a402117086fb7a3e58231581ea5&FromState=NY&SmsStatus=received&FromCity=NEW+YORK&Body=Ffkl&FromCountry=US&To=%2B18624149519&MessagingServiceSid=MG55aae21a9c184ba02cfcaebebd2ea973&ToZip=07102&NumSegments=1&MessageSid=SM6c888a402117086fb7a3e58231581ea5&AccountSid=AC806677407f595b1e8717e0c84d2aa9d8&From=%2B19174179542&ApiVersion=2010-04-01" for 52.90.220.68 at 2016-04-16 00:21:01 -0400
+Cannot render console from 52.90.220.68! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReceiveTextsController#response_message as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"NJ", "SmsMessageSid"=>"SM6c888a402117086fb7a3e58231581ea5", "NumMedia"=>"0", "ToCity"=>"NEWARK", "FromZip"=>"10010", "SmsSid"=>"SM6c888a402117086fb7a3e58231581ea5", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"Ffkl", "FromCountry"=>"US", "To"=>"+18624149519", "MessagingServiceSid"=>"MG55aae21a9c184ba02cfcaebebd2ea973", "ToZip"=>"07102", "NumSegments"=>"1", "MessageSid"=>"SM6c888a402117086fb7a3e58231581ea5", "AccountSid"=>"AC806677407f595b1e8717e0c84d2aa9d8", "From"=>"+19174179542", "ApiVersion"=>"2010-04-01"}
+  [1m[36mResponse Load (0.1ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["id", 26]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["question", "According to the \"rule of law,\" no one is above the law.\n1) True \n2) False"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["question", "According to the \"rule of law,\" no one is above the law.\n1) True \n2) False"]]
+  Rendered receive_texts/response_message.xml.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 31.8ms | ActiveRecord: 0.4ms)
+  [1m[36mResponse Load (0.3ms)[0m  [1mSELECT  "responses".* FROM "responses"  ORDER BY "responses"."id" DESC LIMIT 1[0m
+
+
+Started GET "/receive_texts/response_message?ToCountry=US&ToState=NJ&SmsMessageSid=SM13981e7ac1a06a2404ace9d9469590f8&NumMedia=0&ToCity=NEWARK&FromZip=10010&SmsSid=SM13981e7ac1a06a2404ace9d9469590f8&FromState=NY&SmsStatus=received&FromCity=NEW+YORK&Body=3&FromCountry=US&To=%2B18624149519&MessagingServiceSid=MG55aae21a9c184ba02cfcaebebd2ea973&ToZip=07102&NumSegments=1&MessageSid=SM13981e7ac1a06a2404ace9d9469590f8&AccountSid=AC806677407f595b1e8717e0c84d2aa9d8&From=%2B19174179542&ApiVersion=2010-04-01" for 54.209.154.231 at 2016-04-16 00:21:07 -0400
+Cannot render console from 54.209.154.231! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReceiveTextsController#response_message as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"NJ", "SmsMessageSid"=>"SM13981e7ac1a06a2404ace9d9469590f8", "NumMedia"=>"0", "ToCity"=>"NEWARK", "FromZip"=>"10010", "SmsSid"=>"SM13981e7ac1a06a2404ace9d9469590f8", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"3", "FromCountry"=>"US", "To"=>"+18624149519", "MessagingServiceSid"=>"MG55aae21a9c184ba02cfcaebebd2ea973", "ToZip"=>"07102", "NumSegments"=>"1", "MessageSid"=>"SM13981e7ac1a06a2404ace9d9469590f8", "AccountSid"=>"AC806677407f595b1e8717e0c84d2aa9d8", "From"=>"+19174179542", "ApiVersion"=>"2010-04-01"}
+  [1m[36mResponse Load (0.1ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["id", 26]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["question", "According to the \"rule of law,\" no one is above the law.\n1) True \n2) False"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."question" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["question", "According to the \"rule of law,\" no one is above the law.\n1) True \n2) False"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "responses" SET "user_response" = ?, "updated_at" = ? WHERE "responses"."id" = ?[0m  [["user_response", "3"], ["updated_at", "2016-04-16 04:21:07.910424"], ["id", 82]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  Rendered receive_texts/response_message.xml.erb (0.1ms)
+Completed 200 OK in 60ms (Views: 49.4ms | ActiveRecord: 2.0ms)
+  [1m[35mResponse Load (8.8ms)[0m  SELECT  "responses".* FROM "responses"  ORDER BY "responses"."id" DESC LIMIT 1
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 26]]

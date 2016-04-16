@@ -15,19 +15,25 @@ class ReceiveTextsController < ApplicationController
     body = params[:Body]
 
     correct_answer = Question.where(question: Question.where(id: Response.where(to_number: from).last.question_id).first.question).first.correct_answer
-    
-    explanation = Question.where(question: Question.where(id: Response.where(to_number: from).last.question_id).first.question).first.explanation
-    
-    # user_last_received_question = Question.where(id: Response.where(to_number: from).last.question_id).first.question
 
+    explanation = Question.where(question: Question.where(id: Response.where(to_number: from).last.question_id).first.question).first.explanation
+
+    # user_last_received_question = Question.where(id: Response.where(to_number: from).last.question_id).first.question
 
     @twiml = Twilio::TwiML::Response.new do |r|
       if body == correct_answer
           r.Message "Correct."
-      else
+          Response.where(to_number: from).last.update_attributes(user_response: body)
+      elsif body == "2" || body == "3" || body == "4"
           r.Message explanation
+          Response.where(to_number: from).last.update_attributes(user_response: body)
+      else
+          r.Message "Please send only the number of your response. For Example, type 1 for choice 1."   
       end
     end
+
+
+
     
     # render makes response happen
     render 'response_message.xml.erb', :content_type => 'text/xml'
