@@ -1,10 +1,10 @@
 <div>
   <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :id => "signOut" %>
 </div>
- <div id="clientStart" style="display:none;">
+<!--  <div id="clientStart" style="display:none;">
   Sinch client started!
 </div>
-
+ -->
 
 
 
@@ -13,6 +13,7 @@
   1. Upon sign out, terminate the Sinch client
   2. Use the authentication ticket you generated, @ticket, to start the Sinch client
   3. Reveal the UI when the Sinch client is started. This will take one to two seconds -->
+<!-- 
 <script>
   $('document').ready(function() {
     $("#signOut").click(function() {
@@ -33,4 +34,4 @@
         $("#clientStart").css("display", "inline");
       });
     });
-</script>
+</script> -->

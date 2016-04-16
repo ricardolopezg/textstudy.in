@@ -1,4 +1,21 @@
 module ApplicationHelper
+  def contacts_link
+    content_tag :a do
+      link_to "CONTACTS", contacts_path      
+    end    
+  end
+
+  def questions_link
+    content_tag :a do
+      link_to "QUESTIONS", questions_path      
+    end    
+  end
+
+  def send_text_link
+    content_tag :a do
+      link_to "SEND TEXT", send_texts_path
+    end    
+  end 
 
   # def my_profile_nav_link
   #   content_tag :a do
@@ -40,8 +57,7 @@ module ApplicationHelper
   def phelper(body)
     content_tag :p, body 
   end
- 
-
+  def boldhelper(body)
+    content_tag :strong, body 
+  end
 end
-
-

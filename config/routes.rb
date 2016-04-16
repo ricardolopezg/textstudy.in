@@ -1,11 +1,22 @@
-Rails.application.routes.draw do
+ Rails.application.routes.draw do
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  post "/send_texts/send_sms_questions" => "send_texts#send_sms_questions"
+
+  get "/receive_texts/response_message" => "receive_texts#response_message"
+  
+  get "/receive_texts/logs" => "receive_texts#logs"
+  
+  post "/receive_texts/response_message.xml.erb" => "receive_texts#response_message.xml.erb"
+
+
+  resources :send_texts
+  resources :receive_texts
+  resources :contacts
+  resources :questions
   resources :sinch
-  resources :messages
-  post 'messages/reply' => 'messages#reply'
 
   
   # You can have the root of your site routed with "root"

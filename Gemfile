@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'daemons'
+gem 'workless'
+gem 'delayed_job_active_record'
 gem 'devise'
 gem 'twilio-ruby'
 gem 'sinch_sms', '~> 2.1'

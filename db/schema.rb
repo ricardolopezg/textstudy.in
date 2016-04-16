@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160410044332) do
+ActiveRecord::Schema.define(version: 20160415221623) do
+
+  create_table "delayed_jobs", force: :cascade do |t|
+    t.integer  "priority",   default: 0, null: false
+    t.integer  "attempts",   default: 0, null: false
+    t.text     "handler",                null: false
+    t.text     "last_error"
+    t.datetime "run_at"
+    t.datetime "locked_at"
+    t.datetime "failed_at"
+    t.string   "locked_by"
+    t.string   "queue"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority"
 
   create_table "profiles", force: :cascade do |t|
     t.integer  "user_id"
@@ -34,27 +50,28 @@ ActiveRecord::Schema.define(version: 20160410044332) do
   create_table "questions", force: :cascade do |t|
     t.integer  "subject_id"
     t.text     "question"
-    t.string   "correct_answer"
     t.string   "version"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-    t.string   "wrong_answer1"
-    t.string   "wrong_answer2"
-    t.string   "wrong_answer3"
     t.string   "language"
     t.text     "explanation"
+    t.string   "correct_answer"
   end
 
   create_table "responses", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "from_number"
     t.string   "to_number"
-    t.integer  "questions_id"
-    t.string   "response"
-    t.string   "timestamp"
-    t.integer  "version"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "question_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "user_response"
+    t.string   "question_version"
+  end
+
+  create_table "send_texts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "subjects", force: :cascade do |t|
@@ -69,8 +86,9 @@ ActiveRecord::Schema.define(version: 20160410044332) do
     t.integer  "user_id"
     t.integer  "subject_id"
     t.datetime "expiration"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "active",     default: false
   end
 
   create_table "users", force: :cascade do |t|

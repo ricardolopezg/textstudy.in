@@ -1,0 +1,22 @@
+<h1>Text Logs</h1>
+
+<% @twilio_client.account.messages.list({}).each do |m| %>
+<ul>
+  <li>From: <%= m.from %></li>
+  <li>To: <%= m.to %></li>
+  <li>Message: <%= m.body %></li>
+  <li>Status: <%= m.status %></li>
+  <li>Direction: <%= m.direction %></li>
+  <li>Date Sent: <%= m.date_sent %></li>
+  <li>Date Updated: <%= m.date_updated %></li>
+  <li>Date Created: <%= m.date_created %></li>
+  <li>Message Sid: <%= m.sid %></li>
+  <li>Account Sid: <%= m.account_sid %></li>
+  <li>Price: <%= m.price_unit + " " + m.price %></li>
+  <li>API Version: <%= m.api_version %></li>
+  <li>URI: <%= m.uri %></li>
+</ul>
+<% end %>
+
+
+
