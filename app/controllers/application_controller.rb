@@ -15,7 +15,8 @@ class ApplicationController < ActionController::Base
   def after(email)
     #temporarily store ticket in session
     session[:ticket] = get_auth_ticket(email)
-    root_path
+    # root_path
+    account_path(current_user.id)
   end
   
   #generate ticket for Sinch authentication

@@ -3,7 +3,8 @@
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  post "/send_texts/send_sms_questions" => "send_texts#send_sms_questions"
+  # post "/send_texts/send_sms_questions" => "send_texts#send_sms_questions"
+  post "/subscription/send_sms_questions" => "subscription#send_sms_questions"
 
   get "/receive_texts/response_message" => "receive_texts#response_message"
   
@@ -12,15 +13,15 @@
   post "/receive_texts/response_message.xml.erb" => "receive_texts#response_message.xml.erb"
 
 
+  resources :home, :only => [:index]
+  resources :accounts
   resources :send_texts
   resources :receive_texts
-  resources :contacts
-  resources :questions
   resources :sinch
 
   
   # You can have the root of your site routed with "root"
-  root 'sinch#index'
+  root 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,10 +1,10 @@
 class Subscription < ActiveRecord::Base
   belongs_to :user
 
-  twilio_sid = ENV["TWILIO_ACCOUNT_SID_2"]
-  twilio_token = ENV["TWILIO_AUTH_TOKEN_2"]
+  twilio_sid = ENV["TWILIO_ACCOUNT_SID_1"]
+  twilio_token = ENV["TWILIO_AUTH_TOKEN_1"]
   @@twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
-  @@twilio_phone_number = ENV["TWILIO_MESSAGING_SERVICE_SID_2"]
+  @@twilio_phone_number = ENV["TWILIO_MESSAGING_SERVICE_SID_1"]
   # after_create :send_sms_questions
 
 
@@ -16,6 +16,7 @@ class Subscription < ActiveRecord::Base
     end    
   end
 
+# Response.where.not(user_response: nil).map{|s| s.user.profile.mobile_phone}.uniq
 
   def send_sms_questions
     # TWILIO ACCOUNT INFO
@@ -24,9 +25,9 @@ class Subscription < ActiveRecord::Base
     for i in subscription_nums_to_text
       number_to_send_to = i
       user_id = Profile.where(mobile_phone: number_to_send_to).first.user_id
-      message_to_send = Question.where(subject_id: Subscription.where(active:true).map{|s| s.subject_id}).map{|q| q.question}.sample
-      question_id = Question.where(question: message_to_send).first.id
-      question_version = Question.where(question: message_to_send).first.version
+      message_to_send = Question.where(subject_id: Subscription.where(user_id: user_id).map{|s| s.subject_id}).map{|q| q.body}.sample
+      question_id = Question.where(body: message_to_send).first.id
+      question_version = Question.where(body: message_to_send).first.version
 
 
         # CREATE MESSAGE

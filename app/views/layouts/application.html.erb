@@ -10,11 +10,22 @@
 </head>
 <body>
 
+
 <nav id = "main_nav">
   <ul>
-    <li><%= send_text_link %></li>
+  <% if current_user %>
+    <li><%= log_out_nav_link %></li>
+  <% else %>
+    <li><%= home_nav_link %></li>
+    <li><%= sign_up_nav_link %></li>
+    <li><%= log_in_nav_link %></li>
+  <% end %>
   </ul>
 </nav>
+
+
+
+
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>

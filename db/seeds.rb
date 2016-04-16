@@ -27,7 +27,7 @@ Question.destroy_all
 
     ["What is the economic system in the United States?\n1) Communist economy \n2) Capitalist economy\n3) Socialist economy\n4) Somebody's economy", "2", "The US has a Capitalist (or Market) Economy in which individual producers and consumers determine the goods and services produced, along with their prices.", "rev. 02/16", "English"],
 
-    ["What stops one branch of government from becoming too powerful?\n1) Separation of concerns \n2) Separation of powers \n3) Donald Trump\n4) Bananas ", "2", "The Constitution separates the government’s power into 3 branches. This separation of powers means that each branch can block the actions of the other branches.", "rev. 02/16", "English"],
+    ["What stops one branch of government from becoming too powerful?\n1) Separation of concerns \n2) Separation of powers \n3) Donald Trump\n4) Bananas ", "2", "The Constitution separates the government's power into 3 branches. This separation of powers means that each branch can block the actions of the other branches.", "rev. 02/16", "English"],
 
     ["What is an amendment?\n1) A change to the Constitution\n2) A change to your recipe list\n3) A change to voting\n4) Changing your license", "1", "An amendment is a change or addition to a legal or statutory document, such as the Constitution.", "rev. 02/16", "English"],
 

@@ -1,21 +1,39 @@
 module ApplicationHelper
-  def contacts_link
+  def home_nav_link
     content_tag :a do
-      link_to "CONTACTS", contacts_path      
+      link_to "HOME", home_index_path      
     end    
   end
 
-  def questions_link
+  def sign_up_nav_link
     content_tag :a do
-      link_to "QUESTIONS", questions_path      
+      link_to "SIGN UP", new_user_registration_path
+    end    
+  end  
+
+  def log_in_nav_link
+    content_tag :a do
+      link_to "LOG IN", new_user_session_path     
     end    
   end
 
-  def send_text_link
+  def log_out_nav_link
     content_tag :a do
-      link_to "SEND TEXT", send_texts_path
+      link_to "SIGN OUT", destroy_user_session_path, :method => :delete, :id => "signOut"
     end    
-  end 
+  end
+
+  # def questions_link
+  #   content_tag :a do
+  #     link_to "QUESTIONS", questions_path      
+  #   end    
+  # end
+
+  # def send_text_link
+  #   content_tag :a do
+  #     link_to "SEND TEXT", send_texts_path
+  #   end    
+  # end 
 
   # def my_profile_nav_link
   #   content_tag :a do
@@ -28,13 +46,6 @@ module ApplicationHelper
   #     link_to "EDIT PROFILE", edit_profile_path(current_user.id)      
   #   end    
   # end
-
-  # def log_out_nav_link
-  #   content_tag :a do
-  #     link_to "LOG OUT", destroy_user_session_path, method: :delete     
-  #   end    
-  # end
-
   
   def h1helper(title)
     content_tag :h1, title 
