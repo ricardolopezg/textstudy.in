@@ -7,6 +7,8 @@
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
   <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.css">
+  <script src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script>
 </head>
 <body>
 
@@ -14,6 +16,7 @@
 <nav id = "main_nav">
   <ul>
   <% if current_user %>
+    <li><%= @current_user_full_name %></li>
     <li><%= log_out_nav_link %></li>
   <% else %>
     <li><%= home_nav_link %></li>
