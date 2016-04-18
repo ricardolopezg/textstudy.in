@@ -8,4 +8,12 @@ class AccountsController < ApplicationController
     @current_user_subscriptions = Subscription.where(user_id: current_user.id)
   end
 
+
+private
+  def profile_params
+    params.require(:subscription).permit(:active)
+  end
+
 end
+
+

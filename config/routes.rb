@@ -11,12 +11,24 @@
   get "/receive_texts/logs" => "receive_texts#logs"
   
   post "/receive_texts/response_message.xml.erb" => "receive_texts#response_message.xml.erb"
+  
+
+  put "/accounts/update_active_subscription_true" => "accounts#update_active_subscription_true"
+
+  put "/accounts/update_active_subscription_false" => "accounts#update_active_subscription_false"
+  
+
 
 
   resources :home, :only => [:index]
   resources :accounts
   resources :send_texts
   resources :receive_texts
+  resources :subscriptions do
+    member do 
+      patch :active
+    end
+  end
   resources :sinch
 
   

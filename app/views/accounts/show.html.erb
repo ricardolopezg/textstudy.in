@@ -1,9 +1,6 @@
 <%= h1helper("My Account") %>
-
-<!-- CREATE SUBSCRIPTION SELECTION WITH A RADIO BUTTON TO TOGGLE ACTIVE:TRUE ACTIVE:FALSE FOR SUBSCRIPTION STATUS TO SEND QUESTIONS ACCORDING TO ONE ACTIVE SUBSCRIPTION -->
-
 <%= h2helper("Active Subscription") %>
-  
+
 
 Subscriptions<br>
   <% @current_user_subscriptions.each do |s| %>
@@ -16,17 +13,12 @@ Subscriptions<br>
     subsection:
     <%= @subjects.find(s.subject_id).subsection %><br>
     active: 
-    <%= s.active %><br><br>
-    <div class="switch">
-      <input class="switch-input" id="subscription_btn_<%= "#{s.id}" %>" type="radio" name="testGroup" 
-        <% if s.active == true %>
-          checked = "<%= "#{true}" %>"
-        <% end %>>
-      <label class="switch-paddle" for="subscription_btn_<%= "#{s.id}" %>">
-        <!-- <span class="show-for-sr">Bulbasaur</span> -->
-        <span class="switch-active" aria-hidden="true">On</span>
-        <span class="switch-inactive" aria-hidden="true">Off</span>
-      </label>
-    </div>
+    <span id="subscription_status_<%= s.id %>"><%= s.active %></span>
+    
+    <% if s.active == false %>
+      <%= link_to "Activate", active_subscription_path(s.id), id: "activate_link_#{s.id}", method: :patch, remote: true %><br><br>
+    <% else %>
+      <%= link_to "Deactivate", active_subscription_path(s.id), id: "deactivate_link_#{s.id}", method: :patch, remote: true %><br><br>
+    <% end %>
   <% end %><br>
 
