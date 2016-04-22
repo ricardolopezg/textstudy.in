@@ -1,5 +1,6 @@
 class AccountsController < ApplicationController
-
+  before_action :authenticate_user!
+  
   def show
     @current_user = User.find(current_user.id)
     @current_user_full_name = User.find(current_user.id).profile.fname + " " + User.find(current_user.id).profile.lname

@@ -1,11 +1,16 @@
+<!-- META -->
+<% content_for :head do %>
+<% end %>
+
+
 
 <div class = "row login_sign_up_forms">
   <div class = "five columns">
-<h2>Log in</h2>
-    <%= render "devise/sessions/login" %>
+    <%= render "devise/sessions/login" %><br><br>
   </div>
+  <hr><br>
   <div class = "five columns">
-<h2>New User?</h2>
+  <div class="vertical_line"></div>
     <%= render "devise/registrations/sign_up" %>
   </div>
 </div>

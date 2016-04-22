@@ -12,14 +12,15 @@ class User < ActiveRecord::Base
 
   after_create :build_default_profile, :build_user_subscriptions
 
+
+
+
 private
   def build_default_profile
     Profile.create(user_id: User.last.id, fname: "Your", lname: "Name")
   end
 
   def build_user_subscriptions
-    # self.build
-    # true
     Subject.all.each do |s| 
       s.id
       s.name 
@@ -28,7 +29,5 @@ private
       Subscription.create(user_id: User.last.id, subject_id: s.id, active: false)
     end
   end 
-
-
 
 end
