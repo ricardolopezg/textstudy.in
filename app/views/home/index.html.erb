@@ -1,1 +1,169 @@
-<%= h1helper("HOME Page") %>
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <div class="section hero">
+    <div class="container">
+      <div class="row">
+        <div class="one-half column">
+          <h4 class="hero-heading">Stop forgetting. Stay sharp with Text Message Studying!</h4>
+          <a class="button button-primary" href="/users/sign_up">Try textSTUDY</a><br><br><br>
+        </div>
+        <div class="one-half column phones">
+          <%= image_tag("phone_screen3.png", class: "phone") %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="section values">
+    <h3 class="section-heading subjects_scroll">Choose Any Subject</h3>
+    <div class="row">
+      <div class="one-half column">
+        <div class="service">
+          <div class="service-icon-box">
+            <%= image_tag("us_dept_homeland_security.png", class: "service-icon") %>
+          </div>
+          <h4 class="service-heading">US Naturalization<br>Study Questions<br>(English)</h4>
+          <p class="service-description">Civics (History and Government) knowledge is necessary to pass the US Naturalization test.<br><br>Prepare with questions sent to your mobile phone via SMS.</p>
+        </div>
+      </div>
+      <div class="one-half column">
+        <div class="service">
+          <div class="service-icon-box">
+            <%= image_tag("us_dept_homeland_security.png", class: "service-icon") %>
+          </div>
+          <h4 class="service-heading">Preguntas Para Examen de Naturalización EE.UU.<br>(Español)</h4>
+          <p class="service-description">Educación Cívica (Historia y Gobierno) es necesario para pasar el Examen de Naturalización de EE.UU.<br><br>Prepárate con preguntas enviados a tu móvil via mensaje de texto.</p>
+        </div>
+      </div>
+    </div>
+    <h1 class = "up_arrow scrollup up_arrow_position1"><a href = "#">&#10095</a></h1>
+  </div>
+
+  
+  <div class="section pricing">
+    <h3 class="section-heading pricing_scroll">Simple Pricing = $10</h3>
+    <div class="row">
+      <div class="seven columns">
+      <!-- <div class="one-half column"> -->
+        <p class="section-description">No pricing tiers, No confusion.<br><br>Your decision to keep your mind active should be easy.<br><br>Simply register and subscribe to the subject you want to stay prepped for via Text Message/SMS studying.</p><br><br>
+      </div>
+      <div class="five columns">
+      <!-- <div class="one-half column"> -->
+        <ul class="active-tb">
+          <li class="pricing_info pricing_title">Monthly Subscription</li>
+          <li class="pricing_info">Choose One Subject</li>
+          <li class="pricing_info">Switch Subjects Anytime</li>
+          <li class="pricing_info">5 SMS Questions Sent Daily</li>
+          <li class="pricing_info">Analyze Your Reponse History</li>
+          <li class="pricing_info pricing_cost">$10 per Month</li>
+          <li><%= link_to("Register", new_user_registration_path, class: "button button-primary pricing_btn") %></li>
+        </ul>
+      </div>
+    </div>
+    <h1 class = "up_arrow scrollup up_arrow_position2"><a href = "#">&#10095</a></h1>
+  </div>
+
+
+  <div class="section categories">
+    <h3 class="section-heading process_scroll">SMS Questions Sent To Your Phone</h3>
+    <div class="row">
+      <div class="six columns category feature_list">
+        <ol>
+          <div class="row">
+            <div class="one columns category">
+              <span class = "feature_num">1</span>
+            </div>
+            <div class="nine columns category ">
+              <li>Register and create a Subscription</li><br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="one columns category">
+              <span class = "feature_num">2</span>
+            </div>
+            <div class="nine columns category">
+              <li>Select a Subject to receive SMS study questions</li><br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="one columns category">
+              <span class = "feature_num">3</span>
+            </div>
+            <div class="nine columns category">
+              <li>Receive 5 questions per day</li><br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="one columns category">
+              <span class = "feature_num">4</span>
+            </div>
+            <div class="nine columns category">
+              <li>Simply respond with your multiple choice number</li><br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="one columns category">
+              <span class = "feature_num">5</span>
+            </div>
+            <div class="nine columns category">
+              <li>Track your responses in your dashboard</li><br>
+            </div>
+          </div>
+        </ol>
+      </div>
+      <div class="one-half column category feature_phone_img phones">
+        <%= image_tag("phone_screen4.png", class: "u-max-full-width phones") %>
+      </div>
+    </div>
+    <h1 class = "up_arrow scrollup up_arrow_position3"><a href = "#">&#10095</a></h1>
+  </div>
+
+<footer class = "contact_scroll">
+  <form>
+    <div class="row">
+      <div class="six columns form_footer_left">
+        <%= h2helper("Questions?") %>
+        <%= h4helper("Email Us") %>
+      </div>
+      <div class="six columns form_footer_right">
+        <%= phelper(mail_to("info@textstudy.in", "info@textstudy.in")) %>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="four columns">
+        <label for="fname_input">First Name</label>
+        <input class="u-full-width" type="text" placeholder="First Name" id="fname_input">
+      </div>
+      <div class="four columns">
+        <label for="lname_input">Last Name</label>
+        <input class="u-full-width" type="text" placeholder="Last Name" id="lname_input">
+      </div>
+      <div class="four columns">
+        <label for="email_input">Your email</label>
+        <input class="u-full-width" type="email" placeholder="youremail@gmail.com" id="email_input">
+      </div>
+    </div>
+        
+    <div class="row">
+      <div class="twelve columns">
+        <label for="message_input">Message</label>
+        <textarea class="u-full-width" placeholder="Say something..." id="message_input" rows="5"></textarea>
+      </div>
+      
+        <label class="send_yourself_copy_input">
+          <input type="checkbox">
+          <span class="label-body">Send a copy to yourself</span>
+        </label>
+      <input class="button-primary" type="submit" value="Submit">
+    </div>
+  <div class="twelve columns made_in">
+    <%= image_tag("nyc_glyph.png", class: "footer_glyph") %>
+    <%= h6helper("Made in NYC | \u00A9 " + Time.now.year.to_s) %>
+  </div>
+  </form>
+
+</footer>
+

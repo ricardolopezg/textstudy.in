@@ -1,45 +1,63 @@
 module ApplicationHelper
-  def home_nav_link
+
+  def logo_nav_link
     content_tag :a do
-      link_to "HOME", home_index_path      
+      link_to "textSTUDY", home_index_path, class: "logo_nav_link"      
+    end    
+  end
+  
+  def process_nav_link
+    content_tag :a do
+      link_to "PROCESS", home_index_path, class: "process_nav_link"      
     end    
   end
 
-  def sign_up_nav_link
+  def blog_nav_link
     content_tag :a do
-      link_to "SIGN UP", new_user_registration_path
+      link_to "BLOG", "#", class: "blog_nav_link"
+    end    
+  end
+  
+  def account_home_nav_link
+    content_tag :a do
+      link_to "ACCOUNT HOME", account_path(:id),class: "account_home_nav_link"      
+    end    
+  end
+  def register_nav_link
+    content_tag :a do
+      link_to "REGISTER", new_user_registration_path, class: "register_nav_link"
     end    
   end  
 
   def log_in_nav_link
     content_tag :a do
-      link_to "LOG IN", new_user_session_path     
+      link_to "LOGIN", new_user_session_path, class: "log_in_nav_link"     
     end    
   end
 
   def log_out_nav_link
     content_tag :a do
-      link_to "SIGN OUT", destroy_user_session_path, :method => :delete, :id => "signOut"
+      link_to "SIGN OUT", destroy_user_session_path, class: "log_out_nav_link", :method => :delete, :id => "signOut"
     end    
   end
 
-  # def questions_link
-  #   content_tag :a do
-  #     link_to "QUESTIONS", questions_path      
-  #   end    
-  # end
+  def pricing_nav_link
+    content_tag :a do
+      link_to "PRICING", "#", class: "pricing_nav_link"      
+    end    
+  end
 
-  # def send_text_link
-  #   content_tag :a do
-  #     link_to "SEND TEXT", send_texts_path
-  #   end    
-  # end 
+  def subjects_nav_link
+    content_tag :a do
+      link_to "SUBJECTS", "#", class: "subjects_nav_link"
+    end    
+  end 
 
-  # def my_profile_nav_link
-  #   content_tag :a do
-  #     link_to "MY PROFILE", profile_path(current_user.id)      
-  #   end    
-  # end
+  def contact_nav_link
+    content_tag :a do
+      link_to "CONTACT", "#{}" , class: "contact_nav_link"      
+    end    
+  end
 
   # def edit_profile_nav_link
   #   content_tag :a do

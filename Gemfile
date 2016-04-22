@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'delayed_job_recurring'
 gem 'daemons'
 gem 'workless'
 gem 'delayed_job_active_record'

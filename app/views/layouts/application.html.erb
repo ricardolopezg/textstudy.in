@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Textstudy</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>textSTUDY</title>
   <%= csrf_meta_tags %>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-  <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+  <meta charset="utf-8" />
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css">
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.css">
   <script src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 </head>
 <body>
 
+        <!-- text.study textstudy.io textstudy.co -->
+        <!-- textPREP.in textPREP.io textPREP.co -->
+        <!-- studying doesn't have to end when you put down the book -->
 
 <nav id = "main_nav">
-  <ul>
-  <% if current_user %>
-    <li><%= @current_user_full_name %></li>
-    <li><%= log_out_nav_link %></li>
-  <% else %>
-    <li><%= home_nav_link %></li>
-    <li><%= sign_up_nav_link %></li>
-    <li><%= log_in_nav_link %></li>
-  <% end %>
-  </ul>
+  <div class="row">
+    <% if current_user %>
+    <div class="top-bar-left twelve columns">
+      <ul class="menu">
+        <li class="menu-text"><%= logo_nav_link %></li>
+        <hr> 
+    </div>
+    <div class="top-bar-right twelve columns">
+        <li><%= account_home_nav_link %></li>
+        <li><%= @current_user_full_name %></li>
+        <li><%= log_out_nav_link %></li>
+    </div>
+  </div>
+      <% else %>
+    <div class="top-bar-left twelve columns">
+        <li class="menu-text"><%= logo_nav_link %></li>
+        <hr> 
+    </div>
+    <div class="top-bar-right twelve columns">
+        <li><%= subjects_nav_link %></li>
+        <li><%= process_nav_link %></li>
+        <li><%= pricing_nav_link %></li>
+        <li><%= blog_nav_link %></li>
+        <li><%= contact_nav_link %></li>
+        <li><%= log_in_nav_link %></li>
+      <% end %>
+      </ul>
+    </div>
+  </div>
 </nav>
-
 
 
 
@@ -36,5 +61,9 @@
 
 <%= yield %>
 
+
+
+<script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+<script>$(document).foundation();</script>
 </body>
 </html>

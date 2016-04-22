@@ -14,7 +14,21 @@ module Textstudy
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
+    config.time_zone = 'Eastern Time (US & Canada)'
+    # * UTC -10:00 *
+    # Hawaii
+    # * UTC -09:00 *
+    # Alaska
+    # * UTC -08:00 *
+    # Pacific Time (US & Canada)
+    # * UTC -07:00 *
+    # Arizona
+    # Mountain Time (US & Canada)
+    # * UTC -06:00 *
+    # Central Time (US & Canada)
+    # * UTC -05:00 *
+    # Eastern Time (US & Canada)
+    # Indiana (East)
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
@@ -22,6 +36,11 @@ module Textstudy
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    
     config.active_job.queue_adapter = :delayed_job
+
+    Delayed::Worker.destroy_failed_jobs = false
+
+    # config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
   end
 end
