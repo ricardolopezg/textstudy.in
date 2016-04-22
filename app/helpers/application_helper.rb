@@ -1,8 +1,22 @@
 module ApplicationHelper
+  # DEVISE PARTIAL
+  def resource_name
+    :user
+  end
+
+  def resource
+    @resource ||= User.new
+  end
+
+  def devise_mapping
+    @devise_mapping ||= Devise.mappings[:user]
+  end
+  # END DEVISE PARTIAL
+
 
   def logo_nav_link
     content_tag :a do
-      link_to "textSTUDY", home_index_path, class: "logo_nav_link"      
+      link_to "textSTUDY", root_path, class: "logo_nav_link"      
     end    
   end
   

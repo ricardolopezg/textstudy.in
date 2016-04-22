@@ -7,8 +7,8 @@ class SendQuestionsJob
   include Delayed::RecurringJob
   # run_every 3.days
   run_every 1.day
-  run_at '8:06PM'
-  run_at '8:07PM'
+  run_at '11:08PM'
+  run_at '11:09PM'
   run_at '8:08PM'
   run_at '8:09PM'
   run_at '8:10PM'
