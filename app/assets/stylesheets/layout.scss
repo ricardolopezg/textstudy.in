@@ -1,18 +1,13 @@
 @import 'default_styles';
 
 body {
-    // max-width: 100%;
-    // overflow-x: hidden;
     position: relative;
     top: 0;
     left: 0;
     margin: 0;
-    // background-color: $color_blue;
 }
 
 a, h1, h2, h3, h4, h5, h6 {
-  // margin: 0; in skeleton
-  // padding: 0; in skeleton
   font-family: $font_family_headers;
 }
 
@@ -26,10 +21,9 @@ p {
 
 
 // HEADER
-#main_nav {
+.main_nav {
   background: transparent;
   height: 6em;
-  // margin: 3em auto 0 auto;
   margin: 0 auto;
   padding: 2em 1em;
   width: 85%;
@@ -38,16 +32,13 @@ p {
     font-size: 2em;
   }
   li {
-    // padding: 0 1.3em;
-    padding: 0 1em;
+    padding: 0 0.489em;
     display: inline; 
     list-style: none;
-    // font-weight: $font_bold;
     font-size: $font_size_p;
     color: $color_grey;
   }
   a {
-    // font-weight: $font_normal;
     color: $color_grey;
     text-decoration: none;
   }
@@ -71,7 +62,6 @@ footer {
   .form_footer_left {
     text-align: center;
     a {
-      // font-weight: $font_normal;
       color: $color_grey;
       text-decoration: none;
     }

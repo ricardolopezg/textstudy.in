@@ -55,9 +55,21 @@ module ApplicationHelper
     end    
   end
 
+  def process_nav_link_else
+    content_tag :a do
+      link_to "PROCESS", root_path, class: "process_nav_link_else"      
+    end    
+  end
+
   def pricing_nav_link
     content_tag :a do
       link_to "PRICING", "", class: "pricing_nav_link"      
+    end    
+  end
+  
+  def pricing_nav_link_else
+    content_tag :a do
+      link_to "PRICING", root_path, class: "pricing_nav_link_else"      
     end    
   end
 
@@ -66,10 +78,22 @@ module ApplicationHelper
       link_to "SUBJECTS", "", class: "subjects_nav_link"
     end    
   end 
+  
+  def subjects_nav_link_else
+    content_tag :a do
+      link_to "SUBJECTS", root_path, class: "subjects_nav_link_else"
+    end    
+  end 
 
   def contact_nav_link
     content_tag :a do
       link_to "CONTACT", "" , class: "contact_nav_link"      
+    end    
+  end
+
+  def contact_nav_link_else
+    content_tag :a do
+      link_to "CONTACT", root_path, class: "contact_nav_link_else"      
     end    
   end
 

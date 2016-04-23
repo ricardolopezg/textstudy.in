@@ -20,40 +20,12 @@
 </head>
 <body>
 
-<% if current_user %>
-  <nav id = "main_nav" class = "row">
-      <div class="top-bar-left twelve columns">
-        <ul>
-          <li class="menu-text"><%= logo_nav_link %></li>
-          <hr> 
-      </div>
-  </nav>
-  <nav id = "main_nav" class = "row">
-      <div class="top-bar-right twelve columns">
-          <li><%= account_home_nav_link %></li>
-          <li><%= @current_user_full_name %></li>
-          <li><%= log_out_nav_link %></li>
-      </div>
-  </nav>
+<% if current_page?(root_path) %>
+    <%= render 'layouts/home_nav' %>
 <% else %>
-  <nav id = "main_nav" class = "row">
-      <div class="top-bar-left twelve columns">
-          <li class="menu-text"><%= logo_nav_link %></li>
-          <hr> 
-      </div>
-  </nav>
-  <nav id = "main_nav" class = "row">
-      <div class="top-bar-right twelve columns">
-          <li><%= subjects_nav_link %></li>
-          <li><%= process_nav_link %></li>
-          <li><%= pricing_nav_link %></li>
-          <li><%= blog_nav_link %></li>
-          <li><%= contact_nav_link %></li>
-          <li><%= log_in_nav_link %></li>
-        </ul>
-      </div>
-  </nav>
+    <%= render 'layouts/else_nav' %>
 <% end %>
+
 
 
 <p class="twelve columns notice"><%= notice %></p>
