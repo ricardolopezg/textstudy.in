@@ -1,5 +1,10 @@
 @import 'default_styles';
 
+.nav div ul li {
+  padding-bottom: 4rem;
+}
+
+
 .notice, .alert {
   position: absolute;
   top: 28rem;

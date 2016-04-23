@@ -19,12 +19,6 @@ module ApplicationHelper
       link_to "textSTUDY", root_path, class: "logo_nav_link"      
     end    
   end
-  
-  def process_nav_link
-    content_tag :a do
-      link_to "PROCESS", home_index_path, class: "process_nav_link"      
-    end    
-  end
 
   def blog_nav_link
     content_tag :a do
@@ -54,30 +48,31 @@ module ApplicationHelper
       link_to "SIGN OUT", destroy_user_session_path, class: "log_out_nav_link", :method => :delete, :id => "signOut"
     end    
   end
+ 
+  def process_nav_link
+    content_tag :a do
+      link_to "PROCESS", "", class: "process_nav_link"      
+    end    
+  end
 
   def pricing_nav_link
     content_tag :a do
-      link_to "PRICING", "#", class: "pricing_nav_link"      
+      link_to "PRICING", "", class: "pricing_nav_link"      
     end    
   end
 
   def subjects_nav_link
     content_tag :a do
-      link_to "SUBJECTS", "#", class: "subjects_nav_link"
+      link_to "SUBJECTS", "", class: "subjects_nav_link"
     end    
   end 
 
   def contact_nav_link
     content_tag :a do
-      link_to "CONTACT", "#{}" , class: "contact_nav_link"      
+      link_to "CONTACT", "" , class: "contact_nav_link"      
     end    
   end
 
-  # def edit_profile_nav_link
-  #   content_tag :a do
-  #     link_to "EDIT PROFILE", edit_profile_path(current_user.id)      
-  #   end    
-  # end
   
   def h1helper(title)
     content_tag :h1, title 
