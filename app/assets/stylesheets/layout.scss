@@ -5,6 +5,7 @@ body {
     top: 0;
     left: 0;
     margin: 0;
+    background-color: $color_white_off;
 }
 
 a, h1, h2, h3, h4, h5, h6 {
@@ -83,13 +84,49 @@ footer {
   textarea, input[type="text"], input[type="email"] {
     font-size: 1em;  
   }
-  .made_in {
+  .footer_art_home {
     text-align: center;
   }
   .footer_glyph {
     height: 5.5rem;
     width: 5.5rem;
   }
+}
+
+.footer_art_signed_in {
+  text-align: right;
+  margin-right: 1rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  .footer_glyph_buffalo {
+    margin: 0 1rem;
+    height: 5.5rem;
+    width: 7.5rem;
+  }
+  .footer_glyph_lion {
+    margin: 0 1.6rem;
+    height: 5.5rem;
+    width: 6rem;
+  }
+  .footer_glyph_elephant {
+    margin: 0 1rem;
+    height: 5.5rem;
+    width: 7.5rem;
+  }
+  .footer_glyph_rhino {
+    margin: 0 1.4rem;
+    height: 5.5rem;
+    width: 6.5rem;
+  }
+  .footer_glyph_leopard {
+    margin: 0 1.2rem;
+    height: 5.5rem;
+    width: 7rem;
+  }
+}
+.art_credit {
+  font-size: $font_size_p - 0.75;
 }
 
 

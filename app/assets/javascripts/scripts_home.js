@@ -28,17 +28,18 @@ $(document).ready(function() {
   $(".pricing_nav_link").on("click", function(e) {
     e.preventDefault();
     $("html, body").animate({
-      scrollTop: $(".pricing_scroll").offset().top - 40
+      scrollTop: $(".pricing_scroll").offset().top - 48
     }, 1000);
     }) 
   
   $(".pricing_nav_link_else").on("click", function() {
     setTimeout(function() {
       $("html, body").animate({
-        scrollTop: $(".pricing_scroll").offset().top - 40
+        scrollTop: $(".pricing_scroll").offset().top - 48
       }, 1000);
     }, 1000);
   }) 
+
 
 
   $(".process_nav_link").on("click", function(e) {

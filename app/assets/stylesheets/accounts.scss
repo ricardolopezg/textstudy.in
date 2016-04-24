@@ -1,23 +1,8 @@
-// Place all the styles related to the Accounts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 @import 'default_styles';
 
-$sidebar-width: 150px;
-$nav-color: #333;
-
-.inner-wrap {
-  width: auto;
-  -ms-transform: none;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  -o-transform: none;
-  transform: none;
-  // margin-left: $sidebar-width;
-}
-
+$sidebar-width: 8em;
+$topbar-height: 4em;
+// $nav-color: #333;
 
 
 .left-off-canvas-menu {
@@ -28,25 +13,31 @@ $nav-color: #333;
   -o-transform: none;
   transform: none;
   position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
   height: 100%;
   text-align: center;
   background-color: $color_green;
   width: $sidebar-width;
   .menu_item {
-    background-color: $color_blue_light;
+    float: left;
     width: $sidebar-width;
+    .icon {
+      color: $color_white_off;
+      font-size: $font_size_p * 2;
+      padding-top: 0.25em;
+    }
     .item {
-      i {
-        color: $color_white_off;
-        font-size: 3em;
-        // margin: 0 auto;
-      }
-      label {
-        color: $color_white_off;
-        font-size: $font_size_p;
-      }
+      margin-top: -2em;
+      color: $color_white_off;
+      font-size: $font_size_p;
+      font-weight: $font_bold;
     }
   }
+  .menu_item:hover, .menu_item:active {
+      background-color: $color_blue_light;
+    }
 }
 
 #content_container {
@@ -55,32 +46,29 @@ $nav-color: #333;
   top: 0;
   right: 0;
 }
+.text-center {
+  color: $color_white_off;
+  max-height: 100%;
+  margin-top: 0.1em;
+}
+
+.horizontal_nav {
+  color: $color_white_off;
+  position: absolute;
+  left: $sidebar-width;
+  right: 0;
+  height: $topbar-height;
+  background-color: $color_green_light;
+  p {
+    max-height: 100%;
+    margin: 1rem;
+    font-size: $font_size_p + 0.1;
+    text-align: right;
+  }
+}
 
 
 
-
-
-
-
-
-
-// .left-off-canvas-toggle {
-//   display: none;
-//   margin-top: 1rem;
-//   margin-left: 1rem;
-//   font-size: 3rem;
-//   color: $nav-color;
-//   transition: all .25s ease-in-out;
-  
-//   &:focus {
-//     color: $nav-color;
-//   }
-  
-//   &:hover {
-//     color: lighten($nav-color, 35%);
-//     transition: all .25s ease-in-out;
-//   }
-// }
 
 
 

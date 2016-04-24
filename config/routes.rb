@@ -3,7 +3,6 @@
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # post "/send_texts/send_sms_questions" => "send_texts#send_sms_questions"
   post "/subscription/send_sms_questions" => "subscription#send_sms_questions"
 
   get "/receive_texts/response_message" => "receive_texts#response_message"
@@ -13,15 +12,16 @@
   post "/receive_texts/response_message.xml.erb" => "receive_texts#response_message.xml.erb"
   
 
-  put "/accounts/update_active_subscription_true" => "accounts#update_active_subscription_true"
-
-  put "/accounts/update_active_subscription_false" => "accounts#update_active_subscription_false"
-  
-
-
 
   resources :home, :only => [:index]
-  resources :accounts
+  resources :accounts do
+    member do 
+      get :dashboard
+      get :subjects
+      get :billing
+      get :contact
+    end
+  end
   resources :send_texts
   resources :receive_texts
   resources :subscriptions do

@@ -1,0 +1,52 @@
+<div id="content_container">
+  <h3 class="text-center">Contact Support</h3>
+<form>
+    <div class="row">
+      <div class="six columns form_footer_left">
+        <%= h3helper("Questions?") %>
+        <%= h5helper("Email Us") %>
+      </div>
+      <div class="six columns form_footer_right">
+        <%= phelper(mail_to("info@textstudy.in", "info@textstudy.in")) %>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="four columns">
+        <label for="fname_input">First Name</label>
+        <input class="u-full-width" type="text" placeholder="First Name" id="fname_input">
+      </div>
+      <div class="four columns">
+        <label for="lname_input">Last Name</label>
+        <input class="u-full-width" type="text" placeholder="Last Name" id="lname_input">
+      </div>
+      <div class="four columns">
+        <label for="email_input">Your email</label>
+        <input class="u-full-width" type="email" placeholder="youremail@gmail.com" id="email_input">
+      </div>
+    </div>
+        
+    <div class="row">
+      <div class="twelve columns">
+        <label for="message_input">Message</label>
+        <textarea class="u-full-width" placeholder="Say something..." id="message_input" rows="5"></textarea>
+      </div>
+      
+        <label class="send_yourself_copy_input">
+          <input type="checkbox">
+          <span class="label-body">Send a copy to yourself</span>
+        </label>
+      <input class="button-primary" type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+
+
+
+
+
+<div class="two columns footer_art_signed_in">
+  <%= image_tag("big5-icon-grid-cape-water-buffalo-adam-whitcroft.png", class: "footer_glyph_buffalo") %>
+  <p class = "art_credit">art by: Adam Whitcroft</p>
+</div>

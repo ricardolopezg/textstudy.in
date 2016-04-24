@@ -28,7 +28,7 @@ module ApplicationHelper
   
   def account_home_nav_link
     content_tag :a do
-      link_to "ACCOUNT HOME", account_path(:id),class: "account_home_nav_link"      
+      link_to "MY ACCOUNT", account_path(:id), class: "account_home_nav_link"      
     end    
   end
   def register_nav_link

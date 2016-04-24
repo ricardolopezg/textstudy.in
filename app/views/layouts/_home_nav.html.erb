@@ -1,18 +1,5 @@
 <% if current_user %>
-  <nav class = "row main_nav">
-      <div class="top-bar-left twelve columns">
-        <ul>
-          <li class="menu-text"><%= logo_nav_link %></li>
-          <hr> 
-      </div>
-  </nav>
-  <nav class = "row main_nav">
-      <div class="top-bar-right twelve columns">
-          <li><%= account_home_nav_link %></li>
-          <li><%= @current_user_full_name %></li>
-          <li><%= log_out_nav_link %></li>
-      </div>
-  </nav>
+  <%= render "layouts/signed_in_nav" %>  
 <% else %>
   <nav class = "row main_nav">
       <div class="top-bar-left twelve columns">

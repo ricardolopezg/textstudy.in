@@ -1,0 +1,34 @@
+<!-- VERTICAL NAV - LOGGED IN -->
+<nav class="left-off-canvas-menu">
+  <div class="icon-bar vertical five-up">
+    <a href="/accounts/id/dashboard" class="menu_item dashboard_nav_link" id="dashboard_nav" rel="nofollow">
+      <p class="icon fi-graph-bar"></p>
+      <p class="item">Dashboard</p>
+    </a>
+    <a href="/accounts/id/subjects" class="menu_item subjects_nav_link" id="subjects_nav" rel="nofollow">
+      <p class="icon fi-book"></p>
+      <p class="item">Subjects</p>
+    </a>
+    <a href="/accounts/id/billing" class="menu_item billing_nav_link" id="billing_nav" rel="nofollow">
+      <p class="icon fi-credit-card"></p>
+      <p class="item">Billing</p>
+    </a>
+    <a href="/accounts/id" class="menu_item profile_nav_link" id="profile_nav" rel="nofollow">
+      <p class="icon fi-torsos-male-female"></p>
+      <p class="item">Profile</p>
+    </a>
+    <a href="/accounts/id/contact" class="menu_item contact_nav_link" id="support_nav" rel="nofollow">
+      <p class="icon fi-mail"></p>
+      <p class="item">Support</p>
+    </a>
+    <a href="/users/sign_out" class="menu_item log_out_nav_link" id="signOut" rel="nofollow" data-method="delete">
+      <p class="icon fi-power"></p>
+      <p class="item">Log Off</p>
+    </a>
+  </div>  
+</nav>
+
+<!-- HORIZONTAL NAV - LOGGED IN -->
+<div class="horizontal_nav u-max-full-width">
+  <%= phelper("Welcome back, " + User.find(current_user.id).profile.fname + "!") %>
+</div>  
