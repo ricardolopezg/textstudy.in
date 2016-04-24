@@ -47,13 +47,17 @@ p {
   }
   .logo_nav_link {
     color: $color_green;
+    font-size: $font_size_logo;
   }
   .logo_nav_link:hover {
     border: none;
   }
 }
 
-
+.text_enlarge_italic {
+  font-size: $font_size_logo;
+  font-style: italic;
+}
 
 
 // FOOTER

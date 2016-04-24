@@ -3,3 +3,84 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import 'default_styles';
+
+$sidebar-width: 150px;
+$nav-color: #333;
+
+.inner-wrap {
+  width: auto;
+  -ms-transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  // margin-left: $sidebar-width;
+}
+
+
+
+.left-off-canvas-menu {
+  -ms-transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  position: fixed;
+  height: 100%;
+  text-align: center;
+  background-color: $color_green;
+  width: $sidebar-width;
+  .menu_item {
+    background-color: $color_blue_light;
+    width: $sidebar-width;
+    .item {
+      i {
+        color: $color_white_off;
+        font-size: 3em;
+        // margin: 0 auto;
+      }
+      label {
+        color: $color_white_off;
+        font-size: $font_size_p;
+      }
+    }
+  }
+}
+
+#content_container {
+  position: absolute;
+  left: $sidebar-width;
+  top: 0;
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+// .left-off-canvas-toggle {
+//   display: none;
+//   margin-top: 1rem;
+//   margin-left: 1rem;
+//   font-size: 3rem;
+//   color: $nav-color;
+//   transition: all .25s ease-in-out;
+  
+//   &:focus {
+//     color: $nav-color;
+//   }
+  
+//   &:hover {
+//     color: lighten($nav-color, 35%);
+//     transition: all .25s ease-in-out;
+//   }
+// }
+
+
+
