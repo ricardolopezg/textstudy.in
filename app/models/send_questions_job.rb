@@ -1,8 +1,8 @@
 class SendQuestionsJob
-  twilio_sid = ENV["TWILIO_ACCOUNT_SID_1"]
-  twilio_token = ENV["TWILIO_AUTH_TOKEN_1"]
+  twilio_sid = ENV["TWILIO_ACCOUNT_SID_3"]
+  twilio_token = ENV["TWILIO_AUTH_TOKEN_3"]
   @@twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
-  @@twilio_phone_number = ENV["TWILIO_MESSAGING_SERVICE_SID_1"]
+  @@twilio_phone_number = ENV["TWILIO_MESSAGING_SERVICE_SID_3"]
 
   include Delayed::RecurringJob
   # run_every 3.days
@@ -13,6 +13,12 @@ class SendQuestionsJob
   run_at '07:42PM'
   run_at '07:43PM'
   run_at '07:44PM'
+  run_at '07:45PM'
+  run_at '07:46PM'
+  run_at '07:47PM'
+  run_at '07:48PM'
+  run_at '07:49PM'
+  run_at '07:50PM'
 
   
   run_at '12:00AM'
