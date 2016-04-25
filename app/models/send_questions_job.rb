@@ -7,6 +7,14 @@ class SendQuestionsJob
   include Delayed::RecurringJob
   # run_every 3.days
   run_every 1.day
+
+  run_at '07:40PM'
+  run_at '07:41PM'
+  run_at '07:42PM'
+  run_at '07:43PM'
+  run_at '07:44PM'
+
+  
   run_at '12:00AM'
   run_at '12:30AM'
   # run_at '01:00AM'
@@ -57,6 +65,8 @@ class SendQuestionsJob
   run_at '11:30PM'
   timezone 'US/Eastern'
   queue 'slow-jobs'
+
+
 
   def perform
     # TWILIO ACCOUNT INFO

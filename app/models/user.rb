@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
 
 private
   def build_default_profile
-    Profile.create(user_id: User.last.id, fname: "Your", lname: "Name")
+    Profile.create(user_id: User.last.id, fname: "FirstName", lname: "LastName")
   end
 
   def build_user_subscriptions

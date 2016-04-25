@@ -1,0 +1,17 @@
+      <% @current_user_subscriptions.each do |s| %>
+        active: 
+        <span id="subscription_status_<%= s.id %>"><%= s.active %></span>
+    
+        <% if s.active == false %>
+          <%= link_to "Activate", active_subscription_path(s.id), id: "activate_link_#{s.id}", method: :patch, remote: true %><br><br>
+        <% else %>
+          <%= link_to "Deactivate", active_subscription_path(s.id), id: "deactivate_link_#{s.id}", method: :patch, remote: true %><br><br>
+        <% end %>
+      <% end %><br>
+    </div>
+  </div>
+
+
+
+
+ 

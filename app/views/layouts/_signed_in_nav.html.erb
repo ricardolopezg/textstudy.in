@@ -1,3 +1,4 @@
+
 <!-- VERTICAL NAV - LOGGED IN -->
 <nav class="left-off-canvas-menu">
   <div class="icon-bar vertical five-up">
@@ -9,13 +10,13 @@
       <p class="icon fi-book"></p>
       <p class="item">Subjects</p>
     </a>
-    <a href="/accounts/id/billing" class="menu_item billing_nav_link" id="billing_nav" rel="nofollow">
-      <p class="icon fi-credit-card"></p>
-      <p class="item">Billing</p>
-    </a>
     <a href="/accounts/id" class="menu_item profile_nav_link" id="profile_nav" rel="nofollow">
       <p class="icon fi-torsos-male-female"></p>
       <p class="item">Profile</p>
+    </a>
+    <a href="/accounts/id/billing" class="menu_item billing_nav_link" id="billing_nav" rel="nofollow">
+      <p class="icon fi-credit-card"></p>
+      <p class="item">Billing</p>
     </a>
     <a href="/accounts/id/contact" class="menu_item contact_nav_link" id="support_nav" rel="nofollow">
       <p class="icon fi-mail"></p>
@@ -30,5 +31,18 @@
 
 <!-- HORIZONTAL NAV - LOGGED IN -->
 <div class="horizontal_nav u-max-full-width">
-  <%= phelper("Welcome back, " + User.find(current_user.id).profile.fname + "!") %>
+  <p class="user_name">Welcome back, <%= User.find(current_user.id).profile.fname %>!</p>
+  <p class="logo_signed_in">textSTUDY</p>
+  <% if current_page?(contact_account_path(:id)) %>
+    <h3 class="text-center">Contact Support</h3>
+  <% elsif current_page?(billing_account_path(:id)) %>
+    <h3 class="text-center">Billing Info</h3>
+  <% elsif current_page?(dashboard_account_path(:id)) %>
+    <h3 class="text-center">Dashboard</h3>
+  <% elsif current_page?(account_path(:id)) %>
+    <h3 class="text-center">My Profile</h3>
+  <% elsif current_page?(subjects_account_path(:id)) %>
+    <h3 class="text-center">All Subjects</h3>
+  <% end %>
 </div>  
+  
