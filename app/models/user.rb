@@ -13,11 +13,23 @@ class User < ActiveRecord::Base
   after_create :build_default_profile, :build_user_subscriptions
 
 
-
-
 private
   def build_default_profile
-    Profile.create(user_id: User.last.id, fname: "FirstName", lname: "LastName")
+    Profile.create!(
+      user_id: User.last.id, 
+      fname: "Click to edit First Name", 
+      lname: "Click to edit Last Name", 
+      mobile_phone: "Click to edit Mobile Phone", 
+      alt_phone: "Click to edit Alternate Phone", 
+      billing_phone: "Click to edit Billing Phone", 
+      billing_address1: "Click to edit Billing Address 1", 
+      billing_address2: "Click to edit Billing Address 2", 
+      billing_city: "Click to edit Billing City", 
+      billing_state: "Click to edit Billing State", 
+      billing_zip: "Click to edit Billing Zip", 
+      billing_country: "Click to edit Billing Country", 
+      birthday: "Click to edit Birthday"
+      )
   end
 
   def build_user_subscriptions

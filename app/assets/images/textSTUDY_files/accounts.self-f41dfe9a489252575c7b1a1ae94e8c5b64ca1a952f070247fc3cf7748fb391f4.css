@@ -1,0 +1,88 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,100,500,600,700,800,900);
+/* line 8, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/accounts.scss */
+.left-off-canvas-menu {
+  -ms-transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  box-shadow: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  text-align: center;
+  background-color: #179388;
+  width: 8em;
+}
+/* line 24, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/accounts.scss */
+.left-off-canvas-menu .menu_item {
+  float: left;
+  width: 8em;
+  position: relative;
+  top: 4em;
+}
+/* line 29, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/accounts.scss */
+.left-off-canvas-menu .menu_item .icon {
+  color: #F0F0F0;
+  font-size: 1.875em;
+  padding-top: 0.4em;
+}
+/* line 34, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/accounts.scss */
+.left-off-canvas-menu .menu_item .item {
+  margin-top: -2em;
+  color: #F0F0F0;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+/* line 41, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/accounts.scss */
+.left-off-canvas-menu .menu_item:visited, .left-off-canvas-menu .menu_item:hover, .left-off-canvas-menu .menu_item:focus, .left-off-canvas-menu .menu_item:active {
+  background-color: #4BB4E8;
+}
+
+/* line 46, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/accounts.scss */
+#content_container {
+  position: absolute;
+  left: 8em;
+  top: 4em;
+  right: 0;
+}
+
+/* line 54, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/accounts.scss */
+.horizontal_nav {
+  color: #F0F0F0;
+  box-shadow: none;
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 4em;
+  background-color: #3cb4a8;
+}
+/* line 66, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/accounts.scss */
+.horizontal_nav .user_name {
+  max-height: 100%;
+  margin: 1rem;
+  font-size: 1.35em;
+  text-align: right;
+}
+/* line 74, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/accounts.scss */
+.horizontal_nav .logo_signed_in {
+  color: #179388;
+  position: absolute;
+  top: 0.05em;
+  left: 0.4em;
+  font-size: 2.25em;
+  font-weight: 600;
+}
+/* line 82, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/accounts.scss */
+.horizontal_nav .text-center {
+  position: absolute;
+  top: 0.05em;
+  width: 100%;
+  margin: 0 auto;
+}

@@ -1,0 +1,152 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,100,500,600,700,800,900);
+/* line 3, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+body {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background-color: #F0F0F0;
+}
+
+/* line 11, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+a, h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 15, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 25, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+.main_nav {
+  background: transparent;
+  height: 6em;
+  margin: 0 auto;
+  padding: 2em 1em;
+  width: 85%;
+  text-align: center;
+}
+/* line 32, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+.main_nav .menu-text {
+  font-size: 2em;
+}
+/* line 35, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+.main_nav li {
+  padding: 0 0.489em;
+  display: inline;
+  list-style: none;
+  font-size: 1.25em;
+  color: #30343F;
+}
+/* line 42, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+.main_nav a {
+  color: #30343F;
+  text-decoration: none;
+}
+/* line 46, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+.main_nav a:hover {
+  border-bottom: solid 2px #4BB4E8;
+}
+/* line 49, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+.main_nav .logo_nav_link {
+  color: #179388;
+  font-size: 1.5em;
+}
+/* line 53, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+.main_nav .logo_nav_link:hover {
+  border: none;
+}
+
+/* line 58, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+.text_enlarge_italic {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+/* line 65, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+footer {
+  margin: 5rem 1rem 0;
+}
+/* line 67, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+footer .form_footer_left, footer .form_footer_right {
+  text-align: center;
+}
+/* line 69, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+footer .form_footer_left a, footer .form_footer_right a {
+  color: #30343F;
+  text-decoration: none;
+}
+/* line 73, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+footer .form_footer_left a:hover, footer .form_footer_right a:hover {
+  border-bottom: solid 2px #4BB4E8;
+}
+/* line 77, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+footer .form_footer_right {
+  font-size: 1.25em;
+}
+/* line 81, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+footer label {
+  font-size: 1em;
+}
+/* line 84, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+footer textarea, footer input[type="text"], footer input[type="email"] {
+  font-size: 1em;
+}
+/* line 87, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+footer .footer_art_home {
+  text-align: center;
+}
+/* line 90, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+footer .footer_glyph {
+  height: 5.5rem;
+  width: 5.5rem;
+}
+
+/* line 96, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+.footer_art_signed_in {
+  text-align: right;
+  margin-right: 1rem;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+/* line 102, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+.footer_art_signed_in .footer_glyph_buffalo {
+  margin: 0 1rem;
+  height: 5.5rem;
+  width: 7.5rem;
+}
+/* line 107, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+.footer_art_signed_in .footer_glyph_lion {
+  margin: 0 1.6rem;
+  height: 5.5rem;
+  width: 6rem;
+}
+/* line 112, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+.footer_art_signed_in .footer_glyph_elephant {
+  margin: 0 1rem;
+  height: 5.5rem;
+  width: 7.5rem;
+}
+/* line 117, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+.footer_art_signed_in .footer_glyph_rhino {
+  margin: 0 1.4rem;
+  height: 5.5rem;
+  width: 6.5rem;
+}
+/* line 122, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+.footer_art_signed_in .footer_glyph_leopard {
+  margin: 0 1.2rem;
+  height: 5.5rem;
+  width: 7rem;
+}
+
+/* line 128, /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/assets/stylesheets/layout.scss */
+.art_credit {
+  font-size: 0.5em;
+}

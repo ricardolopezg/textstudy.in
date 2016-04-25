@@ -1,3 +1,109 @@
-// Place all the styles related to the Profiles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'default_styles';
+
+$sidebar-width: 8em;
+$topbar-height: 4em;
+// $nav-color: #333;
+
+.left-off-canvas-menu {
+  -ms-transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  box-shadow: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  text-align: center;
+  background-color: $color_green;
+  width: $sidebar-width;
+  .menu_item {
+    float: left;
+    width: $sidebar-width;
+    position: relative;
+    top: $topbar-height;
+    .icon {
+      color: $color_white_off;
+      font-size: $font_size_p * 1.5;
+      padding-top: 0.4em;
+    }
+    .item {
+      margin-top: -2em;
+      color: $color_white_off;
+      font-size: $font_size_p;
+      font-weight: $font_bold;
+    }
+  }
+  .menu_item:visited, .menu_item:hover, .menu_item:focus, .menu_item:active {
+    background-color: $color_blue_light;
+  }
+}
+
+#content_container {
+  position: absolute;
+  left: $sidebar-width;
+  top: $topbar-height;
+  // border: 2px solid red;
+  right: 0;
+}
+
+.horizontal_nav {
+  color: $color_white_off;
+  box-shadow: none;
+  z-index: 100;
+  position: fixed;
+  // left: $sidebar-width;
+  left: 0;
+  right: 0;
+  height: $topbar-height;
+  // border: 2px solid orange;
+  // background-color: $color_green;
+  background-color: $color_green_light;
+  .user_name {
+    // color: $color_green;
+    // font-weight: $font_bold;
+    max-height: 100%;
+    margin: 1rem;
+    font-size: $font_size_p + 0.1;
+    text-align: right;
+  }
+  .logo_signed_in {
+    color: $color_green;
+    position: absolute;
+    top: 0.05em;
+    left: 0.4em;
+    font-size: $font_size_logo * 1.5;
+    font-weight: $font_bold;
+  }  
+  .text-center {
+    // position: absolute;
+    //   top: 0.05em;
+    //   width: 100%;
+    //   margin: 0 auto;
+    text-align: right;
+    padding-right: .4em;
+  }
+}
+
+.bip_edit_field {
+  font-size: $font_size_p;
+}
+
+.bip_edit_field input {
+  font-size: $font_size_p - 0.25;
+}
+
+.signed_in_section_header {
+  text-align: center;
+  margin: 1em 0 1em;
+  font-size: $font_size_p;
+}
+
+.profile_show_header {
+  margin: 1em 0 6em;
+}
+
+

@@ -3,8 +3,6 @@ class ProfilesController < ApplicationController
   
   def show
     @current_user = User.find(current_user.id)
-    @current_user_full_name = @current_user.profile.fname + " " + User.find(current_user.id).profile.lname
-    @current_user_profile = @current_user.profile
     @current_profile = Profile.find(params[:id])
   end
 
@@ -13,26 +11,37 @@ class ProfilesController < ApplicationController
 
   def edit
     @current_user = User.find(current_user.id)
-    @current_user_profile = @current_user.profile
     @current_profile = Profile.find(params[:id])
   end
 
   def update
     @current_profile = Profile.find(params[:id])
+    @current_profile.update(profile_params)
 
-
+    respond_to do |format|
+      if @current_profile.update_attributes(profile_params)
+        format.html { redirect_to(@current_profile, :notice => 'User was successfully updated.') }
+        format.json { respond_with_bip(@current_profile) }
+      else
+        format.html { render :action => "show" }
+        format.json { respond_with_bip(@current_profile) }
+      end
+    end
   end
 
   def subjects
     @subjects = Subject.all
-    @subscriptions = Subscription.all
     @current_user_subscriptions = Subscription.where(user_id: current_user.id)
   end
 
 
 private
   def profile_params
-    params.require(:subscription).permit(:active)
-    params.require(:profile).permit(:fname)
+    params.require(:profile).permit(:fname, :lname, :mobile_phone, :alt_phone, :billing_phone, :billing_address1, :billing_address2, :billing_city, :billing_state, :billing_zip, :billing_country, :birthday)
   end
+  
+  def subscription_params
+    params.require(:subscription).permit(:active)
+  end
+
 end

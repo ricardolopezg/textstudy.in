@@ -1,6 +1,55 @@
 <div id="content_container">
-Profile Show
-</div>
+  <article class="signed_in_section_header profile_show_header row u-max-full-width">
+    <h4>Edit My Info</h4>
+    <p>Click on the information text to edit your information. Your MOBILE PHONE will be the number used to send your questions.</p>
+  </article>
+
+  <!-- VALIDATION OF PROFILE INFO -->
+  <% if @current_profile.errors.any? %>
+    <% @current_profile.errors.values.each do |error_message| %>
+      <%= error_message * " " %><br><br>
+    <% end %>
+  <% end %>
+
+  <div class="row">
+    <div class="six columns image_div">
+      <%= image_tag("placeholder_ricky.jpg", class: "profile_image") %>
+    </div>
+    <div class="six columns">
+      <%= best_in_place @current_profile, :fname, :data => {:profile_fname => @current_profile.fname}, :classes => 'bip_edit_field', :place_holder => 'Click to edit First Name', :ok_button => 'Save', :cancel_button => 'Cancel', :ok_button => 'Save', :cancel_button => 'Cancel', :as => :input %>
+    </div>
+    <div class="six columns">
+      <%= best_in_place @current_profile, :lname, :data => {:profile_fname => @current_profile.lname}, :classes => 'bip_edit_field', :place_holder => 'Click to edit Last Name', :ok_button => 'Save', :cancel_button => 'Cancel', :as => :input %>
+    </div>
+    <div class="six columns">
+      <%= best_in_place @current_profile, :mobile_phone, :data => {:profile_fname => @current_profile.mobile_phone}, :classes => 'bip_edit_field', :place_holder => 'Click to edit Mobile Phone', :ok_button => 'Save', :cancel_button => 'Cancel', :as => :input %>
+    </div>
+    <div class="six columns">
+      <%= best_in_place @current_profile, :alt_phone, :data => {:profile_fname => @current_profile.alt_phone}, :classes => 'bip_edit_field', :place_holder => 'Click to edit Alternate Phone', :ok_button => 'Save', :cancel_button => 'Cancel', :as => :input %>
+    </div>
+    <div class="six columns">
+      <%= best_in_place @current_profile, :billing_phone, :data => {:profile_fname => @current_profile.billing_phone}, :classes => 'bip_edit_field', :place_holder => 'Click to edit Billing Phone', :ok_button => 'Save', :cancel_button => 'Cancel', :as => :input %>
+    </div>
+    <div class="six columns">
+      <%= best_in_place @current_profile, :billing_address1, :data => {:profile_fname => @current_profile.billing_phone}, :classes => 'bip_edit_field', :place_holder => 'Click to edit Billing Address 1', :ok_button => 'Save', :cancel_button => 'Cancel', :as => :input %>    
+    </div>
+    <div class="six columns">
+      <%= best_in_place @current_profile, :billing_address2, :data => {:profile_fname => @current_profile.billing_phone}, :classes => 'bip_edit_field', :place_holder => 'Click to edit Billing Address 2', :ok_button => 'Save', :cancel_button => 'Cancel', :as => :input %>
+    </div>
+    <div class="six columns">
+      <%= best_in_place @current_profile, :billing_city, :data => {:profile_fname => @current_profile.billing_phone}, :classes => 'bip_edit_field', :place_holder => 'Click to edit Billing City', :ok_button => 'Save', :cancel_button => 'Cancel', :as => :input %>
+    </div>
+    <div class="six columns">
+      <%= best_in_place @current_profile, :billing_state, :data => {:profile_fname => @current_profile.billing_phone}, :classes => 'bip_edit_field', :place_holder => 'Click to edit Billing State', :ok_button => 'Save', :cancel_button => 'Cancel', :as => :input %>
+    </div>
+    <div class="six columns">
+      <%= best_in_place @current_profile, :billing_zip, :data => {:profile_fname => @current_profile.billing_phone}, :classes => 'bip_edit_field', :place_holder => 'Click to edit Billing Zip', :ok_button => 'Save', :cancel_button => 'Cancel', :as => :input %>
+    </div>
+    <div class="six columns">
+      <%= best_in_place @current_profile, :billing_country, :data => {:profile_fname => @current_profile.billing_phone}, :classes => 'bip_edit_field', :place_holder => 'Click to edit Billing Country', :ok_button => 'Save', :cancel_button => 'Cancel', :as => :input %>
+    </div>
+  </div>
+</div> <!-- END CONTENT_CONTAINER  -->
 
 
 <div class="two columns footer_art_signed_in">

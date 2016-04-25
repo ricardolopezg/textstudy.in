@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160424225522) do
+ActiveRecord::Schema.define(version: 20160425191932) do
 
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer  "priority",   default: 0, null: false
@@ -34,17 +34,17 @@ ActiveRecord::Schema.define(version: 20160424225522) do
     t.string   "mobile_phone"
     t.string   "alt_phone"
     t.string   "billing_phone"
-    t.string   "billing_address"
-    t.string   "string"
+    t.string   "billing_address1"
     t.string   "billing_city"
     t.string   "billing_state"
     t.string   "billing_zip"
     t.string   "billing_country"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.string   "fname"
     t.string   "lname"
     t.datetime "birthday"
+    t.string   "billing_address2"
   end
 
   create_table "questions", force: :cascade do |t|

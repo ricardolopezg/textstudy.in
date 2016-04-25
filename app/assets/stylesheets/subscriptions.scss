@@ -42,9 +42,13 @@
   max-width: rem-calc(1200);
 }
 
-.signed_in_section_header {
-  text-align: center;
-  margin-top: 1em;
-  font-size: $font_size_p;
+
+.image_div {
+  height: 45rem;
+  .profile_image {
+    position:relative;
+    right: 5em;
+    height: 18em;
+  }
 }
 

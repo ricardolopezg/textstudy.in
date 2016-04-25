@@ -14,10 +14,10 @@
       <p class="icon fi-torsos-male-female"></p>
       <p class="item">Profile</p>
     </a>
-    <a href="/profiles/<%= current_user.profile.id %>/billing" class="menu_item billing_nav_link" id="billing_nav" rel="nofollow">
+    <!-- <a href="/profiles/<%= current_user.profile.id %>/billing" class="menu_item billing_nav_link" id="billing_nav" rel="nofollow">
       <p class="icon fi-credit-card"></p>
       <p class="item">Billing</p>
-    </a>
+    </a> -->
     <a href="/profiles/<%= current_user.profile.id %>/contact" class="menu_item contact_nav_link" id="support_nav" rel="nofollow">
       <p class="icon fi-mail"></p>
       <p class="item">Support</p>
@@ -31,7 +31,7 @@
 
 <!-- HORIZONTAL NAV - LOGGED IN -->
 <div class="horizontal_nav u-max-full-width">
-  <p class="user_name">Welcome back, <%= User.find(current_user.id).profile.fname %>!</p>
+  <!-- <p class="user_name">Welcome back, <%= current_user.profile.fname %>!</p> -->
   <p class="logo_signed_in">textSTUDY</p>
   <% if current_page?(contact_profile_path(current_user.profile.id)) %>
     <h3 class="text-center">Contact Support</h3>
