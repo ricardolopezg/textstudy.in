@@ -12,6 +12,7 @@ $topbar-height: 4em;
   -ms-transform: none;
   -o-transform: none;
   transform: none;
+  box-shadow: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -52,6 +53,7 @@ $topbar-height: 4em;
 
 .horizontal_nav {
   color: $color_white_off;
+  box-shadow: none;
   z-index: 100;
   position: fixed;
   // left: $sidebar-width;
@@ -84,5 +86,4 @@ $topbar-height: 4em;
       margin: 0 auto;
   }
 }
-
 

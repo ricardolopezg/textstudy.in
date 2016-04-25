@@ -31,7 +31,20 @@
     border-bottom: 1px solid #999;
   }
 }
+  
+  .activate_link, .deactivate_link {
+    position: relative;
+    // left: 30rem;
+    left: 2rem;
+  }
 
 .row.wide {
   max-width: rem-calc(1200);
 }
+
+.signed_in_section_header {
+  text-align: center;
+  margin-top: 1em;
+  font-size: $font_size_p;
+}
+

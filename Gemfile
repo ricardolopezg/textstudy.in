@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'best_in_place', '~> 3.1'
 gem 'delayed_job_recurring'
 gem 'daemons'
 gem 'workless'
