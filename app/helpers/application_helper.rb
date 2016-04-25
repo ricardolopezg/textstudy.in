@@ -26,11 +26,6 @@ module ApplicationHelper
     end    
   end
   
-  def account_home_nav_link
-    content_tag :a do
-      link_to "MY ACCOUNT", account_path(:id), class: "account_home_nav_link"      
-    end    
-  end
   def register_nav_link
     content_tag :a do
       link_to "REGISTER", new_user_registration_path, class: "register_nav_link"

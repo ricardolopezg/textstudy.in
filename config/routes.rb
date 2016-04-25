@@ -14,7 +14,7 @@
 
 
   resources :home, :only => [:index]
-  resources :accounts do
+  resources :profiles do
     member do 
       get :dashboard
       get :subjects
