@@ -43,8 +43,7 @@ class ReceiveTextsController < ApplicationController
     end
 
     # render makes response happen
-    # render 'response_message.xml.erb', :content_type => 'text/xml'
-    response.to_xml
+    render 'response_message.xml.erb', :content_type => 'text/xml'
   end
 
 
