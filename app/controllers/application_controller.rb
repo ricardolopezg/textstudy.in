@@ -16,8 +16,8 @@ class ApplicationController < ActionController::Base
     #temporarily store ticket in session
     session[:ticket] = get_auth_ticket(email)
     # root_path
-    dashboard_profile_path(current_user.profile.id)
-    # dashboard_profile_path(current_user.id)
+    # dashboard_profile_path(current_user.profile.id)
+    profile_path(current_user.profile.id)
   end
   
   #generate ticket for Sinch authentication
