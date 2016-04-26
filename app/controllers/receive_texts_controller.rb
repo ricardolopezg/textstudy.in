@@ -66,20 +66,19 @@ class ReceiveTextsController < ApplicationController
         Response.where(to_number: from).last.update_attributes(user_response: body, response_status: "Correct")
       else 
         :body => "You can only respond once per question."
-          end
-      elsif body == "1" || body == "2" || body == "3" || body == "4"
-        if user_response.nil?
-          :body => explanation
-          Response.where(to_number: from).last.update_attributes(user_response: body, response_status: "Wrong")
-        else 
-          :body => "You can only respond once per question."
-        end
-      else
-        :body => "Please send only the number of your response. For Example, type 1 for choice 1."   
       end
+    elsif body == "1" || body == "2" || body == "3" || body == "4"
+      if user_response.nil?
+        :body => explanation
+        Response.where(to_number: from).last.update_attributes(user_response: body, response_status: "Wrong")
+      else 
+        :body => "You can only respond once per question."
+      end
+    else
+      :body => "Please send only the number of your response. For Example, type 1 for choice 1."   
     end
-
   end
+
       
 
   end
