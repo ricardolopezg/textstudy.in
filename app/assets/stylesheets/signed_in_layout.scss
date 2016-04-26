@@ -87,3 +87,58 @@ $topbar-height: 4em;
   }
 }
 
+.footer_art_signed_in {
+  text-align: right;
+  margin-right: 1rem;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  .footer_glyph_buffalo {
+    margin: 0 1rem;
+    height: 5.5rem;
+    width: 7.5rem;
+  }
+  .footer_glyph_lion {
+    margin: 0 1.6rem;
+    height: 5.5rem;
+    width: 6rem;
+  }
+  .footer_glyph_elephant {
+    margin: 0 1rem;
+    height: 5.5rem;
+    width: 7.5rem;
+  }
+  .footer_glyph_rhino {
+    margin: 0 1.4rem;
+    height: 5.5rem;
+    width: 6.5rem;
+  }
+  .footer_glyph_leopard {
+    margin: 0 1.2rem;
+    height: 5.5rem;
+    width: 7rem;
+  }
+}
+.art_credit {
+  font-size: $font_size_p - 0.75;
+}
+
+
+
+/* Bigger than 750 */
+@media (min-width: 550px) {
+}
+
+
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+}
+
+
+
+
+/* Bigger than 750 */
+@media (min-width: 1000px) {
+}
+
