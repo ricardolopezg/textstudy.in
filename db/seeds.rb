@@ -11,11 +11,12 @@ Question.destroy_all
 
 # SUBJECTS
   subjects = [
-    ["US Naturalization Test", "Civics (History and Government)", "English"]
+    ["US Naturalization Exam", "Civics (History and Government)", "English", "In order to become a US citizen, immigrants must pass the Naturalization Test. During your naturalization interview with the USCIS, an officer will ask you to orally answer a set of Civics (History and Government) questions.\nYou must answer six out of ten civics questions correctly to be able to pass the civics test.\nPrepare for the exam with these questions.", "Civics (History and Government) knowledge is necessary to pass the US Naturalization test.\nPrepare with questions sent to your mobile phone via SMS."],
+    ["Naturalización EE.UU.", "Civics (History and Government)", "Spanish", "Para hacerce ciudadano Americano, imigrantes deben pasar el Examen de Naturalización. Durante su entrevista con USCIS, el oficial le hará 10 preguntas sobre educación Cívica (Historia y Gobierno). Debe de contestar correctamente 6 de las 10 preguntas para pasar el examen. Preparate para el examen con éstas preguntas.", "Educación Cívica (Historia y Gobierno) es necesario para pasar el Examen de Naturalización de EE.UU. Prepárate con preguntas enviados a tu móvil via mensaje de texto."]
   ]
 
-  subjects.each do | name, subsection, language |
-    Subject.create(name: name, subsection: subsection, language: language)
+  subjects.each do | name, subsection, language, long_description, short_description |
+    Subject.create(name: name, subsection: subsection, language: language, long_description: long_description, short_description: short_description)
   end
 
 
@@ -44,6 +45,6 @@ Question.destroy_all
     ["New York, Pennsylvannia and Tennessee are all part of the 13 original states.\n1) True\n2) False", "2", "The 13 original states are: New Hampshire, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, Pennsylvania, Delaware, Maryland, Virginia, North Carolina, South Carolina and Georgia.", "rev. 02/16", "English"]
   ]
 
-  us_naturalization_en_questions.each do | question, correct_answer, explanation, version, language |
-    Question.create(subject_id: 3, question: question, correct_answer: correct_answer, explanation: explanation, version: version, language: language)
+  us_naturalization_en_questions.each do | body, correct_answer, explanation, version, language |
+    Question.create(subject_id: 2, body: body, correct_answer: correct_answer, explanation: explanation, version: version, language: language)
   end
