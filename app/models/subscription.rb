@@ -1,8 +1,8 @@
 class Subscription < ActiveRecord::Base
   belongs_to :user
 
-  twilio_sid = ENV["TWILIO_ACCOUNT_SID_3"]
-  twilio_token = ENV["TWILIO_AUTH_TOKEN_3"]
+  twilio_sid = ENV["TWILIO_ACCOUNT_SID_1"]
+  twilio_token = ENV["TWILIO_AUTH_TOKEN_1"]
   @@twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
 
 

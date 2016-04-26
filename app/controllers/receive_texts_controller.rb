@@ -1,8 +1,8 @@
 class ReceiveTextsController < ApplicationController
-  twilio_sid = ENV["TWILIO_ACCOUNT_SID_3"]
-  twilio_token = ENV["TWILIO_AUTH_TOKEN_3"]
+  twilio_sid = ENV["TWILIO_ACCOUNT_SID_1"]
+  twilio_token = ENV["TWILIO_AUTH_TOKEN_1"]
   @@twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
-  @@twilio_phone_number = ENV["TWILIO_MESSAGING_SERVICE_SID_3"]
+  @@twilio_phone_number = ENV["TWILIO_MESSAGING_SERVICE_SID_1"]
 
 
   def logs
