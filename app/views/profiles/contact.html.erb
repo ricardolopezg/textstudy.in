@@ -20,7 +20,7 @@
         <a href="#panel1d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">Can I stop receiving questions for a day or two?</a>
         <!-- The content pane needs an ID that matches the above href, role="tabpanel", data-tab-content, and aria-labelledby. -->
         <p id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
-          Head on over to the <a href="/accounts/id/subjects" style="border: none; text-transform: lowercase;">subjects page</a> and deactivate your active subject. When you are ready to begin receiving questions again, simply activate the subject again.
+          Head on over to the <a href="/profiles/<%= current_user.profile.id %>/subjects" style="border: none; text-transform: lowercase;">subjects page</a> and deactivate your active subject. When you are ready to begin receiving questions again, simply activate the subject again.
         </p>
       </li>
       <li class="accordion-item">
