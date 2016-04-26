@@ -44,9 +44,8 @@ class ReceiveTextsController < ApplicationController
 
     # render makes response happen
     # render 'response_message.xml.erb', :content_type => 'text/xml'
-    # render 'response_message.xml.erb', :content_type => 'text/html'
-    render 'response_message.html.erb', :content_type => 'text/html'
-    # render 'response_message.html.erb', :content_type => 'text/plain'
+    render 'response_message.xml.erb', :content_type => 'text/html'
+    # render 'response_message.xml.erb', :content_type => 'text/plain'
   end
 
 
