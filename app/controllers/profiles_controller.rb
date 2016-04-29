@@ -8,6 +8,11 @@ class ProfilesController < ApplicationController
 
   def dashboard
   end
+  
+  def subjects
+    @subjects = Subject.all
+    @current_user_subscriptions = Subscription.where(user_id: current_user.id)
+  end
 
   def edit
     @current_user = User.find(current_user.id)
@@ -29,15 +34,19 @@ class ProfilesController < ApplicationController
     end
   end
 
-  def subjects
-    @subjects = Subject.all
-    @current_user_subscriptions = Subscription.where(user_id: current_user.id)
+  def destroy
+    @current_user = User.find(params[:id])
+
+    if @current_user.destroy
+      redirect_to root_url, notice: "User deleted."
+      # redirect_to home_index_path, notice: "User deleted."
+    end
   end
 
 
 private
   def profile_params
-    params.require(:profile).permit(:fname, :lname, :mobile_phone, :alt_phone, :billing_phone, :billing_address1, :billing_address2, :billing_city, :billing_state, :billing_zip, :billing_country, :birthday)
+    params.require(:profile).permit(:fname, :lname, :mobile_phone, :alt_phone, :billing_phone, :billing_address1, :billing_address2, :billing_city, :billing_state, :billing_zip, :billing_country, :birthday, :avatar)
   end
   
   def subscription_params

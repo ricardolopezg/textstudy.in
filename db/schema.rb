@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160425191932) do
+ActiveRecord::Schema.define(version: 20160429181214) do
 
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer  "priority",   default: 0, null: false
@@ -39,12 +39,16 @@ ActiveRecord::Schema.define(version: 20160425191932) do
     t.string   "billing_state"
     t.string   "billing_zip"
     t.string   "billing_country"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "fname"
     t.string   "lname"
     t.datetime "birthday"
     t.string   "billing_address2"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "questions", force: :cascade do |t|

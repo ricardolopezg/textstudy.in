@@ -4,11 +4,8 @@
   # See how all your routes lay out with "rake routes".
 
   post "/subscription/send_sms_questions" => "subscription#send_sms_questions"
-
   get "/receive_texts/response_message" => "receive_texts#response_message"
-  
   get "/receive_texts/logs" => "receive_texts#logs"
-  
   post "/receive_texts/response_message.xml.erb" => "receive_texts#response_message.xml.erb"
   
 

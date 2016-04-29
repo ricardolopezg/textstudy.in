@@ -11,9 +11,21 @@
     <% end %>
   <% end %>
 
+  
+
+
   <div class="row">
     <div class="six columns image_div">
-      <%= image_tag("placeholder_ricky.jpg", class: "profile_image") %>
+      <%= image_tag @current_profile.avatar.url %>
+      <div class="twelve columns image_upload">
+        <%= form_for @current_profile, url: profile_path(@current_profile.id), html: { multipart: true } do |form| %>
+          <%= form.file_field :avatar %>
+          <%= form.submit :update, value: "Upload" %>
+        <% end %>
+      </div>
+    
+
+
     </div>
     <div class="six columns">
       <%= best_in_place @current_profile, :fname, :data => {:profile_fname => @current_profile.fname}, :classes => 'bip_edit_field', :place_holder => 'Click to edit First Name', :ok_button => 'Save', :cancel_button => 'Cancel', :ok_button => 'Save', :cancel_button => 'Cancel', :as => :input %>
@@ -49,6 +61,10 @@
       <%= best_in_place @current_profile, :billing_country, :data => {:profile_fname => @current_profile.billing_phone}, :classes => 'bip_edit_field', :place_holder => 'Click to edit Billing Country', :ok_button => 'Save', :cancel_button => 'Cancel', :as => :input %>
     </div>
   </div>
+  <%= link_to("Delete Profile", 
+     user_registration_path(@current_user.id), 
+    method: :delete, 
+    data: {confirm: "Are you sure you want to permanently delete your profile and your question/response history?"}) %>
 </div> <!-- END CONTENT_CONTAINER  -->
 
 
