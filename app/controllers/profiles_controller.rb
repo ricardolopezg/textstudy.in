@@ -34,15 +34,6 @@ class ProfilesController < ApplicationController
     end
   end
 
-  def destroy
-    @current_user = User.find(params[:id])
-
-    if @current_user.destroy
-      redirect_to root_url, notice: "User deleted."
-      # redirect_to home_index_path, notice: "User deleted."
-    end
-  end
-
 
 private
   def profile_params

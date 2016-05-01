@@ -103,12 +103,43 @@ $topbar-height: 4em;
 }
 
 .profile_show_header {
-  margin: 1em 0 6em;
+  margin: 1em 0 2em;
 }
 
 .image_upload {
-  
+
 }
+
+#settings-tabs {
+  a {
+    margin: 0.25em 0 0;
+    font-size: $font_size_p;
+    text-align: center;
+    background-color: #fff;
+    color: $color_grey;
+    text-decoration: none;
+  }
+  a:visited, a:focus, a:hover, a:active {
+    border-bottom: solid 2px $color_blue_light;
+    color: $color_blue_light;
+  }
+}
+
+#panel_billing {
+  border-right: 1px solid black;
+}
+
+
+#panel_profile {
+  background-color: #fff;
+  margin: 1em 0 0;
+  padding-top: 4em;
+}
+
+#panel_login {
+  padding: 0 13em 6em;
+}
+
 
 
 
