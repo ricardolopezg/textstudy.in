@@ -32,7 +32,7 @@
           </div>
         </div>
         <div class="six columns">
-          <%= best_in_place @current_profile, :fname, :data => {:profile_fname => @current_profile.fname}, :classes => 'bip_edit_field', :place_holder => 'Click to edit First Name', :ok_button => 'Save', :cancel_button => 'Cancel', :ok_button => 'Save', :cancel_button => 'Cancel', :as => :input %>
+          <%= best_in_place @current_profile, :fname, :data => {:profile_fname => @current_profile.fname}, :classes => 'bip_edit_field', :place_holder => 'Click to edit First Name', :ok_button => 'Save', :cancel_button => 'Cancel', :as => :input %>
         </div>
         <div class="six columns">
           <%= best_in_place @current_profile, :lname, :data => {:profile_fname => @current_profile.lname}, :classes => 'bip_edit_field', :place_holder => 'Click to edit Last Name', :ok_button => 'Save', :cancel_button => 'Cancel', :as => :input %>
@@ -73,7 +73,7 @@
       <div class="tabs-panel" id="panel_login">
         <div class = "row login_sign_up_forms">
           <div class = "tweleve columns">
-            <%= render "devise/registrations/edit_user" %><br><br>
+            <%= render "devise/registrations/logged_in_edit_emailpw" %><br><br>
           </div>
         </div>
       </div>
