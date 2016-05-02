@@ -8,15 +8,15 @@ class SendQuestionsJob
   # run_every 3.days
   run_every 1.day
 
-  # run_at '05:40PM'
-  # run_at '05:41PM'
+  run_at '05:50PM'
+  run_at '05:51PM'
   # run_at '05:42PM'
   # run_at '05:43PM'
   # run_at '05:44PM'
   # run_at '05:45PM'
   # run_at '05:46PM'
-  run_at '05:47PM'
-  run_at '05:48PM'
+  # run_at '05:47PM'
+  # run_at '05:48PM'
   # run_at '05:49PM'
 
   
