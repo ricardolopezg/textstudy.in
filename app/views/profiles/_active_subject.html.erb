@@ -1,0 +1,26 @@
+<% @current_user_subscriptions.each do |s| %>
+    <% if s.active == true %>
+      <article class="subject_card row wide">
+        <div class="row">
+          <div class="five columns">
+            <%= image_tag("us_dept_homeland_security.png", class: "card_image") %>
+          </div>
+          <h4 class="card_title seven columns"><%= @subjects.find(s.subject_id).name + " (" + @subjects.find(s.subject_id).language + ")" %></h4>
+        </div>
+        
+        <div class="row">
+            <h6 class="card_subsection"><%= @subjects.find(s.subject_id).subsection %></h6>
+        </div>
+        <div class="row">
+            <p class="card_content"><%= @subjects.find(s.subject_id).long_description %></p>
+            <!-- active:  -->
+            <!-- <span id="subscription_status_<%= s.id %>"><%= s.active %></span> -->
+            <% if s.active == false %>
+              <h5><%= link_to "Activate", active_subscription_path(s.id), id: "activate_link_#{s.id}", class: "activate_link", method: :patch, remote: true, onClick: "window.location.reload()" %></h5>
+            <% else %>
+              <h5><%= link_to "Deactivate", active_subscription_path(s.id), id: "deactivate_link_#{s.id}", class: "deactivate_link", method: :patch, remote: true, onClick: "window.location.reload()" %></h5>
+          <% end %>
+        </div>
+      </article><br>
+    <% end %>
+  <% end %>

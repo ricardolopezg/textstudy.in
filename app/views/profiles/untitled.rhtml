@@ -1,0 +1,15 @@
+<!-- VALIDATION OF PROFILE INFO -->
+  <% if @current_profile.errors.any? %>
+    <% @current_profile.errors.values.each do |error_message| %>
+      <%= error_message * " " %><br><br>
+    <% end %>
+  <% end %>
+
+  
+
+<!-- VALIDATION OF PROFILE INFO -->
+  <% if @current_user_subscriptions.errors.any? %>
+    <% @current_user_subscriptions.errors.values.each do |error_message| %>
+      <%= error_message * " " %><br><br>
+    <% end %>
+  <% end %>
