@@ -8,8 +8,9 @@ class ProfilesController < ApplicationController
 
   def dashboard
     @current_user = User.find(current_user.id)
-    @responses = Response.where(user_id: @current_user)
+    @responses = Response.where(user_id: @current_user).paginate(page: params[:page], per_page: 4)
   end
+
   
   def subjects
     @subjects = Subject.all
