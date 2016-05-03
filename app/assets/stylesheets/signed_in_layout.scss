@@ -91,7 +91,8 @@ $topbar-height: 4em;
   text-align: right;
   margin-right: 1rem;
   position: fixed;
-  right: 0;
+  // right: 0;
+  left: -8.5em;
   bottom: 0;
   .footer_glyph_buffalo {
     margin: 0 1rem;

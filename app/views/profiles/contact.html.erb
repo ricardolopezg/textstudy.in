@@ -10,39 +10,36 @@
       <li class="accordion-item">
         <!-- The tab title needs role="tab", an href, a unique ID, and aria-controls. -->
         <a href="#panel1d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">How many questions will I receive?</a>
-        <!-- The content pane needs an ID that matches the above href, role="tabpanel", data-tab-content, and aria-labelledby. -->
         <p id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
           Five questions per day.
         </p>
       </li>
       <li class="accordion-item">
-        <!-- The tab title needs role="tab", an href, a unique ID, and aria-controls. -->
+        <a href="#panel1d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">Why are some of my responses blank in my dashboard?</a>
+        <p id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
+          That's because you didn't get around to answering the question before the following question was sent to you. When we send you a question, you have a couple of hours to respond. Make sure to answer all of your questions for your own benefit! 
+        </p>
+      </li>
+      <li class="accordion-item">
         <a href="#panel1d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">Can I stop receiving questions for a day or two?</a>
-        <!-- The content pane needs an ID that matches the above href, role="tabpanel", data-tab-content, and aria-labelledby. -->
         <p id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
           Head on over to the <a href="/profiles/<%= current_user.profile.id %>/subjects" style="border: none; text-transform: lowercase;">subjects page</a> and deactivate your active subject. When you are ready to begin receiving questions again, simply activate the subject again.
         </p>
       </li>
       <li class="accordion-item">
-        <!-- The tab title needs role="tab", an href, a unique ID, and aria-controls. -->
         <a href="#panel1d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">Can I select more than one subject?</a>
-        <!-- The content pane needs an ID that matches the above href, role="tabpanel", data-tab-content, and aria-labelledby. -->
         <p id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
           You can only select one subject at a time, but you have the freedom to switch subjects at any time.
         </p>
       </li>
       <li class="accordion-item">
-        <!-- The tab title needs role="tab", an href, a unique ID, and aria-controls. -->
         <a href="#panel1d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">Will you offer more subjects?</a>
-        <!-- The content pane needs an ID that matches the above href, role="tabpanel", data-tab-content, and aria-labelledby. -->
         <p id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
           We are always working on updating our current questions and adding more subjects to offer.
         </p>
       </li>
       <li class="accordion-item">
-        <!-- The tab title needs role="tab", an href, a unique ID, and aria-controls. -->
         <a href="#panel1d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">I have a big exam I am studying for. Can you add it to the list of subjects offered?</a>
-        <!-- The content pane needs an ID that matches the above href, role="tabpanel", data-tab-content, and aria-labelledby. -->
         <p id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
           Glad to hear you would like to use textSTUDY for your exam! Depending on the scope of the material, we could consider adding your subject for all members. Send us a message below with your request. 
         </p>

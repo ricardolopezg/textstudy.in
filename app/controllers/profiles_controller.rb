@@ -7,6 +7,8 @@ class ProfilesController < ApplicationController
   end
 
   def dashboard
+    @current_user = User.find(current_user.id)
+    @responses = Response.where(user_id: @current_user)
   end
   
   def subjects
