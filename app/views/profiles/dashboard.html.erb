@@ -7,17 +7,17 @@
   <table class="eleven columns">
     <thead>
       <tr class="row table_header">
-        <th><%= link_to "Date", sort: "created_at" %></th>
-        <th><%= link_to "Subject", sort: "name" %></th>
-        <th><%= link_to "Subsection", sort: "subsection" %></th>
-        <th><%= link_to "Question", sort: "body" %></th>
-        <th><%= link_to "Response", sort: "user_response" %></th>
-        <th><%= link_to "Status", sort: "response_status" %></th>
-        <th><%= link_to "Explanation", sort: "explanation" %></th>
+        <th>Date</th>
+        <th>Subject</th>
+        <th>Subsection</th>
+        <th>Question</th>
+        <th>Response</th>
+        <th>Status</th>
+        <th>Explanation</th>
       </tr>
     </thead>
     <tbody>
-      <% @responses.reverse_each do |r| %>
+      <% @responses.each do |r| %>
         <tr class="row table_data">
           <td><%= r.created_at.strftime("%b %d, %Y") %></td>
           <td><%= Subject.find(Question.find(r.question_id).subject_id).name %></td>
@@ -32,7 +32,7 @@
       <% end %>
     </tbody>
   </table>
-  <p class="twelve columns"><%= will_paginate @responses %></p>
+  <p class="twelve columns"><%= will_paginate @responses, inner_window: 2%></p>
   
 
   <div = class="row">
