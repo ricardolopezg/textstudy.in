@@ -1,18 +1,50 @@
 if (<%= @subscription.errors.any? %>) {
   // console.log('there was a problem')
-  alert('Only one subscription may be active. Please deactivate your current subscription before selecting a new one.')
+  // alert(' ')
   // <% @subscription.errors.values.each do |error_message| %>
     // <%= error_message * " xxxx" %><br><br>
   // <% end %>
+  swal({ 
+    title: "Only one subject may be active.", 
+    text: "Please deactivate your current subject before selecting a new one.", 
+    type: "error", 
+    allowEscapeKey: false, 
+    confirmButtonText: "Got it" 
+  });
+
+
 
 } else {
   // console.log('all good')
   if (<%= @subscription.active %>) {
     $("#activate_link_<%= @subscription.id %>").text("Deactivate")
+    swal({ 
+      title: "Awesome! You will begin receiving questions for this subject shortly.", 
+      text: "Study hard!", 
+      type: "success",
+      allowEscapeKey: false, 
+      confirmButtonText: "Sweet"
+    },  function(isConfirm) {
+          if (isConfirm) { 
+            window.scrollTo(0, 0);
+            window.location.reload();
+          } 
+    });
   } else {
     $("#deactivate_link_<%= @subscription.id %>").text("Activate")    
+    swal({ 
+      title: "You deactivated the subject.", 
+      text: "To continue receiving questions, please select another subject.", 
+      type: "success", 
+      allowEscapeKey: false, 
+      confirmButtonText: "Ok"
+    },  function(isConfirm) {
+          if (isConfirm) { 
+            window.scrollTo(0, 0);
+            window.location.reload();
+          }  
+    });
   }
-  window.location.reload();
 }
 
 
