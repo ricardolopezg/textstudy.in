@@ -16,9 +16,9 @@
             <!-- active:  -->
             <!-- <span id="subscription_status_<%= s.id %>"><%= s.active %></span> -->
             <% if s.active == false %>
-              <h5><%= link_to "Activate", active_subscription_path(s.id), id: "activate_link_#{s.id}", class: "activate_link", method: :patch, remote: true, onClick: "window.location.reload()" %></h5>
+              <h5><%= link_to "Activate", active_subscription_path(s.id), id: "activate_link_#{s.id}", class: "activate_link", method: :patch, remote: true %></h5>
             <% else %>
-              <h5><%= link_to "Deactivate", active_subscription_path(s.id), id: "deactivate_link_#{s.id}", class: "deactivate_link", method: :patch, remote: true, onClick: "window.location.reload()" %></h5>
+              <h5><%= link_to "Deactivate", active_subscription_path(s.id), id: "deactivate_link_#{s.id}", class: "deactivate_link", method: :patch, remote: true %></h5>
           <% end %>
         </div>
       </article><br>

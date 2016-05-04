@@ -7,9 +7,16 @@
 
   
 
-<!-- VALIDATION OF PROFILE INFO -->
   <% if @current_user_subscriptions.errors.any? %>
     <% @current_user_subscriptions.errors.values.each do |error_message| %>
+      <%= error_message * " " %><br><br>
+    <% end %>
+  <% end %>
+
+
+
+  <% if @subscription.errors.any? %>
+    <% @subscription.errors.values.each do |error_message| %>
       <%= error_message * " " %><br><br>
     <% end %>
   <% end %>

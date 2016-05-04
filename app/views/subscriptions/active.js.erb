@@ -1,6 +1,24 @@
-  $("#subscription_status_<%= @subscription.id %>").html("<%= @subscription.active %>");
-  $("#activate_link_<%= @subscription.id %>").html("<%= @active_status %>")
-  $("#deactivate_link_<%= @subscription.id %>").html("<%= @other_status %>")
+if (<%= @subscription.errors.any? %>) {
+  // console.log('there was a problem')
+  alert('Only one subscription may be active. Please deactivate your current subscription before selecting a new one.')
+  // <% @subscription.errors.values.each do |error_message| %>
+    // <%= error_message * " xxxx" %><br><br>
+  // <% end %>
+
+} else {
+  // console.log('all good')
+  if (<%= @subscription.active %>) {
+    $("#activate_link_<%= @subscription.id %>").text("Deactivate")
+  } else {
+    $("#deactivate_link_<%= @subscription.id %>").text("Activate")    
+  }
+  window.location.reload();
+}
+
+
+  // $("#subscription_status_<%= @subscription.id %>").html("<%= @subscription.active %>");
+  // $("#activate_link_<%= @subscription.id %>").html("<%= @active_status %>")
+  // $("#deactivate_link_<%= @subscription.id %>").html("<%= @other_status %>")
 
 
 
