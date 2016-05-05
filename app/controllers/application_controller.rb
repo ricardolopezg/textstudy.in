@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
   def after(email)
     #temporarily store ticket in session
     session[:ticket] = get_auth_ticket(email)
+    # subjects_profile_path(current_user.profile.id)
     # dashboard_profile_path(current_user.profile.id)
     profile_path(current_user.profile.id)
   end
