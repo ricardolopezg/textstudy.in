@@ -3,8 +3,10 @@
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  post "/subscription/send_sms_questions" => "subscription#send_sms_questions"
+  # post "/subscription/send_sms_questions" => "subscription#send_sms_questions"
+  # post "/send_email/send_simple_message" => "send_email#send_simple_message"
   get "/receive_texts/response_message" => "receive_texts#response_message"
+  # post "/receive_texts/response_message" => "receive_texts#response_message"
   get "/receive_texts/logs" => "receive_texts#logs"
   post "/receive_texts/response_message.xml.erb" => "receive_texts#response_message.xml.erb"
   

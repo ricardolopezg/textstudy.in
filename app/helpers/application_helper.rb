@@ -16,7 +16,7 @@ module ApplicationHelper
 
   def logo_nav_link
     content_tag :a do
-      link_to "textSTUDY", root_path, class: "logo_nav_link"      
+      link_to "TEXT PREP", root_path, class: "logo_nav_link"      
     end    
   end
 

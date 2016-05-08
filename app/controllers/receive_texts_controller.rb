@@ -43,10 +43,13 @@ class ReceiveTextsController < ApplicationController
     end
 
     # render makes response happen
-    render 'response_message.xml.erb', :content_type => 'text/xml'
+    render text: @twiml.text
+    # render 'response_message.xml.erb'
+    # render 'response_message.xml.erb', :content_type => 'text/xml'
     # render 'response_message.xml.erb', :content_type => 'text/html'
     # render 'response_message.xml.erb', :content_type => 'text/plain'
   end
+
 
 
    
