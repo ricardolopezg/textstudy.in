@@ -30,6 +30,16 @@
   }
 }
 
+.contact_email {
+  font-size: $font_size_p;
+  a {
+    color: $color_grey;
+    text-decoration: none;
+  }
+  a:hover {
+    border-bottom: solid 2px $color_blue_light;
+  }
+}
 
 
 /* Bigger than 750 */
