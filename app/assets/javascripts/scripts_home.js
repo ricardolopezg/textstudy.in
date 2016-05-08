@@ -18,7 +18,7 @@ $(document).ready(function() {
   $(".subjects_nav_link_else").on("click", function() {
     setTimeout(function() {
       $("html, body").animate({
-        scrollTop: $(".subjects_scroll").offset().top - 40
+        scrollTop: $(".subjects_scroll").offset().top - 80
       }, 1000);
     }, 1000);
   }) 
@@ -45,7 +45,7 @@ $(document).ready(function() {
   $(".process_nav_link").on("click", function(e) {
     e.preventDefault();
     $("html, body").animate({
-      scrollTop: $(".process_scroll").offset().top - 60
+      scrollTop: $(".process_scroll").offset().top - 40
     }, 1000);
     })
 
@@ -58,6 +58,20 @@ $(document).ready(function() {
   }) 
 
 
+  $(".faq_nav_link").on("click", function(e) {
+    e.preventDefault();
+    $("html, body").animate({
+      scrollTop: $(".faq_scroll").offset().top
+    }, 1000);
+    })
+
+  $(".faq_nav_link_else").on("click", function() {
+    setTimeout(function() {
+      $("html, body").animate({
+        scrollTop: $(".faq_scroll").offset().top
+      }, 1000);
+    }, 1000);
+  }) 
 
 
 $(".contact_nav_link").on("click", function(e) {
@@ -70,7 +84,7 @@ $(".contact_nav_link").on("click", function(e) {
 $(".contact_nav_link_else").on("click", function() {
     setTimeout(function() {
       $("html, body").animate({
-        scrollTop: $(".contact_scroll").offset().top - 40
+        scrollTop: $(".contact_scroll").offset().top
       }, 1000);
     }, 1000);
   }) 

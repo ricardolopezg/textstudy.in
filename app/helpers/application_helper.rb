@@ -20,11 +20,6 @@ module ApplicationHelper
     end    
   end
 
-  def blog_nav_link
-    content_tag :a do
-      link_to "BLOG", "#", class: "blog_nav_link"
-    end    
-  end
   
   def register_nav_link
     content_tag :a do
@@ -44,6 +39,18 @@ module ApplicationHelper
     end    
   end
  
+  def faq_nav_link
+    content_tag :a do
+      link_to "FAQ's", "", class: "faq_nav_link"
+    end    
+  end
+  
+  def faq_nav_link_else
+    content_tag :a do
+      link_to "FAQ's", root_path, class: "faq_nav_link_else"
+    end    
+  end
+
   def process_nav_link
     content_tag :a do
       link_to "PROCESS", "", class: "process_nav_link"      
