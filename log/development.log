@@ -4988,3 +4988,473 @@ ActionController::RoutingError (No route matches [GET] "/profiles/assets/img/gen
   Rendered /Users/RicardoMacbookAir/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (19.8ms)
   Rendered /Users/RicardoMacbookAir/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.6ms)
   Rendered /Users/RicardoMacbookAir/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (510.9ms)
+  [1m[36mSubscription Load (0.8ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."active" = ?[0m  [["active", "t"]]
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 37]]
+  [1m[36mProfile Load (0.7ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 37]]
+  [1m[35mProfile Load (0.3ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."mobile_phone" = ?  ORDER BY "profiles"."id" ASC LIMIT 1  [["mobile_phone", "+19174179542"]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ?[0m  [["user_id", 37]]
+  [1m[35mQuestion Load (0.8ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."subject_id" IN (3, 5)
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["body", "New York, Pennsylvannia and Tennessee are all part of the 13 original states.\n1) True\n2) False"]]
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["body", "New York, Pennsylvannia and Tennessee are all part of the 13 original states.\n1) True\n2) False"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "responses" ("user_id", "to_number", "from_number", "question_id", "question_version", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 37], ["to_number", "+19174179542"], ["from_number", "MG89b716912976a1764a6e2baafede385c"], ["question_id", 31], ["question_version", "rev. 02/16"], ["created_at", "2016-05-08 02:27:28.985727"], ["updated_at", "2016-05-08 02:27:28.985727"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mSubscription Load (11.5ms)[0m  SELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."active" = ?  [["active", "t"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 37]]
+  [1m[35mProfile Load (0.2ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 37]]
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."mobile_phone" = ?  ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["mobile_phone", "+19174179542"]]
+  [1m[35mSubscription Load (0.2ms)[0m  SELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ?  [["user_id", 37]]
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" IN (3, 5)[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["body", "How many U.S. Senators are there?\n1) Fifty (50)\n2) One hundred (100)\n3) One hundred and fifty (150)\n4) Two hundred (200)"]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["body", "How many U.S. Senators are there?\n1) Fifty (50)\n2) One hundred (100)\n3) One hundred and fifty (150)\n4) Two hundred (200)"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "responses" ("user_id", "to_number", "from_number", "question_id", "question_version", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 37], ["to_number", "+19174179542"], ["from_number", "MG89b716912976a1764a6e2baafede385c"], ["question_id", 28], ["question_version", "rev. 02/16"], ["created_at", "2016-05-08 02:27:38.194359"], ["updated_at", "2016-05-08 02:27:38.194359"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+
+
+Started GET "/receive_texts/response_message?ToCountry=US&ToState=NY&SmsMessageSid=SMae05ac5260f39f1a4141b9dc993e9482&NumMedia=0&ToCity=&FromZip=10010&SmsSid=SMae05ac5260f39f1a4141b9dc993e9482&FromState=NY&SmsStatus=received&FromCity=NEW+YORK&Body=1&FromCountry=US&To=%2B16467604553&MessagingServiceSid=MG89b716912976a1764a6e2baafede385c&ToZip=&NumSegments=1&MessageSid=SMae05ac5260f39f1a4141b9dc993e9482&AccountSid=AC28c2b599fdb837e71fae600c97314141&From=%2B19174179542&ApiVersion=2010-04-01" for 54.82.224.150 at 2016-05-07 22:27:48 -0400
+Cannot render console from 54.82.224.150! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ReceiveTextsController#response_message as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"NY", "SmsMessageSid"=>"SMae05ac5260f39f1a4141b9dc993e9482", "NumMedia"=>"0", "ToCity"=>"", "FromZip"=>"10010", "SmsSid"=>"SMae05ac5260f39f1a4141b9dc993e9482", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"1", "FromCountry"=>"US", "To"=>"+16467604553", "MessagingServiceSid"=>"MG89b716912976a1764a6e2baafede385c", "ToZip"=>"", "NumSegments"=>"1", "MessageSid"=>"SMae05ac5260f39f1a4141b9dc993e9482", "AccountSid"=>"AC28c2b599fdb837e71fae600c97314141", "From"=>"+19174179542", "ApiVersion"=>"2010-04-01"}
+  [1m[35mResponse Load (0.8ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["id", 28]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["body", "How many U.S. Senators are there?\n1) Fifty (50)\n2) One hundred (100)\n3) One hundred and fifty (150)\n4) Two hundred (200)"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["body", "How many U.S. Senators are there?\n1) Fifty (50)\n2) One hundred (100)\n3) One hundred and fifty (150)\n4) Two hundred (200)"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "responses" SET "user_response" = ?, "response_status" = ?, "updated_at" = ? WHERE "responses"."id" = ?[0m  [["user_response", "1"], ["response_status", "Wrong"], ["updated_at", "2016-05-08 02:27:48.950317"], ["id", 351]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  Rendered text template (0.0ms)
+Completed 200 OK in 112ms (Views: 13.7ms | ActiveRecord: 5.2ms)
+  [1m[36mSubscription Load (5.8ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."active" = ?[0m  [["active", "t"]]
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 37]]
+  [1m[36mProfile Load (0.9ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 37]]
+  [1m[35mProfile Load (0.5ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."mobile_phone" = ?  ORDER BY "profiles"."id" ASC LIMIT 1  [["mobile_phone", "+19174179542"]]
+  [1m[36mSubscription Load (0.3ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ?[0m  [["user_id", 37]]
+  [1m[35mQuestion Load (2.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."subject_id" IN (3, 5)
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["body", "New York, Pennsylvannia and Tennessee are all part of the 13 original states.\n1) True\n2) False"]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["body", "New York, Pennsylvannia and Tennessee are all part of the 13 original states.\n1) True\n2) False"]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "responses" ("user_id", "to_number", "from_number", "question_id", "question_version", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 37], ["to_number", "+19174179542"], ["from_number", "MG89b716912976a1764a6e2baafede385c"], ["question_id", 31], ["question_version", "rev. 02/16"], ["created_at", "2016-05-08 02:28:59.470758"], ["updated_at", "2016-05-08 02:28:59.470758"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mSubscription Load (1.6ms)[0m  SELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."active" = ?  [["active", "t"]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 37]]
+  [1m[35mProfile Load (0.3ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 37]]
+  [1m[36mProfile Load (0.3ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."mobile_phone" = ?  ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["mobile_phone", "+19174179542"]]
+  [1m[35mSubscription Load (0.3ms)[0m  SELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ?  [["user_id", 37]]
+  [1m[36mQuestion Load (1.1ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" IN (3, 5)[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["body", "Who is the Commander in Chief of the military?\n1) The President\n2) The General\n3) The Lieutenant\n4) The Colonol"]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["body", "Who is the Commander in Chief of the military?\n1) The President\n2) The General\n3) The Lieutenant\n4) The Colonol"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "responses" ("user_id", "to_number", "from_number", "question_id", "question_version", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 37], ["to_number", "+19174179542"], ["from_number", "MG89b716912976a1764a6e2baafede385c"], ["question_id", 30], ["question_version", "rev. 02/16"], ["created_at", "2016-05-08 02:29:11.929965"], ["updated_at", "2016-05-08 02:29:11.929965"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+
+
+Started GET "/receive_texts/response_message?ToCountry=US&ToState=NY&SmsMessageSid=SMd98d461dbff96b9b9a5c9ce432455bc4&NumMedia=0&ToCity=&FromZip=10010&SmsSid=SMd98d461dbff96b9b9a5c9ce432455bc4&FromState=NY&SmsStatus=received&FromCity=NEW+YORK&Body=4&FromCountry=US&To=%2B16467604553&MessagingServiceSid=MG89b716912976a1764a6e2baafede385c&ToZip=&NumSegments=1&MessageSid=SMd98d461dbff96b9b9a5c9ce432455bc4&AccountSid=AC28c2b599fdb837e71fae600c97314141&From=%2B19174179542&ApiVersion=2010-04-01" for 54.243.17.130 at 2016-05-07 22:29:25 -0400
+Cannot render console from 54.243.17.130! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReceiveTextsController#response_message as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"NY", "SmsMessageSid"=>"SMd98d461dbff96b9b9a5c9ce432455bc4", "NumMedia"=>"0", "ToCity"=>"", "FromZip"=>"10010", "SmsSid"=>"SMd98d461dbff96b9b9a5c9ce432455bc4", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"4", "FromCountry"=>"US", "To"=>"+16467604553", "MessagingServiceSid"=>"MG89b716912976a1764a6e2baafede385c", "ToZip"=>"", "NumSegments"=>"1", "MessageSid"=>"SMd98d461dbff96b9b9a5c9ce432455bc4", "AccountSid"=>"AC28c2b599fdb837e71fae600c97314141", "From"=>"+19174179542", "ApiVersion"=>"2010-04-01"}
+  [1m[36mResponse Load (1.4ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35mQuestion Load (0.7ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["id", 30]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["body", "Who is the Commander in Chief of the military?\n1) The President\n2) The General\n3) The Lieutenant\n4) The Colonol"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["id", 30]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["body", "Who is the Commander in Chief of the military?\n1) The President\n2) The General\n3) The Lieutenant\n4) The Colonol"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36m (2.9ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "responses" SET "user_response" = ?, "response_status" = ?, "updated_at" = ? WHERE "responses"."id" = ?  [["user_response", "4"], ["response_status", "Wrong"], ["updated_at", "2016-05-08 02:29:25.877851"], ["id", 353]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 58ms (Views: 2.8ms | ActiveRecord: 6.9ms)
+
+
+Started DELETE "/users/sign_out" for 24.103.3.36 at 2016-05-07 22:40:35 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xnOtrNMkhLg/7wCBAV7t+PObMCQZYmcnH6jVdXPbsJLtG0jgTeNgsLTareR+N+toH2juxGQMkVgq8i3XsbHuFg=="}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 37]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://32077d3b.ngrok.io/
+Completed 302 Found in 77ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 24.103.3.36 at 2016-05-07 22:40:36 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1262.3ms)
+  Rendered layouts/_home_nav.html.erb (16.6ms)
+Completed 200 OK in 1947ms (Views: 1944.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/phone_screen7-c1ba4f51c0ba7924bcf111965911aa32e9cd4fe941b34bc1bfd711e7d0141cb2.png" for 24.103.3.36 at 2016-05-07 22:40:39 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phone_screen8-a3a385fedac7a6c0f8308bdc90162aa16cafeb4e51fb4854cc61f25b9cc8f64d.png" for 24.103.3.36 at 2016-05-07 22:40:39 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/values-bg.jpg" for 24.103.3.36 at 2016-05-07 22:40:40 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mSubscription Load (3.5ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."active" = ?[0m  [["active", "t"]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 37]]
+  [1m[36mProfile Load (0.8ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 37]]
+  [1m[35mProfile Load (0.3ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."mobile_phone" = ?  ORDER BY "profiles"."id" ASC LIMIT 1  [["mobile_phone", "+19174179542"]]
+  [1m[36mSubscription Load (0.2ms)[0m  [1mSELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ?[0m  [["user_id", 37]]
+  [1m[35mQuestion Load (1.6ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."subject_id" IN (3, 5)
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["body", "What stops one branch of government from becoming too powerful?\n1) Separation of concerns \n2) Separation of powers \n3) Donald Trump\n4) Bananas "]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["body", "What stops one branch of government from becoming too powerful?\n1) Separation of concerns \n2) Separation of powers \n3) Donald Trump\n4) Bananas "]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "responses" ("user_id", "to_number", "from_number", "question_id", "question_version", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["user_id", 37], ["to_number", "+19174179542"], ["from_number", "MG89b716912976a1764a6e2baafede385c"], ["question_id", 24], ["question_version", "rev. 02/16"], ["created_at", "2016-05-08 02:41:05.144781"], ["updated_at", "2016-05-08 02:41:05.144781"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/receive_texts/response_message?ToCountry=US&ToState=NY&SmsMessageSid=SM123ea7c27e100dfd7eab748a78c557a3&NumMedia=0&ToCity=&FromZip=10010&SmsSid=SM123ea7c27e100dfd7eab748a78c557a3&FromState=NY&SmsStatus=received&FromCity=NEW+YORK&Body=1&FromCountry=US&To=%2B16467604553&MessagingServiceSid=MG89b716912976a1764a6e2baafede385c&ToZip=&NumSegments=1&MessageSid=SM123ea7c27e100dfd7eab748a78c557a3&AccountSid=AC28c2b599fdb837e71fae600c97314141&From=%2B19174179542&ApiVersion=2010-04-01" for 54.87.233.196 at 2016-05-07 22:41:39 -0400
+Cannot render console from 54.87.233.196! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReceiveTextsController#response_message as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"NY", "SmsMessageSid"=>"SM123ea7c27e100dfd7eab748a78c557a3", "NumMedia"=>"0", "ToCity"=>"", "FromZip"=>"10010", "SmsSid"=>"SM123ea7c27e100dfd7eab748a78c557a3", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"1", "FromCountry"=>"US", "To"=>"+16467604553", "MessagingServiceSid"=>"MG89b716912976a1764a6e2baafede385c", "ToZip"=>"", "NumSegments"=>"1", "MessageSid"=>"SM123ea7c27e100dfd7eab748a78c557a3", "AccountSid"=>"AC28c2b599fdb837e71fae600c97314141", "From"=>"+19174179542", "ApiVersion"=>"2010-04-01"}
+  [1m[36mResponse Load (1.8ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35mQuestion Load (0.7ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["id", 24]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["body", "What stops one branch of government from becoming too powerful?\n1) Separation of concerns \n2) Separation of powers \n3) Donald Trump\n4) Bananas "]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["id", 24]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["body", "What stops one branch of government from becoming too powerful?\n1) Separation of concerns \n2) Separation of powers \n3) Donald Trump\n4) Bananas "]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "responses" SET "user_response" = ?, "response_status" = ?, "updated_at" = ? WHERE "responses"."id" = ?  [["user_response", "1"], ["response_status", "Wrong"], ["updated_at", "2016-05-08 02:41:39.337906"], ["id", 354]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  Rendered text template (0.3ms)
+Completed 200 OK in 79ms (Views: 6.7ms | ActiveRecord: 5.7ms)
+  [1m[35mSubscription Load (3.5ms)[0m  SELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."active" = ?  [["active", "t"]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 37]]
+  [1m[35mProfile Load (1.0ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 37]]
+  [1m[36mProfile Load (0.4ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."mobile_phone" = ?  ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["mobile_phone", "+19174179542"]]
+  [1m[35mSubscription Load (0.3ms)[0m  SELECT "subscriptions".* FROM "subscriptions" WHERE "subscriptions"."user_id" = ?  [["user_id", 37]]
+  [1m[36mQuestion Load (1.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."subject_id" IN (3, 5)[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["body", "What is an amendment?\n1) A change to the Constitution\n2) A change to your recipe list\n3) A change to voting\n4) Changing your license"]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["body", "What is an amendment?\n1) A change to the Constitution\n2) A change to your recipe list\n3) A change to voting\n4) Changing your license"]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "responses" ("user_id", "to_number", "from_number", "question_id", "question_version", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 37], ["to_number", "+19174179542"], ["from_number", "MG89b716912976a1764a6e2baafede385c"], ["question_id", 25], ["question_version", "rev. 02/16"], ["created_at", "2016-05-08 02:41:49.617769"], ["updated_at", "2016-05-08 02:41:49.617769"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+
+
+Started GET "/receive_texts/response_message?ToCountry=US&ToState=NY&SmsMessageSid=SM4694ada71817496ef419caec29ee34d4&NumMedia=0&ToCity=&FromZip=10010&SmsSid=SM4694ada71817496ef419caec29ee34d4&FromState=NY&SmsStatus=received&FromCity=NEW+YORK&Body=1&FromCountry=US&To=%2B16467604553&MessagingServiceSid=MG89b716912976a1764a6e2baafede385c&ToZip=&NumSegments=1&MessageSid=SM4694ada71817496ef419caec29ee34d4&AccountSid=AC28c2b599fdb837e71fae600c97314141&From=%2B19174179542&ApiVersion=2010-04-01" for 52.91.220.100 at 2016-05-07 22:42:05 -0400
+Cannot render console from 52.91.220.100! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ReceiveTextsController#response_message as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"NY", "SmsMessageSid"=>"SM4694ada71817496ef419caec29ee34d4", "NumMedia"=>"0", "ToCity"=>"", "FromZip"=>"10010", "SmsSid"=>"SM4694ada71817496ef419caec29ee34d4", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"1", "FromCountry"=>"US", "To"=>"+16467604553", "MessagingServiceSid"=>"MG89b716912976a1764a6e2baafede385c", "ToZip"=>"", "NumSegments"=>"1", "MessageSid"=>"SM4694ada71817496ef419caec29ee34d4", "AccountSid"=>"AC28c2b599fdb837e71fae600c97314141", "From"=>"+19174179542", "ApiVersion"=>"2010-04-01"}
+  [1m[35mResponse Load (2.9ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mQuestion Load (0.7ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["id", 25]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["body", "What is an amendment?\n1) A change to the Constitution\n2) A change to your recipe list\n3) A change to voting\n4) Changing your license"]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ?  ORDER BY "questions"."id" ASC LIMIT 1  [["id", 25]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."body" = ?  ORDER BY "questions"."id" ASC LIMIT 1[0m  [["body", "What is an amendment?\n1) A change to the Constitution\n2) A change to your recipe list\n3) A change to voting\n4) Changing your license"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1  [["to_number", "+19174179542"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "responses".* FROM "responses" WHERE "responses"."to_number" = ?  ORDER BY "responses"."id" DESC LIMIT 1[0m  [["to_number", "+19174179542"]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "responses" SET "user_response" = ?, "response_status" = ?, "updated_at" = ? WHERE "responses"."id" = ?[0m  [["user_response", "1"], ["response_status", "Correct"], ["updated_at", "2016-05-08 02:42:05.785462"], ["id", 355]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  Rendered text template (0.1ms)
+Completed 200 OK in 77ms (Views: 4.1ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 24.103.3.36 at 2016-05-07 22:46:51 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (376.8ms)
+  Rendered layouts/_home_nav.html.erb (5.7ms)
+Completed 200 OK in 1021ms (Views: 1009.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/chartkick.self-a2b3d6d094c53ae10177ddc507b4c2ed63c8396678bc1bd2003aa59f19b79f30.js?body=1" for 24.103.3.36 at 2016-05-07 22:46:53 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 24.103.3.36 at 2016-05-07 22:46:53 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dashboard.self-041622de81366185e5276b18900d23ccc48504aa0add61a56a34e847a5f1cc8f.css?body=1" for 24.103.3.36 at 2016-05-07 22:46:53 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/_default_styles.self-c87f1c3882c983f7a8de56617546b561cbd4e3c7d847e4ee1abb443a19eddffe.css?body=1" for 24.103.3.36 at 2016-05-07 22:46:53 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-10cb790ec3e742d0d2a851daa5b32a24dd1c9fe4940ffa653ea9759c0f5ac48a.css?body=1" for 24.103.3.36 at 2016-05-07 22:46:53 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/profiles.self-f095908dff8c411cc6f82fdcd019caf70b09bb402c7795ce14d9e779b9fa594c.css?body=1" for 24.103.3.36 at 2016-05-07 22:46:53 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/receive_texts.self-c87f1c3882c983f7a8de56617546b561cbd4e3c7d847e4ee1abb443a19eddffe.css?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/layout.self-69a769f29239dde556a3eaa4d39406ee7c74c2d7582f13e33f2014a1e7d1e88f.css?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/contact.self-ae13655386059e2d6fd2588bf344326fcb0c82c3642dbc967450a393cd01addb.css?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/signed_in_layout.self-2878efe604225b9ebad07a9f3819a6c3a6875b22ec4a159b6cde0343b5aead99.css?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sinch.self-c87f1c3882c983f7a8de56617546b561cbd4e3c7d847e4ee1abb443a19eddffe.css?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/subscriptions.self-fbe2193d80e7626655c46d39137dd2932a1325948a0c416cc1e42895ee3f54ca.css?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/skeleton.self-f691e4dadf6eb769895ea39cd4e79b7e75eeca704bfc3e46f89fca2e7ae4879c.css?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sweetalert.self-66c10544e24434f0d5a98ac1c3e9992e59ddafb371bf377b5f99d14c0dbb4ea5.css?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/best_in_place.self-ef93f4d2b932bcd1e6a5160e7e2cfec71c92911751b537f402e293113595e104.js?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/profiles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/profile.self-542ee14bd863d93dbae7a1ab94680baf939b3cbdbed7ceb35e2c8cbe82b16a8b.js?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/receive_texts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.autosize.self-208a4ea73c22b3517889027ffae7a076a0c5b4c38e4b595639979f10ada2ebe4.js?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sinch.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scripts_home.self-376e014abc68bf3a92545f8f2a643f136fa74e601aaa682cde76123bee427bfb.js?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sinch.min.self-dc64d310d617e22495ba795840bd0d3fac55ac1fa4dd8495cc902b2991b422ed.js?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sweetalert.min.self-f1de35952d4e269b45e3a6c390445bf2a3b4b643b69a5de4bb63790e7ca1d1b9.js?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 24.103.3.36 at 2016-05-07 22:46:54 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phone_screen7-94ab7cbdf86dbbb68c31ed6b1bbb1df1b378c8c201130d711b287c71302e1441.png" for 24.103.3.36 at 2016-05-07 22:46:55 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phone_screen8-a3a385fedac7a6c0f8308bdc90162aa16cafeb4e51fb4854cc61f25b9cc8f64d.png" for 24.103.3.36 at 2016-05-07 22:46:55 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nyc_glyph-c227a48500a2fd85e92c2ad6d940118d50713add956159ae8a7d54926b7a2c6d.png" for 24.103.3.36 at 2016-05-07 22:46:55 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/us_dept_homeland_security-32fe054b1bfb69944661e0f18b8fbd8057b92f3303eab87f00cc08bfb8c3a44c.png" for 24.103.3.36 at 2016-05-07 22:46:55 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/values-bg.jpg" for 24.103.3.36 at 2016-05-07 22:46:55 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 24.103.3.36 at 2016-05-07 22:47:31 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (73.7ms)
+  Rendered layouts/_home_nav.html.erb (3.4ms)
+Completed 200 OK in 608ms (Views: 599.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/chartkick.self-a2b3d6d094c53ae10177ddc507b4c2ed63c8396678bc1bd2003aa59f19b79f30.js?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.autosize.self-208a4ea73c22b3517889027ffae7a076a0c5b4c38e4b595639979f10ada2ebe4.js?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/best_in_place.self-ef93f4d2b932bcd1e6a5160e7e2cfec71c92911751b537f402e293113595e104.js?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/_default_styles.self-c87f1c3882c983f7a8de56617546b561cbd4e3c7d847e4ee1abb443a19eddffe.css?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dashboard.self-041622de81366185e5276b18900d23ccc48504aa0add61a56a34e847a5f1cc8f.css?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/contact.self-ae13655386059e2d6fd2588bf344326fcb0c82c3642dbc967450a393cd01addb.css?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-10cb790ec3e742d0d2a851daa5b32a24dd1c9fe4940ffa653ea9759c0f5ac48a.css?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/layout.self-69a769f29239dde556a3eaa4d39406ee7c74c2d7582f13e33f2014a1e7d1e88f.css?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/profiles.self-f095908dff8c411cc6f82fdcd019caf70b09bb402c7795ce14d9e779b9fa594c.css?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/receive_texts.self-c87f1c3882c983f7a8de56617546b561cbd4e3c7d847e4ee1abb443a19eddffe.css?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/signed_in_layout.self-2878efe604225b9ebad07a9f3819a6c3a6875b22ec4a159b6cde0343b5aead99.css?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sinch.self-c87f1c3882c983f7a8de56617546b561cbd4e3c7d847e4ee1abb443a19eddffe.css?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/skeleton.self-f691e4dadf6eb769895ea39cd4e79b7e75eeca704bfc3e46f89fca2e7ae4879c.css?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/subscriptions.self-fbe2193d80e7626655c46d39137dd2932a1325948a0c416cc1e42895ee3f54ca.css?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sweetalert.self-66c10544e24434f0d5a98ac1c3e9992e59ddafb371bf377b5f99d14c0dbb4ea5.css?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/profile.self-542ee14bd863d93dbae7a1ab94680baf939b3cbdbed7ceb35e2c8cbe82b16a8b.js?body=1" for 24.103.3.36 at 2016-05-07 22:47:33 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/profiles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.103.3.36 at 2016-05-07 22:47:34 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/receive_texts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.103.3.36 at 2016-05-07 22:47:34 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scripts_home.self-376e014abc68bf3a92545f8f2a643f136fa74e601aaa682cde76123bee427bfb.js?body=1" for 24.103.3.36 at 2016-05-07 22:47:34 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sinch.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.103.3.36 at 2016-05-07 22:47:34 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sinch.min.self-dc64d310d617e22495ba795840bd0d3fac55ac1fa4dd8495cc902b2991b422ed.js?body=1" for 24.103.3.36 at 2016-05-07 22:47:34 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.103.3.36 at 2016-05-07 22:47:34 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sweetalert.min.self-f1de35952d4e269b45e3a6c390445bf2a3b4b643b69a5de4bb63790e7ca1d1b9.js?body=1" for 24.103.3.36 at 2016-05-07 22:47:34 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 24.103.3.36 at 2016-05-07 22:47:34 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phone_screen8-a3a385fedac7a6c0f8308bdc90162aa16cafeb4e51fb4854cc61f25b9cc8f64d.png" for 24.103.3.36 at 2016-05-07 22:47:34 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/us_dept_homeland_security-32fe054b1bfb69944661e0f18b8fbd8057b92f3303eab87f00cc08bfb8c3a44c.png" for 24.103.3.36 at 2016-05-07 22:47:34 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/nyc_glyph-c227a48500a2fd85e92c2ad6d940118d50713add956159ae8a7d54926b7a2c6d.png" for 24.103.3.36 at 2016-05-07 22:47:34 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/phone_screen7-94ab7cbdf86dbbb68c31ed6b1bbb1df1b378c8c201130d711b287c71302e1441.png" for 24.103.3.36 at 2016-05-07 22:47:34 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/values-bg.jpg" for 24.103.3.36 at 2016-05-07 22:47:34 -0400
+Cannot render console from 24.103.3.36! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
