@@ -8,16 +8,16 @@ class SendQuestionsJob
   # run_every 3.days
   run_every 1.day
 
-  run_at '05:40PM'
-  # run_at '05:41PM'
-  run_at '05:42PM'
-  # run_at '05:43PM'
-  run_at '05:44PM'
-  # run_at '05:45PM'
-  run_at '05:46PM'
-  # run_at '05:47PM'
-  run_at '05:48PM'
-  # run_at '05:49PM'
+  run_at '06:20PM'
+  # run_at '06:21PM'
+  run_at '06:22PM'
+  # run_at '06:23PM'
+  run_at '06:24PM'
+  # run_at '06:25PM'
+  run_at '06:26PM'
+  # run_at '06:27PM'
+  run_at '06:28PM'
+  # run_at '06:29PM'
 
   
   # run_at '12:00AM'
