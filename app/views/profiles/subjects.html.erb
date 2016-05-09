@@ -4,8 +4,10 @@
 
 
   <article class="signed_in_section_header row u-max-full-width">
-    <h4>Active Subject</h4>
-    <p>Your are current receiving questions for this subject.</p>
+    <% if @current_user_subscription_true.count > 0 %>
+      <h4>Active Subject</h4>
+      <p>Your are current receiving questions for this subject.</p>
+    <% end %>
   </article>
 
 <!-- ACTIVE SUBJECT -->
@@ -13,8 +15,12 @@
 
   
   <article class="signed_in_section_header row u-max-full-width">
-    <h4>Choose a New Subject</h4>
-    <p>Review the subject cards below, activate another subject and receive questions regarding that subject.</p>
+    <h4>Choose a Subject</h4>
+    <ol>
+      <li>Review the subject cards</li>
+      <li>&nbsp&nbsp&nbsp&nbsp&nbsp Activate a subject &nbsp&nbsp&nbsp&nbsp&nbsp</li>
+      <li>Receive questions via SMS</li>
+    </ol>
   </article>
 
 
@@ -38,8 +44,9 @@
 
 </div> <!-- END CONTENT_CONTAINER  -->
 
-
+<!-- 
   <div class="two columns footer_art_signed_in">
     <%= image_tag("big5-icon-grid-african-elephant-adam-whitcroft.png", class: "footer_glyph_elephant") %>
     <p class = "art_credit">art by: Adam Whitcroft</p>
   </div>
+ -->

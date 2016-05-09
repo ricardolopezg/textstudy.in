@@ -21,6 +21,7 @@ class ProfilesController < ApplicationController
   def subjects
     @subjects = Subject.all
     @current_user_subscriptions = Subscription.where(user_id: current_user.id)
+    @current_user_subscription_true = Subscription.where(user_id: current_user.id, active: true)
   end
 
   def edit

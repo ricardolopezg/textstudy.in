@@ -99,15 +99,15 @@ $topbar-height: 4em;
   text-align: center;
   margin: 1em 0 1em;
   font-size: $font_size_p;
+  li {
+    display: inline-block;
+  }
 }
 
 .profile_show_header {
   margin: 1em 0 2em;
 }
 
-.image_upload {
-
-}
 
 #settings-tabs {
   a {

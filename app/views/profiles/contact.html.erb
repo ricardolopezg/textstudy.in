@@ -33,6 +33,24 @@
         </p>
       </li>
       <li class="accordion-item">
+        <a href="#panel1d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">What time will I receive my questions?</a>
+        <p id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
+          One question at a time will be sent around 9AM, 12PM, 3PM, 6PM and 9PM for a total of five questions per day.
+        </p>
+      </li>
+      <li class="accordion-item">
+        <a href="#panel1d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">What happens if I don't answer a question before another gets sent to me?</a>
+        <p id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
+          We can only track your answer for your latest question. Stay active and you will stay sharp!
+        </p>
+      </li>
+      <li class="accordion-item">
+        <a href="#panel1d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">Can I review questions sent to me online?</a>
+        <p id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
+          Yes! Your <a href="/profiles/<%= current_user.profile.id %>/dashboard" style="border: none; text-transform: lowercase;">dashboard</a> has a history of questions sent to you, along with your answers and explanations. 
+        </p>
+      </li>
+      <li class="accordion-item">
         <a href="#panel1d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">Will you offer more subjects?</a>
         <p id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
           We are always working on updating our current questions and adding more subjects to offer.
@@ -41,7 +59,7 @@
       <li class="accordion-item">
         <a href="#panel1d" role="tab" class="accordion-title" id="panel1d-heading" aria-controls="panel1d">I have a big exam I am studying for. Can you add it to the list of subjects offered?</a>
         <p id="panel1d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel1d-heading">
-          Glad to hear you would like to use textSTUDY for your exam! Depending on the scope of the material, we could consider adding your subject for all members. Send us a message below with your request. 
+          Glad to hear you would like to use Text Prep for your exam! Depending on the scope of the material, we could consider adding your subject for all members. Send us a message below with your request. 
         </p>
       </li>
     </ul>
@@ -91,8 +109,8 @@
 
 
 
-
+<!-- 
 <div class="two columns footer_art_signed_in">
   <%= image_tag("big5-icon-grid-cape-water-buffalo-adam-whitcroft.png", class: "footer_glyph_buffalo") %>
   <p class = "art_credit">art by: Adam Whitcroft</p>
-</div>
+</div> -->
