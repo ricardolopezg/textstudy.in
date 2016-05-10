@@ -41,13 +41,13 @@ module ApplicationHelper
  
   def faq_nav_link
     content_tag :a do
-      link_to "FAQ's", "", class: "faq_nav_link"
+      link_to "FAQ", "", class: "faq_nav_link"
     end    
   end
   
   def faq_nav_link_else
     content_tag :a do
-      link_to "FAQ's", root_path, class: "faq_nav_link_else"
+      link_to "FAQ", root_path, class: "faq_nav_link_else"
     end    
   end
 
