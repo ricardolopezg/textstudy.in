@@ -10127,3 +10127,165 @@ Cannot render console from 72.89.67.69! Allowed networks: 127.0.0.1, ::1, 127.0.
 
 Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 72.89.67.69 at 2016-05-10 13:37:54 -0400
 Cannot render console from 72.89.67.69! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started PUT "/profiles/49" for 24.164.150.148 at 2016-05-10 18:54:27 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfilesController#update as JSON
+  Parameters: {"profile"=>{"mobile_phone"=>"9174179542"}, "authenticity_token"=>"iEqNBWNMfnn4N645uPQ1esURG3alcPrKuR7EZ1gU6r2tizpEVJ2yBtR+W4kbUztb/RAf2RlNGeuf+DJBJdJsVg==", "id"=>"49"}
+  [1m[36mUser Load (6.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 49]]
+  [1m[35mProfile Load (2.4ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", 49]]
+  [1m[36m (2.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+  [1m[36m (9.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+Completed 204 No Content in 301ms (ActiveRecord: 20.8ms)
+
+
+Started GET "/profiles/49" for 24.164.150.148 at 2016-05-10 18:54:34 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 49]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 49]]
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", 49]]
+DEPRECATION WARNING: [Best_in_place] :classes is deprecated in favor of :class . (called from _app_views_profiles_show_html_erb___3908350887444196106_70338854456160 at /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/views/profiles/show.html.erb:20)
+DEPRECATION WARNING: [Best_in_place] :classes is deprecated in favor of :class . (called from _app_views_profiles_show_html_erb___3908350887444196106_70338854456160 at /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/views/profiles/show.html.erb:23)
+DEPRECATION WARNING: [Best_in_place] :classes is deprecated in favor of :class . (called from _app_views_profiles_show_html_erb___3908350887444196106_70338854456160 at /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/views/profiles/show.html.erb:26)
+DEPRECATION WARNING: [Best_in_place] :classes is deprecated in favor of :class . (called from _app_views_profiles_show_html_erb___3908350887444196106_70338854456160 at /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/views/profiles/show.html.erb:31)
+DEPRECATION WARNING: [Best_in_place] :classes is deprecated in favor of :class . (called from _app_views_profiles_show_html_erb___3908350887444196106_70338854456160 at /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/views/profiles/show.html.erb:34)
+DEPRECATION WARNING: [Best_in_place] :classes is deprecated in favor of :class . (called from _app_views_profiles_show_html_erb___3908350887444196106_70338854456160 at /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/views/profiles/show.html.erb:37)
+DEPRECATION WARNING: [Best_in_place] :classes is deprecated in favor of :class . (called from _app_views_profiles_show_html_erb___3908350887444196106_70338854456160 at /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/views/profiles/show.html.erb:40)
+DEPRECATION WARNING: [Best_in_place] :classes is deprecated in favor of :class . (called from _app_views_profiles_show_html_erb___3908350887444196106_70338854456160 at /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/views/profiles/show.html.erb:43)
+DEPRECATION WARNING: [Best_in_place] :classes is deprecated in favor of :class . (called from _app_views_profiles_show_html_erb___3908350887444196106_70338854456160 at /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/views/profiles/show.html.erb:46)
+DEPRECATION WARNING: [Best_in_place] :classes is deprecated in favor of :class . (called from _app_views_profiles_show_html_erb___3908350887444196106_70338854456160 at /Users/RicardoMacbookAir/Documents/Dropbox/Personal/Coding/nycda/final_project/textstudy/app/views/profiles/show.html.erb:49)
+  Rendered devise/registrations/_logged_in_edit_emailpw.html.erb (32.4ms)
+  Rendered profiles/show.html.erb within layouts/application (168.9ms)
+  [1m[35mProfile Load (1.9ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT 1  [["user_id", 49]]
+  Rendered layouts/_signed_in_nav.html.erb (31.9ms)
+  Rendered layouts/_else_nav.html.erb (45.4ms)
+Completed 200 OK in 1380ms (Views: 1366.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/chartkick.self-a2b3d6d094c53ae10177ddc507b4c2ed63c8396678bc1bd2003aa59f19b79f30.js?body=1" for 24.164.150.148 at 2016-05-10 18:54:36 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.autosize.self-208a4ea73c22b3517889027ffae7a076a0c5b4c38e4b595639979f10ada2ebe4.js?body=1" for 24.164.150.148 at 2016-05-10 18:54:36 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/best_in_place.self-ef93f4d2b932bcd1e6a5160e7e2cfec71c92911751b537f402e293113595e104.js?body=1" for 24.164.150.148 at 2016-05-10 18:54:36 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 24.164.150.148 at 2016-05-10 18:54:36 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/contact.self-90901818cc478b0e2b3e65536cf4363abf589b677fa4af39f38deded3011fc75.css?body=1" for 24.164.150.148 at 2016-05-10 18:54:37 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/dashboard.self-041622de81366185e5276b18900d23ccc48504aa0add61a56a34e847a5f1cc8f.css?body=1" for 24.164.150.148 at 2016-05-10 18:54:37 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/profiles.self-05b42d96e542ee40d89343fbc0d0a4c746660d94279b4e83c4b6337b3b74c8c4.css?body=1" for 24.164.150.148 at 2016-05-10 18:54:37 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/_default_styles.self-c87f1c3882c983f7a8de56617546b561cbd4e3c7d847e4ee1abb443a19eddffe.css?body=1" for 24.164.150.148 at 2016-05-10 18:54:37 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-58e25c768dc0ed484de7324cd170cdb54df49828d46a88db83da01eadd6c5027.css?body=1" for 24.164.150.148 at 2016-05-10 18:54:37 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/layout.self-69a769f29239dde556a3eaa4d39406ee7c74c2d7582f13e33f2014a1e7d1e88f.css?body=1" for 24.164.150.148 at 2016-05-10 18:54:37 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sinch.self-c87f1c3882c983f7a8de56617546b561cbd4e3c7d847e4ee1abb443a19eddffe.css?body=1" for 24.164.150.148 at 2016-05-10 18:54:37 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/receive_texts.self-c87f1c3882c983f7a8de56617546b561cbd4e3c7d847e4ee1abb443a19eddffe.css?body=1" for 24.164.150.148 at 2016-05-10 18:54:37 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/subscriptions.self-fbe2193d80e7626655c46d39137dd2932a1325948a0c416cc1e42895ee3f54ca.css?body=1" for 24.164.150.148 at 2016-05-10 18:54:37 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/signed_in_layout.self-2878efe604225b9ebad07a9f3819a6c3a6875b22ec4a159b6cde0343b5aead99.css?body=1" for 24.164.150.148 at 2016-05-10 18:54:37 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sweetalert.self-66c10544e24434f0d5a98ac1c3e9992e59ddafb371bf377b5f99d14c0dbb4ea5.css?body=1" for 24.164.150.148 at 2016-05-10 18:54:37 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/skeleton.self-f691e4dadf6eb769895ea39cd4e79b7e75eeca704bfc3e46f89fca2e7ae4879c.css?body=1" for 24.164.150.148 at 2016-05-10 18:54:37 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 24.164.150.148 at 2016-05-10 18:54:38 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 24.164.150.148 at 2016-05-10 18:54:38 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.purr.self-b53f8f68f6b9035b1aff380084b6b0ffc6bab3f968accf488c78af31a759c717.js?body=1" for 24.164.150.148 at 2016-05-10 18:54:38 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/accounts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.164.150.148 at 2016-05-10 18:54:38 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.164.150.148 at 2016-05-10 18:54:38 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/receive_texts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.164.150.148 at 2016-05-10 18:54:38 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 24.164.150.148 at 2016-05-10 18:54:38 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sinch.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.164.150.148 at 2016-05-10 18:54:38 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/profile.self-542ee14bd863d93dbae7a1ab94680baf939b3cbdbed7ceb35e2c8cbe82b16a8b.js?body=1" for 24.164.150.148 at 2016-05-10 18:54:38 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sinch.min.self-dc64d310d617e22495ba795840bd0d3fac55ac1fa4dd8495cc902b2991b422ed.js?body=1" for 24.164.150.148 at 2016-05-10 18:54:38 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/profiles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.164.150.148 at 2016-05-10 18:54:38 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sweetalert.min.self-f1de35952d4e269b45e3a6c390445bf2a3b4b643b69a5de4bb63790e7ca1d1b9.js?body=1" for 24.164.150.148 at 2016-05-10 18:54:38 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scripts_home.self-c636c4833d37134a7db067c2456ba0a1277d3c59fa8b429e8adcb594cdc796ec.js?body=1" for 24.164.150.148 at 2016-05-10 18:54:38 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/subscriptions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 24.164.150.148 at 2016-05-10 18:54:38 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 24.164.150.148 at 2016-05-10 18:54:38 -0400
+Cannot render console from 24.164.150.148! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
