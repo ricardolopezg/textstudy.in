@@ -195,100 +195,124 @@
 
     ["The judicial branch does not review or explain laws.\n1) True\n2) False", "2", "The judicial branch decides if a law goes against the Constitution, resolves disputes, explains and reviews laws", "rev. 02/16", "English"],
   # 38 What is the highest court in the United States?
-    ["", "", "", "rev. 02/16", "English"],
+    ["What is the highest court in the United States?\n1) Inferior Court\n2) Judicial Court\n3) Civil Court\n4) Criminal Court\n5) Supreme Court", "5", "The U.S. Supreme Court has complete authority over all federal courts. The Supreme Court’s interpretations of federal laws and of the Constitution are final.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["The Supreme Court’s interpretations of federal laws and of the Constitution are not final.\n1) True\n2) False", "2", "False - The Supreme Court’s interpretations of federal laws and of the Constitution are final.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["The U.S. Supreme Court has complete authority over all federal courts.\n1) True\n2) False", "1", "True - It is also limited in its power over the states. The US Supreme Court cannot make decisions about state law or state constitutions.", "rev. 02/16", "English"],
+  # 39 How many justices are on the Supreme Court?
+    ["How many justices are on the Supreme Court?\n1) 3\n2) 9\n3) 1\n4) 5\n6) 10\n6) 75\n6) 50", "2", "Now, there are nine justices on the Supreme Court: eight associate justices and one chief justice. For more info on the Supreme Court - www.supremecourt.gov", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["The Constitution gives the president the power to nominate justices to the Supreme Court.\n1) True\n2) False", "1", "True - The nominee must then be confirmed by the Senate. Justices serve on the court for life or until they retire.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Currently, there are nine justices on the Supreme Court: four associate justices and five chief justices.\n1) True\n2) False", "2", "False - There are nine justices on the Supreme Court: eight associate justices and one chief justice. For more info on the Supreme Court - www.supremecourt.gov", "rev. 02/16", "English"],
+  # 40 Who is the Chief Justice of the United States now?
+    ["Who is the Chief Justice of the United States now?\n1)  Rob Johnson (Robert A. Johnson)\n2)  John Roberts (John G. Roberts, Jr.)\n3) John Smith (John M. Smith)", "2", "John G. Roberts, Jr. is the 17th chief justice of the US and was nominated by President George W. Bush. He became the youngest chief justice since 1801 at 50.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["John Roberts is the current Chief Justice of the US.\n1) True\n2) False", "1", "True - John G. Roberts, Jr. is the 17th chief justice of the US and was nominated by President George W. Bush.", "rev. 02/16", "English"],
+  # 41 Under our Constitution, some powers belong to the federal government. What is one power of the federal government?
+    ["Under our Constitution, some powers belong to the federal govt and one power is:\n1) to spend money\n2) to have fun\n3) to create jobs\n4) to make treaties", "4", "The Constitution gives the federal government the power to print money, declare war, create an army, and make treaties with other nations.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["The Constitution gives the federal government the power to print money, declare war, create an army, and make treaties with other nations.\n1) True\n2) False", "1", "True - The Constitution gives the federal government these powers.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["The Constitution gives the state government the power to print money, declare war, create an army, and make treaties with other nations.\n1) True\n2) False", "2", "False - The Constitution gives the federal government the power to print money, declare war, create an army, and make treaties with other nations.", "rev. 02/16", "English"],
+  # 42 Under our Constitution, some powers belong to the states. What is one power of the states?
+    ["Under our Constitution, some powers belong to the states. What is one power of the states?\n1) voting\n2) provide jobs\n3)provide protection (police)", "3", "States can provide:\n1) schooling and education\n2) protection (police)\n3) safety (fire dept)\nand:\n4) give a driver’s license\n5) approve zoning and land use", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Under our Constitution, states have the authority to provide education and protection.\n1) True\n2) False", "1", "States can provide:\n1) schooling and education\n2) protection (police)\n3) safety (fire dept)\nand:\n4) give a driver’s license\n5) approve zoning and land use", "rev. 02/16", "English"],
+    
+    ["Under our Constitution, states have the authority to create an army.\n1) True\n2) False", "2", "States can provide:\n1) schooling and education\n2) protection (police)\n3) safety (fire dept)\nand:\n4) give a driver’s license\n5) approve zoning and land use", "rev. 02/16", "English"],
+  # 43 Who is the Governor of your state now?
+    ["Who is the Governor of your state now?\n1) Answers will vary. [District of Columbia residents should answer that D.C. does not have a Governor.]", "9", "The governor is the chief executive of the state. To learn the name of the governor of your state or territory, go to www.nga.org/governors.", "rev. 02/16", "English"],
+  # 44 What is the capital of your state?
+    ["What is the capital of your state?\n1) Answers will vary. Select \"1\" to check yours.", "9", "To learn the capital of your state or territory, go to http://bensguide.gpo.gov/3-5/state/index.html. Each state or territory has its own capital.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["The state capital is where the state govt conducts its business.\n1) True\n2) False", "1", "The state capital is where the state govt conducts its business, similar to the nation’s capital, Washington, DC, where the federal govt conducts its business.", "rev. 02/16", "English"],
+  # 45 What are the two major political parties in the United States?
+    ["What are the two major political parties in the United States?\n1) Independent\n2) Democratic\n3) Republican\n4) Green\n5) 1 & 2\n6) 3 & 4\n7) 2 & 3\n8) 3 & 1", "7", "Today, the two major political parties are the Democratic Party and the Republican Party.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["The Democratic and Republican Parties have identical political views and opinions\n1) True\n2) False", "2", "False - Parties are made up of people who organize to promote their candidates for election and to promote their own views about public policies.", "rev. 02/16", "English"],
+  # 46 What is the political party of the President now?
+    ["What is the political party of the President now?\n1) Independent\n2) Democratic\n3) Republican\n4) Green", "2", "The current president, Barack Obama, is a member of the Democratic Party.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["The current president, Barack Obama, is a member of the Republican Party.\n1) True\n2) False", "2", "False - The current president, Barack Obama, is a member of the Democratic Party.", "rev. 02/16", "English"],
+  # 47 What is the name of the Speaker of the House of Representatives now?
+    ["What is the name of the Speaker of the House of Representatives now?\n1) Paul D. Ryan\n2) John G. Roberts\n3) Barack Obama\n4) Joe Biden", "1", "The current speaker of the House of Representatives is Paul D. Ryan. He leads the majority political party in the House, the Republican Party.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Currently, John G. Roberts is the the Speaker of the House of Representatives.\n1) True\n2) False", "2", "False - The current speaker of the House of Representatives is Paul D. Ryan. He leads the majority political party in the House, the Republican Party.", "rev. 02/16", "English"],
+  # 48 There are four amendments to the Constitution about who can vote. Describe one of them.
+    ["There are four amendments to the Constitution about who can vote. Which is correct? Citizens ___ years and older can vote\n1) 16\n2) 18\n3) 19\n4) 21", "2", "The 26th Amendment lowered the voting age from 21 to 18.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["You have to pay (a poll tax) to vote.\n1) True\n2) False", "2", "After the 15th Amendment was passed, leaders designed fees (poll taxes) to stop African Americans from voting. The 24th Amendment made these poll taxes illegal.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Any citizen, both women and men, can vote.\n1) True\n2) False", "1", "True - The 15th Amendment permits American men of all races to vote. The 19th Amendment gave women the right to vote.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["A male citizen of certain races can vote.\n1) True\n2) False", "2", "False - The 15th Amendment permits American men of all races to vote. It was written after the Civil War and the end of slavery.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["- Citizens 18 and older can vote\n- You don’t have to pay a poll tax to vote\n- Any citizen can vote\n- A male citizen of any race can vote.\n1) True\n2) False", "1", "True - These are the four amendments to the Constitution about voting.", "rev. 02/16", "English"],
+  # 49 What is one responsibility that is only for United States citizens?
+    ["What is one responsibility that is only for US citizens?\n1) vote in a local election\n2) serve on a jury \n3) serve the people\n4) vote for prime minister", "2", "Two responsibilities of U.S. citizens are to serve on a jury and vote in federal elections.", "rev. 02/16", "English"],
+    
+    ["What is one responsibility that is only for US citizens?\n1) vote in a federal election\n2) helping a neighbor \n3) serve the people\n4) vote for prime minister", "2", "Two responsibilities of U.S. citizens are to serve on a jury and vote in federal elections.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["US Citizens are responsible for voting in federal elections and serving on a jury\n1) True\n2) False", "1", "True - Two responsibilities of U.S. citizens are to serve on a jury and vote in federal elections.", "rev. 02/16", "English"],
+  # 50 Name one right only for United States citizens.
+    ["What is one right that is only for US citizens?\n1) vote in a federal election\n2) serve on a jury \n3) pay taxes\n4) vote for mayor", "1", "US citizens have the right to vote in federal elections. Permanent residents can vote in local or state elections that do not require voters to be US citizens.", "rev. 02/16", "English"],
+    
+    ["What is one right that is only for US citizens?\n1) vote in a local election\n2) serve on a jury \n3) pay taxes\n4) run for office", "4", "US citizens can run for federal office and must be a US citizen for a minimum number of years.\nSenate - 9\nHouse - 7\nPresident, must be a native-born citizen", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["US citizens do not have the right to vote in federal elections or run for federal office.\n1) True\n2) False", "2", "U.S. citizens have the right to vote in federal elections and can also run for federal office.", "rev. 02/16", "English"],
+  # 51 What are two rights of everyone living in the United States?
+    ["The Constitution gives many rights to all people living in the US, including the freedom of suppression.\n1) True\n2) False", "2", "The Constitution gives many rights to all people living in the US, including the freedom of expression, religion, speech, assembly, and the right to bear arms.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["US Constitutional rights: freedom of:\n- expression\n- religion\n- speech\n- assembly\n- to petition the government\n- the right to bear arms\n1) True\n2) False", "1", "True - The Constitution and the Bill of Rights give these rights to all people living in the United States.", "rev. 02/16", "English"],
+  # 52 What do we show loyalty to when we say the Pledge of Allegiance?
+    ["What do we show loyalty to when we say the Pledge of Allegiance?\n1) the United States\n2) the flag\n3) the 50 stars\n4) 1 & 2\n5) 1 & 3\n6) 2 & 3", "4", "1 & 2 - We pledge allegiance to the United States and the flag", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["When we say the Pledge of Allegiance, we usually stand facing the flag with the right hand over the heart.\n1) True\n2) False", "1", "True - we usually stand facing the flag with the right hand over the heart", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["The Pledge of Allegiance to the flag starts, \"I pledge allegiance to the Flag of the United States of America...\"\n1) True\n2) False", "1", "\"I pledge allegiance to the Flag of the USA, and to the Republic for which it stands, one Nation under God, indivisible, with liberty and justice for all.\"", "rev. 02/16", "English"],
+  # 53 What is one promise you make when you become a United States citizen?
+    ["What is one promise you make when you become a US citizen?\n1) give up loyalty to other countries\n2) obey US laws\n3) be loyal to the US\n4) All of the above", "4", "All Promises:\n- give up loyalty to other countries\n- defend the Constitution and laws of the US\n- obey the laws of the US\n- serve in the U.S. military (if needed)\n- serve (do important work for) the nation (if needed)\n- be loyal to the United States", "rev. 02/16", "English"],
+    
+    ["What is one promise you make when you become a US citizen?\n1) serve in the U.S. military (if needed)\n2) disobey US laws\n3) work every day\n4)  read US laws", "1", "All Promises:\n- give up loyalty to other countries\n- defend the Constitution and laws of the US\n- obey the laws of the US\n- serve in the U.S. military (if needed)\n- serve (do important work for) the nation (if needed)\n- be loyal to the United States", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["What is one promise you make when you become a US citizen?\n1) refuse to serve in the military\n2) defend the US Constitution\n3) serve the nation\n4) 2 and 3", "4", "All Promises:\n- give up loyalty to other countries\n- defend the Constitution and laws of the US\n- obey the laws of the US\n- serve in the U.S. military (if needed)\n- serve (do important work for) the nation (if needed)\n- be loyal to the United States", "rev. 02/16", "English"],
+  # 54 How old do citizens have to be to vote for President?
+    ["How old do citizens have to be to vote for President?\n1) 16 and older\n2) 18 and older\n3) 21 and older\n4) 25 and older", "2", "In 1971, the 26th Amendment changed the minimum voting age from 21 to 18 for all federal, state, and local elections.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["If you are 16 years old, you can vote in local elections, but need to be 18 to vote for the president in a federal election.\n1) True\n2) False", "2", "In 1971, the 26th Amendment changed the minimum voting age from 21 to 18 for all federal, state, and local elections.", "rev. 02/16", "English"],
+  # 55 What are two ways that Americans can participate in their democracy?
+    ["What are two ways Americans can participate in democracy?\n1) join a political party\n2) watch CNN\n3) call Senators\n4) 1 & 3\n5) 1 & 2\n6) none of the above", "4", "Ways to participate in democracy:\n- vote\n- join a political party\n- help with a campaign\n- join a civic group\n- join a community group\n- give an elected official your opinion on an issue\n- call Senators and Representatives\n- publicly support or oppose an issue or policy\n- run for office\n- write to a newspaper", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["What are two ways Americans can participate in democracy?\n1) vote\n2) not vote\n3) join a civic group\n4) 2 & 3\n5) 1 & 3\n6) none of the above", "5", "Ways to participate in democracy:\n- vote\n- join a political party\n- help with a campaign\n- join a civic group\n- join a community group\n- give an elected official your opinion on an issue\n- call Senators and Representatives\n- publicly support or oppose an issue or policy\n- run for office\n- write to a newspaper", "rev. 02/16", "English"],
+  # 56 When is the last day you can send in federal income tax forms?
+    ["When is the last day you can send in federal income tax forms?\n1) January 15\n2) March 15\n3) April 15\n4) September 15\n5) October 15\n6) November 15", "3", "The last day to send in your federal income tax to the Internal Revenue Service is April 15 of each year.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["April 15th is the last day to submit your federal taxes.\n1) True\n2) False", "1", "The last day to send in your federal income tax to the Internal Revenue Service is April 15 of each year.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["March 15th is the last day to submit your federal taxes.\n1) True\n2) False", "2", "The last day to send in your federal income tax to the Internal Revenue Service is April 15 of each year.", "rev. 02/16", "English"],
+    
+    ["May 15th is the last day to submit your federal taxes.\n1) True\n2) False", "2", "The last day to send in your federal income tax to the Internal Revenue Service is April 15 of each year.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["April 13th is the last day to submit your federal taxes.\n1) True\n2) False", "2", "The last day to send in your federal income tax to the Internal Revenue Service is April 15 of each year.", "rev. 02/16", "English"],
+  # 57 When must all men register for the Selective Service?
+    ["When must all men register for the Selective Service?\n1) age 18\n2) age 17\n3) age 13\n4) age 16", "1", "All men between 18 and 26 years old must register with the Selective Service System to tell the govt that they are available to serve in the U.S. Armed Forces.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["All men between 18 and 26 years old must register with the Selective Service System.\n1) True\n2) False", "1", "True - All men between 18 & 26 years old must register with the Selective Service System to tell the govt they are available to serve in the U.S. Armed Forces.", "rev. 02/16", "English"],
+  # 58 What is one reason colonists came to America?
+    ["Colonists came to the US for freedom, political liberty, religious freedom, economic opportunity, to practice religion and escape persecution\n1) True\n2) False", "1", "True - These freedoms and opportunities often did not exist in the colonists' home countries. The American colonies were a chance for freedom and a new life.", "rev. 02/16", "English"],
+    
+    ["Colonists came to the economic opportunity, US for imprisonment, political sabotage and to escape persecution\n1) True\n2) False", "2", "False - Colonists came to the US for freedom, political liberty, religious freedom, economic opportunity, to practice religion and escape persecution", "rev. 02/16", "English"],
+  # 59 Who lived in America before the Europeans arrived?
+    ["Who lived in America before the Europeans arrived?\n1) Indians \n2) Mexicans \n3) Canadians\n4) American Indians", "4", "Great (Native) American Indian tribes such as the Navajo, Sioux, Cherokee, and Iroquois lived in America at the time the Pilgrims arrived.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
+    ["Who lived in America before the Europeans arrived?\n1) Native Americans \n2) Mexicans \n3) Canadians\n4) New Yorkers", "1", "Great (Native) American Indian tribes such as the Navajo, Sioux, Cherokee, and Iroquois lived in America at the time the Pilgrims arrived.", "rev. 02/16", "English"],
+  # 60 What group of people was taken to America and sold as slaves?
+    ["What group of people was taken to America and sold as slaves?\n1) Europeans\n2) South Americans\n3) Africans\n4) Chinese\n5) Canadians", "3", "By 1700, many Africans were brought to the American colonies as slaves. Men, women, & children were brought against their will & separated from their families.", "rev. 02/16", "English"],
+    
+    ["People of Africa were taken to America and sold as slaves by the 1700s.\n1) True\n2) False", "1", "By 1700, many Africans were brought to the American colonies as slaves. Men, women, & children were brought against their will & separated from their families.", "rev. 02/16", "English"],
+  # 61 
     ["", "", "", "rev. 02/16", "English"],
 
     ["", "", "", "rev. 02/16", "English"],
