@@ -17,11 +17,11 @@
 
     ["What does the Constitution do?\n1) sets up the government\n2) defines the government\n3) protects basic rights of Americans\n4) all of the above", "4", "The Constitution divides government power between the national and state governments. It explains the power of the executive, legislative and judicial branches.", "rev. 02/16", "English"],
   # 3 The idea of self-government is in the first three words of the Constitution. What are these words?
-    ["The idea of self-government is in the first three words of the Constitution. What are these words?\n1) We the Citizens\n2) We the Humans\n3) We the People", "3", "With the words “We the People,” the Constitution states that the people set up the government, which works for the people and protects the rights of people.", "rev. 02/16", "English"],
+    ["The idea of self-government is in the first three words of the Constitution. What are these words?\n1) We the Citizens\n2) We the Humans\n3) We the People", "3", "With the words \"We the People,\" the Constitution states that the people set up the government, which works for the people and protects the rights of people.", "rev. 02/16", "English"],
 
     ["The government works for the people and protects the rights of people.\n1) True\n2) False", "1", "The government works for the people and protects the rights of people. In the USA, the power to govern comes from the people, who are the highest power.", "rev. 02/16", "English"],
 
-    ["With the words \"We the ____,\" the Constitution states that the people set up the government.\n1) Government\n2) People\n3) Citizens\n4) Humans", "2", "With the words “We the People,” the Constitution states that the people set up the government, which works for the people and protects the rights of people.", "rev. 02/16", "English"],
+    ["With the words \"We the ____,\" the Constitution states that the people set up the government.\n1) Government\n2) People\n3) Citizens\n4) Humans", "2", "With the words \"We the People,\" the Constitution states that the people set up the government, which works for the people and protects the rights of people.", "rev. 02/16", "English"],
   # 4 What is an amendment?
     ["What is an amendment?\n1) A change to the Constitution\n2) A change to your recipe list\n3) A change to voting\n4) Changing your license", "1", "An amendment is a change or addition to a legal or statutory document, such as the Constitution.", "rev. 02/16", "English"],
 
@@ -35,11 +35,11 @@
 
     ["James Madison, one of the Framers of the Constitution, wrote a list of individual rights and limits on the government, called the Bill of Rights.\n1) True\n2) False", "1", "James Madison wrote the Bill of Rights because many Americans believed that the Constitution should guarantee the rights of the people, and they wanted a list of all the things a government could not do.", "rev. 02/16", "English"],
   # 6 What is one right or freedom from the First Amendment?
-    ["What is one right or freedom from the First Amendment?\n1) Acting\n2) Petition your peers\n3) Speech\n4) Congregations", "3", "The First Amendment of the Bill of Rights protects a person’s right to freedom of expression, religion, free speech and the right to petition the government.", "rev. 02/16", "English"],
+    ["What is one right or freedom from the First Amendment?\n1) Acting\n2) Petition your peers\n3) Speech\n4) Congregations", "3", "The First Amendment of the Bill of Rights protects a person's right to freedom of expression, religion, free speech and the right to petition the government.", "rev. 02/16", "English"],
 
-    ["The Second Amendment of the Bill of Rights protects a person’s right to freedom of expression, religion, free speech and the right to petition the government.\n1) True\n2) False", "2", "The First Amendment of the Bill of Rights protects a person’s right to freedom of expression, religion, free speech and the right to petition the government.", "rev. 02/16", "English"],
+    ["The Second Amendment of the Bill of Rights protects a person's right to freedom of expression, religion, free speech and the right to petition the government.\n1) True\n2) False", "2", "The First Amendment of the Bill of Rights protects a person's right to freedom of expression, religion, free speech and the right to petition the government.", "rev. 02/16", "English"],
 
-    ["What is one right or freedom from the First Amendment?\n1) speech\n2) religion\n3) assembly\n4) press\n5) petition the government\n6) all of the above", "6", "All of the above - The First Amendment protects a person’s right to freedom of expression, religion, free speech and the right to petition the government.", "rev. 02/16", "English"],
+    ["What is one right or freedom from the First Amendment?\n1) speech\n2) religion\n3) assembly\n4) press\n5) petition the government\n6) all of the above", "6", "All of the above - The First Amendment protects a person's right to freedom of expression, religion, free speech and the right to petition the government.", "rev. 02/16", "English"],
   # 7 How many amendments does the Constitution have?
     ["How many amendments does the Constitution have?\n1)27 \n2)25 \n3)29 \n4)26", "1", "The first 10 amendments to the Constitution are called the Bill of Rights. They were added in 1791. Since then, 17 more amendments have been added.", "rev. 02/16", "English"],
 
@@ -87,7 +87,7 @@
     
     ["Article III of the Constitution gave this branch authority to ensure govt laws and actions follow the Constitution.\n1) Legislative\n2) Executive\n3) Judicial", "3", "Article III of the Constitution places the highest judicial power in the Supreme Court to the judicial branch.", "rev. 02/16", "English"],
 
-    ["The vice president and members of the president’s cabinet are part of the legislative branch.\n1) True\n2) False", "2", "The vice president and members of the president’s cabinet are part of the executive branch.", "rev. 02/16", "English"],
+    ["The vice president and members of the president's cabinet are part of the legislative branch.\n1) True\n2) False", "2", "The vice president and members of the president's cabinet are part of the executive branch.", "rev. 02/16", "English"],
   # 14 What stops one branch of government from becoming too powerful?
     ["What stops one branch of government from becoming too powerful?\n1) Separation of concerns \n2) Separation of powers \n3) Donald Trump\n4) Bananas ", "2", "The Constitution separates the government's power into 3 branches. This separation of powers means that each branch can block the actions of the other branches.", "rev. 02/16", "English"],
 
@@ -139,9 +139,9 @@
 
     ["All the voters in a state elect their two US Senators directly.\n1) True\n2) False", "1", "True - All the voters in a state elect their two US Senators directly.", "rev. 02/16", "English"],
   # 25 Why do some states have more Representatives than other states?
-    ["Why do some states have more Representatives than other states?\n1) state's population\n2) they have more people\n3) some states have more people\n4) 1, 2 & 3", "4", "In the House of Representatives, a state’s population determines the number of representatives it has. States with many people have a stronger voice.", "rev. 02/16", "English"],
+    ["Why do some states have more Representatives than other states?\n1) state's population\n2) they have more people\n3) some states have more people\n4) 1, 2 & 3", "4", "In the House of Representatives, a state's population determines the number of representatives it has. States with many people have a stronger voice.", "rev. 02/16", "English"],
 
-    ["A state's population determines the number of representatives they have in the House of Representatives.\n1) True\n2) False", "1", "In the House of Representatives, a state’s population determines the number of representatives it has. States with many people have a stronger voice.", "rev. 02/16", "English"],
+    ["A state's population determines the number of representatives they have in the House of Representatives.\n1) True\n2) False", "1", "In the House of Representatives, a state's population determines the number of representatives it has. States with many people have a stronger voice.", "rev. 02/16", "English"],
   # 26 We elect a President for how many years?
     ["We elect a President for how many years?\n1) two years\n2) three years\n3) four years\n4) five years", "3", "With the 22nd Amendment to the Constitution, the president can only be elected to two terms (four years each) for a total of eight years.", "rev. 02/16", "English"],
 
@@ -178,10 +178,10 @@
     ["Who vetoes bills?\n1) the Vice President\n2) the House of Representatives\n3) the President\n4) the Senate", "3", "The president has veto power and can reject a bill passed by Congress. If the president vetoes a bill, he prevents it from becoming a law.", "rev. 02/16", "English"],
 
     ["The President vetoes bills proposed by Congress.\n1) True\n2) False", "1", "The president has veto power and can reject a bill passed by Congress. If the president vetoes a bill, he prevents it from becoming a law.", "rev. 02/16", "English"],
-  # 35 What does the President’s Cabinet do?
-    ["What does the President’s Cabinet do?\n1) make decisions for the President\n2) pass laws\n3) advises the President\n4) advise the Vice President", "3", "The Constitution says that the leaders of the executive departments should advise the president. These department leaders make up the cabinet.", "rev. 02/16", "English"],
+  # 35 What does the President's Cabinet do?
+    ["What does the President's Cabinet do?\n1) make decisions for the President\n2) pass laws\n3) advises the President\n4) advise the Vice President", "3", "The Constitution says that the leaders of the executive departments should advise the president. These department leaders make up the cabinet.", "rev. 02/16", "English"],
 
-    ["The President’s Cabinet makes decisions for the Presiden\n1) True\n2) False", "2", "The Constitution says that the leaders of the executive departments should advise the president. These department leaders make up the cabinet.", "rev. 02/16", "English"],
+    ["The President's Cabinet makes decisions for the Presiden\n1) True\n2) False", "2", "The Constitution says that the leaders of the executive departments should advise the president. These department leaders make up the cabinet.", "rev. 02/16", "English"],
   # 36 What are two Cabinet-level positions?
     ["What are two Cabinet-level positions?\n1) Secretary of Agriculture and Commerce\n2) Secretary of Education and Traveling\n3) Secretary of Defense and Offense", "1", "1) Attorney General\n2) Vice President\nSecretary of:\n3) Agriculture\n4) Commerce\n5) Defense\n6) Education\n7) Energy\n8) Health and Human Services\n9) Homeland Security\n10) Housing and Urban Development\n11) the Interior\n12) Labor\n13) State\n14) Transportation\n15) the Treasury\n16) Veterans Affairs", "rev. 02/16", "English"],
     
@@ -195,9 +195,9 @@
 
     ["The judicial branch does not review or explain laws.\n1) True\n2) False", "2", "The judicial branch decides if a law goes against the Constitution, resolves disputes, explains and reviews laws", "rev. 02/16", "English"],
   # 38 What is the highest court in the United States?
-    ["What is the highest court in the United States?\n1) Inferior Court\n2) Judicial Court\n3) Civil Court\n4) Criminal Court\n5) Supreme Court", "5", "The U.S. Supreme Court has complete authority over all federal courts. The Supreme Court’s interpretations of federal laws and of the Constitution are final.", "rev. 02/16", "English"],
+    ["What is the highest court in the United States?\n1) Inferior Court\n2) Judicial Court\n3) Civil Court\n4) Criminal Court\n5) Supreme Court", "5", "The U.S. Supreme Court has complete authority over all federal courts. The Supreme Court's interpretations of federal laws and of the Constitution are final.", "rev. 02/16", "English"],
 
-    ["The Supreme Court’s interpretations of federal laws and of the Constitution are not final.\n1) True\n2) False", "2", "False - The Supreme Court’s interpretations of federal laws and of the Constitution are final.", "rev. 02/16", "English"],
+    ["The Supreme Court's interpretations of federal laws and of the Constitution are not final.\n1) True\n2) False", "2", "False - The Supreme Court's interpretations of federal laws and of the Constitution are final.", "rev. 02/16", "English"],
 
     ["The U.S. Supreme Court has complete authority over all federal courts.\n1) True\n2) False", "1", "True - It is also limited in its power over the states. The US Supreme Court cannot make decisions about state law or state constitutions.", "rev. 02/16", "English"],
   # 39 How many justices are on the Supreme Court?
@@ -217,17 +217,17 @@
 
     ["The Constitution gives the state government the power to print money, declare war, create an army, and make treaties with other nations.\n1) True\n2) False", "2", "False - The Constitution gives the federal government the power to print money, declare war, create an army, and make treaties with other nations.", "rev. 02/16", "English"],
   # 42 Under our Constitution, some powers belong to the states. What is one power of the states?
-    ["Under our Constitution, some powers belong to the states. What is one power of the states?\n1) voting\n2) provide jobs\n3)provide protection (police)", "3", "States can provide:\n1) schooling and education\n2) protection (police)\n3) safety (fire dept)\nand:\n4) give a driver’s license\n5) approve zoning and land use", "rev. 02/16", "English"],
+    ["Under our Constitution, some powers belong to the states. What is one power of the states?\n1) voting\n2) provide jobs\n3)provide protection (police)", "3", "States can provide:\n1) schooling and education\n2) protection (police)\n3) safety (fire dept)\nand:\n4) give a driver's license\n5) approve zoning and land use", "rev. 02/16", "English"],
 
-    ["Under our Constitution, states have the authority to provide education and protection.\n1) True\n2) False", "1", "States can provide:\n1) schooling and education\n2) protection (police)\n3) safety (fire dept)\nand:\n4) give a driver’s license\n5) approve zoning and land use", "rev. 02/16", "English"],
+    ["Under our Constitution, states have the authority to provide education and protection.\n1) True\n2) False", "1", "States can provide:\n1) schooling and education\n2) protection (police)\n3) safety (fire dept)\nand:\n4) give a driver's license\n5) approve zoning and land use", "rev. 02/16", "English"],
     
-    ["Under our Constitution, states have the authority to create an army.\n1) True\n2) False", "2", "States can provide:\n1) schooling and education\n2) protection (police)\n3) safety (fire dept)\nand:\n4) give a driver’s license\n5) approve zoning and land use", "rev. 02/16", "English"],
+    ["Under our Constitution, states have the authority to create an army.\n1) True\n2) False", "2", "States can provide:\n1) schooling and education\n2) protection (police)\n3) safety (fire dept)\nand:\n4) give a driver's license\n5) approve zoning and land use", "rev. 02/16", "English"],
   # 43 Who is the Governor of your state now?
     ["Who is the Governor of your state now?\n1) Answers will vary. [District of Columbia residents should answer that D.C. does not have a Governor.]", "9", "The governor is the chief executive of the state. To learn the name of the governor of your state or territory, go to www.nga.org/governors.", "rev. 02/16", "English"],
   # 44 What is the capital of your state?
     ["What is the capital of your state?\n1) Answers will vary. Select \"1\" to check yours.", "9", "To learn the capital of your state or territory, go to http://bensguide.gpo.gov/3-5/state/index.html. Each state or territory has its own capital.", "rev. 02/16", "English"],
 
-    ["The state capital is where the state govt conducts its business.\n1) True\n2) False", "1", "The state capital is where the state govt conducts its business, similar to the nation’s capital, Washington, DC, where the federal govt conducts its business.", "rev. 02/16", "English"],
+    ["The state capital is where the state govt conducts its business.\n1) True\n2) False", "1", "The state capital is where the state govt conducts its business, similar to the nation's capital, Washington, DC, where the federal govt conducts its business.", "rev. 02/16", "English"],
   # 45 What are the two major political parties in the United States?
     ["What are the two major political parties in the United States?\n1) Independent\n2) Democratic\n3) Republican\n4) Green\n5) 1 & 2\n6) 3 & 4\n7) 2 & 3\n8) 3 & 1", "7", "Today, the two major political parties are the Democratic Party and the Republican Party.", "rev. 02/16", "English"],
 
@@ -249,7 +249,7 @@
 
     ["A male citizen of certain races can vote.\n1) True\n2) False", "2", "False - The 15th Amendment permits American men of all races to vote. It was written after the Civil War and the end of slavery.", "rev. 02/16", "English"],
 
-    ["- Citizens 18 and older can vote\n- You don’t have to pay a poll tax to vote\n- Any citizen can vote\n- A male citizen of any race can vote.\n1) True\n2) False", "1", "True - These are the four amendments to the Constitution about voting.", "rev. 02/16", "English"],
+    ["- Citizens 18 and older can vote\n- You don't have to pay a poll tax to vote\n- Any citizen can vote\n- A male citizen of any race can vote.\n1) True\n2) False", "1", "True - These are the four amendments to the Constitution about voting.", "rev. 02/16", "English"],
   # 49 What is one responsibility that is only for United States citizens?
     ["What is one responsibility that is only for US citizens?\n1) vote in a local election\n2) serve on a jury \n3) serve the people\n4) vote for prime minister", "2", "Two responsibilities of U.S. citizens are to serve on a jury and vote in federal elections.", "rev. 02/16", "English"],
     
@@ -312,125 +312,199 @@
     ["What group of people was taken to America and sold as slaves?\n1) Europeans\n2) South Americans\n3) Africans\n4) Chinese\n5) Canadians", "3", "By 1700, many Africans were brought to the American colonies as slaves. Men, women, & children were brought against their will & separated from their families.", "rev. 02/16", "English"],
     
     ["People of Africa were taken to America and sold as slaves by the 1700s.\n1) True\n2) False", "1", "By 1700, many Africans were brought to the American colonies as slaves. Men, women, & children were brought against their will & separated from their families.", "rev. 02/16", "English"],
-  # 61 
-    ["", "", "", "rev. 02/16", "English"],
+  # 61 Why did the colonists fight the British?
+    ["Why did the colonists fight the British?\n1) high taxes\n2) the British army stayed in their houses (boarding, quartering)\n3)no self-govt\n4) all of the above", "4", "4 - Colonists were taxed without consent, had nobody to represent their needs & ideas to the govt, & were forced to let soldiers sleep & eat in their homes.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["The colonists fought the British because they paid high taxes and had no representation and had no self-government.\n1) True\n2) False", "1", "Reasons:\n1) high taxes (taxation without representation)\n2) the British army stayed in their houses (boarding, quartering)\n3) they didn't have self-govt", "rev. 02/16", "English"],
+    
+    ["The colonists fought the British because the British army boarded in their houses.\n1) True\n2) False", "1", "Reasons:\n1) high taxes (taxation without representation)\n2) the British army stayed in their houses (boarding, quartering)\n3) they didn't have self-govt", "rev. 02/16", "English"],
+  # 62 Who wrote the Declaration of Independence?
+    ["Who wrote the Declaration of Independence?\n1) Thomas Jefferson\n2) Benjamin Franklin\n3) Abraham Lincoln\n4) George Washington\n5) John Adams\n6) John Hancock", "1", "1 - Thomas Jefferson wrote the Declaration of Independence in 1776, stating that all people are created equal, one of the most important ideas of American Govt.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["John Hancock wrote the Declaration of Independence in 1776.\n1) True\n2) False", "2", "2 - Thomas Jefferson wrote the Declaration of Independence in 1776, stating that all people are created equal, one of the most important ideas of American Govt.", "rev. 02/16", "English"],
+    
+    ["Thomas Jefferson and John Hancock wrote the Declaration of Independence in 1776.\n1) True\n2) False", "2", "2 - Thomas Jefferson wrote the Declaration of Independence in 1776, stating that all people are created equal, one of the most important ideas of American Govt.", "rev. 02/16", "English"],
+  # 63 When was the Declaration of Independence adopted?
+    ["When was the Declaration of Independence adopted?\n1) July 4, 1676\n2) July 4, 1776\n3) July 4, 1876\n4) July 4, 1976", "2", "2 - On July 4, 1776, the Second Continental Congress adopted the Declaration of Independence.", "rev. 02/16", "English"],
+    
+    ["The 4th of July is Independence Day.\n1) True\n2) False", "1", "1 - On July 4, 1776, the Second Continental Congress adopted the Declaration of Independence.", "rev. 02/16", "English"], 
+  # 64 There were 13 original states. Name three.
+    ["New York, Pennsylvannia and Tennessee are all part of the 13 original states.\n1) True\n2) False", "2", "2 - The 13 original states are: New Hampshire, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, Pennsylvania, Delaware, Maryland, Virginia, North Carolina, South Carolina and Georgia.", "rev. 02/16", "English"]
+    
+    ["New Jersey, Massachusetts and New Hampshire are all part of the 13 original states.\n1) True\n2) False", "1", "1 - The 13 original states are: New Hampshire, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, Pennsylvania, Delaware, Maryland, Virginia, North Carolina, South Carolina and Georgia.", "rev. 02/16", "English"]
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Six of the 13 colonies are Rhode Island, Connecticut, Delaware, Maryland, Ohio and Texas.\n1) True\n2) False", "2", "2 - The 13 original states are: New Hampshire, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, Pennsylvania, Delaware, Maryland, Virginia, North Carolina, South Carolina and Georgia.", "rev. 02/16", "English"]
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Six of the 13 colonies are Connecticut, Pennsylvania, Virginia, Georgia, North Carolina and South Carolina.\n1) True\n2) False", "1", "1 - The 13 original states are: New Hampshire, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, Pennsylvania, Delaware, Maryland, Virginia, North Carolina, South Carolina and Georgia.", "rev. 02/16", "English"]
+  # 65 What happened at the Constitutional Convention?
+    ["What happened at the Constitutional Convention?\n1) The Founding Fathers questioned the Constitution\n2) The Founding Fathers wrote the Constitution\n3) nothing", "2", "2 - The Founding Fathers wrote the Constitution", "rev. 02/16", "English"],
+    
+    ["The Founding Fathers wrote the Constitution at the Constitutional Convention\n1) True\n2) False", "1", "1 - Instead of changing the Articles of Confederation, the delegates decided to create a new governing document with a stronger national govt-the Constitution. ", "rev. 02/16", "English"],
+  # 66 When was the Constitution written?
+    ["When was the Constitution written?\n1) 1767\n2) 1777\n3) 1787\n4) 1797\n5) 1790\n6) 1776", "3", "The Constitution, written by James Madison in 1787, defines the principles of government and the rights of citizens in the United States.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["The Constitution, written by James Madison in 1776, defines the principles of government and the rights of citizens in the United States.\n1) True\n2) False", "2", "The Constitution was written by James Madison in 1787. He became the fourth president of the United States.", "rev. 02/16", "English"],
+  # 67 The Federalist Papers supported the passage of the U.S. Constitution. Name one of the writers.
+    ["The Federalist Papers supported the passage of the US Constitution, written by\n1) James Madison\n2) Alexander Hamilton\n3) John Jay\n4) Publius\n5) 1, 2, 3 & 4", "5", "5 - They were written in 1787/88 by Alexander Hamilton, John Jay & James Madison under the pen name \"Publius,\" explaining why NY should ratify the Constitution.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Publius wrote the Federalist Papers to convince NY to ratify the Constitution\n1) True\n2) False", "1", "1 - They were written in 1787/88 by Alexander Hamilton, John Jay & James Madison under the pen name \"Publius,\" explaining why NY should ratify the Constitution.", "rev. 02/16", "English"],
+  # 68 What is one thing Benjamin Franklin is famous for?
+    ["What is one thing Ben Franklin is known for?\n1) US diplomat\n2) writer of \"Poor Richard\'s Almanac\"\n3) started the first free libraries\n4) 1 & 3\n5) 1, 2 & 3", "5", "5 - Benjamin Franklin organized America\'s first free libraries and was: \n1) a US diplomat\n2) the oldest member of the Constitutional Convention\n3) the first Postmaster General of the United States\n4) the writer of \"Poor Richard\'s Almanac\"", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Benjamin Franklin organized America's first library.\n1) True\n2) False", "1", "1 - Benjamin Franklin organized America\'s first free libraries and was: \n1) a US diplomat\n2) the oldest member of the Constitutional Convention\n3) the first Postmaster General of the United States\n4) the writer of \"Poor Richard\'s Almanac\"", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Benjamin Franklin was the youngest member of the Constitutional Convention.\n1) True\n2) False", "2", "2 - Benjamin Franklin organized America\'s first free libraries and was: \n1) a US diplomat\n2) the oldest member of the Constitutional Convention\n3) the first Postmaster General of the United States\n4) the writer of \"Poor Richard\'s Almanac\"", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Benjamin Franklin was the writer of \"Poor Richard\'s Almanac.\"\n1) True\n2) False", "1", "1 - Benjamin Franklin organized America\'s first free libraries and was: \n1) a US diplomat\n2) the oldest member of the Constitutional Convention\n3) the first Postmaster General of the United States\n4) the writer of \"Poor Richard\'s Almanac\"", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Benjamin Franklin was not a US diplomat.\n1) True\n2) False", "2", "2 - Benjamin Franklin organized America\'s first free libraries and was: \n1) a US diplomat\n2) the oldest member of the Constitutional Convention\n3) the first Postmaster General of the United States\n4) the writer of \"Poor Richard\'s Almanac\"", "rev. 02/16", "English"],
+  # 69 Who is the "Father of Our Country"?
+    ["Who is the \"Father of Our Country\"?\n1) Abraham Lincoln\n2) George Washington\n3) Benjamin Franklin\n4) James Madison", "2", "2 - George Washington is called the Father of Our Country. He was the first American president.", "rev. 02/16", "English"],
+    
+    ["George Washington is the \"Father of Our Country\"?\n1) True\n2) False", "1", "1 - George Washington is called the Father of Our Country. He was the first American president.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["James Madison is the \"Father of Our Country\"?\n1) True\n2) False", "2", "2 - George Washington is called the Father of Our Country. He was the first American president.", "rev. 02/16", "English"],
+  # 70 Who was the first President?
+    ["Who was the first President?\n1) George Washington\n2) Abraham Lincoln\n3) Benjamin Franklin\n4) James Madison\n5) Thomas Jefferson", "1", "1 - George Washington was the first president of the United States. He began his first term in 1789 & voluntarily resigned from the presidency after two terms.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Abraham Lincoln was the first President of the United States.\n1) True\n2) False", "2", "2 - George Washington was the first president of the United States. He began his first term in 1789 & voluntarily resigned from the presidency after two terms.", "rev. 02/16", "English"],
+  # 71 What territory did the United States buy from France in 1803?
+    ["What territory did the United States buy from France in 1803?\n1) Mississippi\n2) Louisiana\n3) Tennessee\n4) Maryland\n5) Alabama", "2", "2 - In 1803, the US bought the Louisiana Territory from France for $15 million and was the largest acquisition of land in American history.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["The Louisiana Purchase Treaty was signed in Paris on April 30, 1803. It was the largest acquisition of land in American history.\n1) True\n2) False", "1", "1 - In 1803, the US bought the Louisiana Territory from France for $15 million and was the largest acquisition of land in American history.", "rev. 02/16", "English"],
+  # 72 Name one war fought by the United States in the 1800s.
+    ["Name one war fought by the United States in the 1800s.\n1) Civil War\n2) Vietnam War\n3) World War II", "1", "1 - The United States fought four major wars in the 1800s—the War of 1812, the Mexican-American War, the Civil War, and the Spanish-American War.", "rev. 02/16", "English"],
+    
+    ["Name one war fought by the US in the 1800s.\n1) Civil War\n2) Spanish-American War\n3) World War I\n4) Vietnam War\n5) 1 & 3\n6) 3 & 4\n7) 1 & 2\n8) 2 & 3", "7", "7 - The United States fought four major wars in the 1800s—the War of 1812, the Mexican-American War, the Civil War, and the Spanish-American War.", "rev. 02/16", "English"],
+  # 73 Name the U.S. war between the North and the South.
+    ["The American Civil War is also known as the War between the States.\n1) True\n2) False", "1", "1 - It was a war between the people in the northern states and those in the southern states, but most battles were fought in the southern states.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Name the U.S. war between the North and the South.\n1) the War of 1812\n2) the Mexican-American War\n3) the Spanish-American War\n4) the Civil War", "4", "4 - The American Civil War is also known as the War between the States. It was a war between the people in the northern states and those in the southern states.", "rev. 02/16", "English"],
+  # 74 Name one problem that led to the Civil War.
+    ["Name one problem that led to the Civil War.\n1) slavery\n2) economic reasons\n3) states' rights\n4) 1 & 2\n5) 1 & 3\n6) all of the above\n7) none of the above", "6", "6 - slavery, economic reasons and states' rights are all problems that led to the Civil War.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["The Civil War began when 11 southern states voted to secede from the US to form their own country, the Confederate States of America.\n1) True\n2) False", "1", "1 - These southern states believed that the federal government of the United States threatened their right to make their own decisions.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Economic reasons led to the Civil War.\n1) True\n2) False", "1", "1 - slavery, economic reasons and states' rights are all problems that led to the Civil War.", "rev. 02/16", "English"],
+    
+    ["Slavery did not lead to the Civil War.\n1) True\n2) False", "2", "2 - slavery, economic reasons and states' rights are all problems that led to the Civil War.", "rev. 02/16", "English"],
+    
+    ["States' rights led to the Civil War.\n1) True\n2) False", "1", "1 - slavery, economic reasons and states' rights are all problems that led to the Civil War.", "rev. 02/16", "English"],
+  # 75 What was one important thing that Abraham Lincoln did?
+    ["What was one important thing that Abraham Lincoln did?\n1) stood against the Emancipation Proclamation\n2) saved the Confederate army\n3) freed the slaves", "3", "3 - During the Civil War, he issued the Emancipation Proclamation. It declared that the slaves who lived in the rebelling Confederate states were forever free.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["What was one important thing that Abraham Lincoln did?\n1) became vice president\n2) saved (or preserved) the Union\n3) led the separation of states", "2", "2 - Lincoln thought the separation of southern (Confederate) states was unconstitutional. He wanted to preserve the Union & issued the Emancipation Proclamation.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["What was one important thing that Abraham Lincoln did?\n1) Emancipation Proclamation\n2) preserved the Union\n3) led the US during the Civil War\n4) 1, 2 & 3", "4", "4 - Abraham Lincoln was president of the US from 1861 to 1865, led the nation during the Civil War, preserved the Union and issued the Emancipation Proclamation", "rev. 02/16", "English"],
+  # 76 What did the Emancipation Proclamation do?
+    ["What did the Emancipation Proclamation do? It freed slaves in the:\n1) Confederate (southern) states\n2) Union (northern) states\n3) western states\n4) no state", "1", "1 - The Emancipation Proclamation declared that slaves living in the southern or Confederate states were free. Many slaves joined the Union army.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Freed slaves in the Confederacy were a result of the Emancipation Proclamation.\n1) True\n2) False", "1", "1 - The Emancipation Proclamation declared that slaves living in the southern or Confederate states were free. Many slaves joined the Union army.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["The Emancipation Proclamation led to the 2nd Amendment to the Constitution, which ended slavery in all of the United States.\n1) True\n2) False", "2", "2 - In 1865, the Civil War ended and the southern slaves kept their right to be free, which led the 13th Amendment to the Constitution.", "rev. 02/16", "English"],
+  # 77 What did Susan B. Anthony do?
+    ["Susan B. Anthony fought for:\n1) women's rights\n2) men's rights\n3) children's rights\n4) 1 & 2\n4) 1 & 3\n4) 2 & 3\n4) 1, 2 & 3", "1", "1 - She is known for campaigning for the right of women to vote. She spoke out publicly against slavery and for equal treatment of women in the workplace.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Susan B. Anthony fought for:\n1) international rights\n2) national rights\n3) civil rights\n4) 1 & 2\n4) 1 & 3\n4) 2 & 3\n4) 1, 2 & 3", "3", "3 - She is known for campaigning for the right of women to vote. She spoke out publicly against slavery and for equal treatment of women in the workplace.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Susan B. Anthony fought for civil and women's rights\n1) True\n2) False", "1", "1 - She is known for campaigning for the right of women to vote. She spoke out publicly against slavery and for equal treatment of women in the workplace.", "rev. 02/16", "English"],
+  # 78 Name one war fought by the United States in the 1900s.
+    ["Name one war fought by the United States in the 1900s.\n1) Korean War\n2) US Civil War\n3) European War\n4) Japanese War", "1", "1 - The United States fought five wars in the 1900s: World War I, World War II, the Korean War, the Vietnam War, and the (Persian) Gulf War.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Name two wars fought by the United States in the 1900s.\n1) Korean & Vietnam War\n2) US Civil & World War I\n3) European and Gulf War\n4) Japanese and World War II", "1", "1 - The United States fought five wars in the 1900s: World War I, World War II, the Korean War, the Vietnam War, and the (Persian) Gulf War.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["The United States fought five wars in the 1900s: World War I, World War II, the Korean War, the Vietnam War, and the (Persian) Gulf War.\n1) True\n2) False", "1", "1 - The US did fight in those five wars throughout the 1900s.", "rev. 02/16", "English"],
+  # 79 Who was President during World War I?
+    ["Who was President during World War I?\n1) Theodore Roosevelt\n2) Franklin D. Roosevelt\n3) Woodrow Wilson\n4) Dwight D. Eisenhower", "3", "3 - Woodrow Wilson was the 28th president of the United States and he asked Congress to declare war on Germany during his second term as president.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Theodore Roosevelt was President during World War I?\n1) True\n2) False", "2", "2 - Woodrow Wilson was the 28th president of the United States and he asked Congress to declare war on Germany during his second term as president.", "rev. 02/16", "English"],
+  # 80 Who was President during the Great Depression and World War II?
+    ["Who was President during the Great Depression and World War II?\n1) Harry S. Truman\n2) Herbert Hoover\n3) Dwight D. Eisenhower\n4) Franklin D. Roosevelt", "4", "4 - Franklin Delano Roosevelt (FDR) was president during the Great Depression. He led the nation into WWII after Japan's attack on Pearl Harbor in Dec 1941.", "rev. 02/16", "English"],
+    
+    "FDR was President during the Great Depression?\n1) True\n2) False", "1", "1 - Franklin Delano Roosevelt (FDR) was president during the Great Depression. He led the nation into WWII after Japan's attack on Pearl Harbor in Dec 1941.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    "Harry S. Truman was President during the Great Depression?\n1) True\n2) False", "2", "2 - Franklin Delano Roosevelt (FDR) was president during the Great Depression. He led the nation into WWII after Japan's attack on Pearl Harbor in Dec 1941.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    "Franklin Delano Roosevelt was President during World War II?\n1) True\n2) False", "1", "1 - Franklin Delano Roosevelt (FDR) was president during the Great Depression. He led the nation into WWII after Japan's attack on Pearl Harbor in Dec 1941.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    "Dwight D. Eisenhower was President during World War II?\n1) True\n2) False", "2", "2 - Franklin Delano Roosevelt (FDR) was president during the Great Depression. He led the nation into WWII after Japan's attack on Pearl Harbor in Dec 1941.", "rev. 02/16", "English"],
+  # 81 Who did the United States fight in World War II?
+    ["Who did the United States fight in World War II?\n1) England, Germany & Italy\n2) Japan, France & Italy\n3) Japan, Germany & Italy\n4) Spain, Turkey & Italy", "3", "3 - When the Japanese bombed US naval bases on Pearl Harbor, President FDR declared war. Japan's Axis partners, Italy & Germany, then declared war on the US.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["When the Japanese bombed US naval bases on Pearl Harbor, President Franklin D. Roosevelt did nothing in response.\n1) True\n2) False", "2", "2 - When the Japanese bombed US naval bases on Pearl Harbor, President FDR declared war. Japan's Axis partners, Italy & Germany, then declared war on the US.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["After the Japanese bombed naval bases on Pearl Harbor & the US declared war, Japan's Axis partners, Italy & Germany, declared war on the US.\n1) True\n2) False", "1", "1 - When the Japanese bombed US naval bases on Pearl Harbor, President FDR declared war. Japan's Axis partners, Italy & Germany, then declared war on the US.", "rev. 02/16", "English"],
+  # 82 Before he was President, Eisenhower was a general. What war was he in?
+    ["Before he was President, Eisenhower was a general. What war was he in?\n1) Vietnam War\n2) Korean War\n3) World War I\n4) World War II\n5) Spanish-American War", "4", "4 - Before becoming the 34th president of the US, he served as a major general in World War II. He led the successful D-Day invasion of Normandy, France.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Before becoming president of the US, FDR served as a major general in World War II. He led the successful D-Day invasion of Normandy, France.\n1) True\n2) False", "2", "2 - Dwight D. Eisenhower served as a major general in World War II. He led the successful D-Day invasion of Normandy, France, on June 6, 1944.", "rev. 02/16", "English"],
+  # 83 During the Cold War, what was the main concern of the United States?
+    ["During the Cold War, what was the main concern of the United States?\n1) Communism\n2) Democracy\n3) Socialism\n4) Capitalism", "1", "1 - The United States and its allies feared the expansion of communism to countries outside the Soviet Union.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["During the Cold War, the US believed that a communist govt & capitalist economy were the best ways to preserve individual rights & freedoms.\n1) True\n2) False", "2", "2 - They believed that a democratic government and a capitalist economy were the best ways to preserve individual rights and freedoms.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["During the Cold War, the US believed that a democratic govt & capitalist economy were the best ways to preserve individual rights & freedoms.\n1) True\n2) False", "1", "1 - The United States and its allies feared the expansion of communism to countries outside the Soviet Union.", "rev. 02/16", "English"],
+  # 84 What movement tried to end racial discrimination?
+    ["What movement tried to end racial discrimination?\n1) civil rights\n2) local rights\n3) international rights\n4) national rights", "1", "1 - The goal of the civil rights movement was to end racial discrimination against African Americans, & to gain full & equal rights for Americans of all races.", "rev. 02/16", "English"],
+    
+    ["The civil rights movement tried to end racial discrimination?\n1) True\n2) False", "1", "1 - The goal of the civil rights movement was to end racial discrimination against African Americans, & to gain full & equal rights for Americans of all races.", "rev. 02/16", "English"],
+  # 85 What did Martin Luther King, Jr. do?    
+    ["What did Martin Luther King, Jr. do?\n1) worked for equality for all Americans\n2) fought for unequal wages\n3) fought for civil rights\n4) 1 & 3\n5) 1 & 2", "4", "4 - King believed in the ideals of the Declaration of Independence: that every citizen deserves America's promise of equality and justice.", "rev. 02/16", "English"],
+    
+    ["Martin Luther King, Jr. worked for equality for all Americans and fought for civil rights.\n1) True\n2) False", "1", "1 - King believed in the ideals of the Declaration of Independence: that every citizen deserves America's promise of equality and justice.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Martin Luther King, Jr. was a Baptist minister and civil rights leader. He worked hard to make America a more fair, tolerant, and equal nation.\n1) True\n2) False", "1", "1 - King believed in the ideals of the Declaration of Independence: that every citizen deserves America's promise of equality and justice.", "rev. 02/16", "English"],
+  # 86 What major event happened on September 11, 2001, in the United States?
+    ["What major event happened on September 11, 2001, in the United States?\n1) Terrorists attacked the US\n2) the US attacked Iraq\n3) the US attacked terrorists", "1", "1 - Four airplanes flying out of US airports were taken over by terrorists. Almost 3,000 people died in these attacks, and is the worst attack ever on US soil.", "rev. 02/16", "English"],
+    
+    ["On September 11, 2001, the United States was attacked by terrorists who hijacked four airplanes and killed almost 3,000 people.\n1) True\n2) False", "1", "1 - Four airplanes flying out of US airports were taken over by terrorists. Almost 3,000 people died in these attacks, and is the worst attack ever on US soil.", "rev. 02/16", "English"],
+  # 87 Name one American Indian tribe in the United States.
+    ["American Indians lived in North America for 1000s of years before the European settlers arrived. Press 1 & memorize a few American Indian tribes for the exam.", "9", "Pueblo, Oneida, Apache, Lakota, Iroquois, Crow, Creek, Teton, Blackfeet, Hopi, Seminole, Inuit", "rev. 02/16", "English"],
+    
+    ["American Indians lived in North America for 1000s of years before the European settlers arrived. Press 1 & memorize a few American Indian tribes for the exam.", "9", "Pueblo, Oneida, Apache, Lakota, Iroquois, Crow, Creek, Teton, Blackfeet, Hopi, Seminole, Inuit", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["American Indians lived in North America for 1000s of years before the European settlers arrived. Press 1 & memorize a few American Indian tribes for the exam.", "9", "Cherokee, Cheyenne, Navajo, Arawak, Sioux, Shawnee, Chippewa, Mohegan, Choctaw, Huron", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["American Indians lived in North America for 1000s of years before the European settlers arrived. Press 1 & memorize a few American Indian tribes for the exam.", "9", "Cherokee, Cheyenne, Navajo, Arawak, Sioux, Shawnee, Chippewa, Mohegan, Choctaw, Huron", "rev. 02/16", "English"],
+  # 88 Name one of the two longest rivers in the United States.
+    ["Name one of the two longest rivers in the United States.\n1) Missouri & Mississippi\n2) Colorado & Missouri\n3) Mississippi & Ohio\n4) Rio Grande & Missouri", "1", "1 - The Mississippi River runs through 10 states. The Missouri River is longer than the Mississippi River, starts in Montana & flows into the Mississippi River.", "rev. 02/16", "English"],
+    
+    ["Two longest rivers in the United States are the Colorado & Missouri River.\n1) True\n2) False", "2", "2 - The Mississippi River runs through 10 states. The Missouri River is longer than the Mississippi River, starts in Montana & flows into the Mississippi River.", "rev. 02/16", "English"],
+  # 89 What ocean is on the West Coast of the United States?
+    ["What ocean is on the West Coast of the United States?\n1) Atlantic Ocean\n2) Pacific Ocean\n3) Indian Ocean\n4) Arctic Ocean\n5) Southern Ocean", "2", "2 - The Pacific Ocean is on the West Coast of the United States. It is the largest ocean on Earth and covers one-third of the Earth’s surface.", "rev. 02/16", "English"],
+    
+    ["The Atlantic Ocean is on the West Coast of the United States?\n1) True\n2) False", "2", "2 - The Pacific Ocean is on the West Coast of the United States. It is the largest ocean on Earth and covers one-third of the Earth’s surface.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["The Pacific Ocean is on the West Coast of the United States?\n1) True\n2) False", "1", "1 - The Pacific Ocean is on the West Coast of the United States. It is the largest ocean on Earth and covers one-third of the Earth’s surface.", "rev. 02/16", "English"],
+  # 90 What ocean is on the East Coast of the United States?
+    ["What ocean is on the East Coast of the United States?\n1) Atlantic Ocean\n2) Pacific Ocean\n3) Indian Ocean\n4) Arctic Ocean\n5) Southern Ocean", "1", "1 - The Atlantic Ocean is on the East Coast of the US. The ocean was named after the giant Atlas from Greek mythology. It is the 2nd largest ocean in the world.", "rev. 02/16", "English"],
+    
+    ["The Atlantic Ocean is on the East Coast of the United States?\n1) True\n2) False", "1", "1 - The Atlantic Ocean is on the East Coast of the US. The ocean was named after the giant Atlas from Greek mythology. It is the 2nd largest ocean in the world.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["The Pacific Ocean is on the East Coast of the United States?\n1) True\n2) False", "2", "2 - The Atlantic Ocean is on the East Coast of the US. The ocean was named after the giant Atlas from Greek mythology. It is the 2nd largest ocean in the world.", "rev. 02/16", "English"],
+  # 91 Name one U.S. territory.
+    ["Name one US territory.\n1) US Virgin Islands\n2) American Samoa\n3) Northern Mariana Islands\n4) Puerto Rico\n5) Guam\n6) 1 & 4\n7) 1 & 3\n8) All of the above", "8", "8 - There are five major U.S. territories: American Samoa, Guam, the Northern Mariana Islands, Puerto Rico, and the U.S. Virgin Islands.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Northern Marina Islands is a US territory.\n1) True\n2) False", "1", "1 - There are five major U.S. territories: American Samoa, Guam, the Northern Mariana Islands, Puerto Rico, and the U.S. Virgin Islands.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["Guam is a US territory.\n1) True\n2) False", "1", "1 - There are five major U.S. territories: American Samoa, Guam, the Northern Mariana Islands, Puerto Rico, and the U.S. Virgin Islands.", "rev. 02/16", "English"],
+    
+    ["Dominican Republic is a US territory.\n1) True\n2) False", "2", "2 - There are five major U.S. territories: American Samoa, Guam, the Northern Mariana Islands, Puerto Rico, and the U.S. Virgin Islands.", "rev. 02/16", "English"],
+    
+    ["Puerto Rico and American Samoa are US territories.\n1) True\n2) False", "1", "1 - There are five major U.S. territories: American Samoa, Guam, the Northern Mariana Islands, Puerto Rico, and the U.S. Virgin Islands.", "rev. 02/16", "English"],
+  # 92 Name one state that borders Canada.
+    ["There are 5 states that border Canada.\n1) True\n2) False", "2", "2 - 13 states border Canada: Maine, Minnesota, New Hampshire, North Dakota, Vermont, Montana, New York, Idaho, Pennsylvania, Washington, Ohio, Alaska & Michigan", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
+    ["There are 13 states that border Canada.\n1) True\n2) False", "1", "1 - 13 states border Canada: Maine, Minnesota, New Hampshire, North Dakota, Vermont, Montana, New York, Idaho, Pennsylvania, Washington, Ohio, Alaska & Michigan", "rev. 02/16", "English"],
+    
+    ["There are 10 states that border Canada.\n1) True\n2) False", "2", "1 - 13 states border Canada: Maine, Minnesota, New Hampshire, North Dakota, Vermont, Montana, New York, Idaho, Pennsylvania, Washington, Ohio, Alaska & Michigan", "rev. 02/16", "English"],
+  # 93 Name one state that borders Mexico.
+    ["Name one state that borders Mexico.\n1) Kansas\n2) Nevada\n3) Louisiana\n4) California", "4", "4 - The border between the United States and Mexico is about 1,900 miles long and spans four U.S. states - Arizona, California, New Mexico and Texas.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
+    ["Name two states that borders Mexico.\n1) Kansas & Arizona\n2) Nevada & New Mexico\n3) California & Arizona\n4) Louisiana & Texas\n5) Nevada & California", "3", "3 - The border between the United States and Mexico is about 1,900 miles long and spans four U.S. states - Arizona, California, New Mexico and Texas.", "rev. 02/16", "English"],
+    
+    ["Name two states that borders Mexico.\n1) Florida & Arizona\n2) Texas & New Mexico\n3) Nevada & Arizona\n4) Louisiana & Texas\n5) Nevada & California", "2", "2 - The border between the United States and Mexico is about 1,900 miles long and spans four U.S. states - Arizona, California, New Mexico and Texas.", "rev. 02/16", "English"],
+  # 94 What is the capital of the United States?
     ["", "", "", "rev. 02/16", "English"],
 
     ["", "", "", "rev. 02/16", "English"],
@@ -638,7 +712,6 @@
     ["", "", "", "rev. 02/16", "English"],
 
     
-    ["New York, Pennsylvannia and Tennessee are all part of the 13 original states.\n1) True\n2) False", "2", "The 13 original states are: New Hampshire, Massachusetts, Rhode Island, Connecticut, New York, New Jersey, Pennsylvania, Delaware, Maryland, Virginia, North Carolina, South Carolina and Georgia.", "rev. 02/16", "English"]
   ]
 
   us_naturalization_en_questions.each do | body, correct_answer, explanation, version, language |
