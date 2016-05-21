@@ -505,213 +505,47 @@
     
     ["Name two states that borders Mexico.\n1) Florida & Arizona\n2) Texas & New Mexico\n3) Nevada & Arizona\n4) Louisiana & Texas\n5) Nevada & California", "2", "2 - The border between the United States and Mexico is about 1,900 miles long and spans four U.S. states - Arizona, California, New Mexico and Texas.", "rev. 02/16", "English"],
   # 94 What is the capital of the United States?
-    ["", "", "", "rev. 02/16", "English"],
+    ["What is the capital of the United States?\n1) New York\n2) Washington\n3) Texas\n4) Washington, D.C.\n5) Arlington\n6) Manhattan\n7) Los Angeles\n8) Fort Knox", "4", "4 - The capital of the United States is Washington, D.C.", "rev. 02/16", "English"],
 
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
-    ["", "", "", "rev. 02/16", "English"],
-
+    ["The capital of the United States is Washington state.\n1) True\n2) False", "2", "2 - The capital of the United States is Washington, D.C.", "rev. 02/16", "English"],
     
+    ["The capital of the United States is Washington D.C.\n1) True\n2) False", "1", "1 - The capital of the United States is Washington, D.C.", "rev. 02/16", "English"],
+  # 95 Where is the Statue of Liberty?
+    ["Where is the Statue of Liberty?\n1) New Jersey\n2) New York Harbor\n3) Liberty Island\n4) All of the above", "4", "4 - The Statue of Liberty is on Liberty Island, in the New York harbor. Acceptable answers also include New Jersey, near New York City, and on the Hudson River.", "rev. 02/16", "English"],
+    
+    ["Where is the Statue of Liberty?\n1) New Mexico\n2) Governor's Island\n3) Liberty Island\n4) Roosevelt Island", "3", "3 - The Statue of Liberty is on Liberty Island, in the New York harbor. Acceptable answers also include New Jersey, near New York City, and on the Hudson River.", "rev. 02/16", "English"],
+
+    ["As a gift of friendship, France gave the Statue of Liberty to the US, 110 years after the signing of the Declaration of Independence.\n1) True\n2) False", "1", "1 - Also, the Statue of Liberty was the first thing new immigrants saw as they approached New York harbor and became a symbol of immigration. ", "rev. 02/16", "English"],
+  # 96 Why does the flag have 13 stripes?
+    ["Why does the flag have 13 stripes? because there were...\n1) 13 original leaders\n2) 13 original countries\n3) 13 original colonies\n4) 13 original cities", "3", "3 - There are 13 stripes on the flag because there were 13 original colonies. We call the American flag \"the Stars and Stripes.\"", "rev. 02/16", "English"],
+
+    ["How many stripes does the American flag have?\n1) 50\n2) 15\n3) 25\n4) 52\n5) 13\n6) 7\n7) 10\n8) 100", "5", "5 - There are 13 stripes on the flag because there were 13 original colonies. We call the American flag \"the Stars and Stripes.\"", "rev. 02/16", "English"],
+
+    ["The stripes of the American flag represent the original colonies.\n1) True\n2) False", "1", "1 - There are 13 stripes on the flag because there were 13 original colonies. We call the American flag \"the Stars and Stripes.\"", "rev. 02/16", "English"],
+  # 97 Why does the flag have 50 stars?
+    ["Why does the flag have 50 stars?\n1) because there are 51 states\n2) because there is one star for each city\n3) because there is one star for each state", "3", "3 - Each star on the flag represents a state. This is why the number of stars has changed over the years from 13 to 50.", "rev. 02/16", "English"],
+
+    ["How many stars does the flag have?\n1) 50\n2) 15\n3) 25\n4) 52\n5) 13\n6) 7\n7) 10\n8) 100", "1", "1 - Each star on the flag represents a state. This is why the number of stars has changed over the years from 13 to 50.", "rev. 02/16", "English"],
+
+    ["The stars of the American flag represent each US city.\n1) True\n2) False", "2", "2 - Each star on the flag represents a state. This is why the number of stars has changed over the years from 13 to 50.", "rev. 02/16", "English"],
+  # 98 What is the name of the national anthem?
+    ["What is the name of the national anthem?\n1) The Star-Spangled Wave\n2) The Star-Spangled Country\n3) The Star-Spangled Banner\n4) The Star-Spangled People", "3", "3 - Congress passed a law in 1931 naming \"The Star-Spangled Banner\" the official national anthem.", "rev. 02/16", "English"],
+
+    ["The national anthem is called the Star-Spangled Banner.\n1) True\n2) False", "1", "1 - Congress passed a law in 1931 naming \"The Star-Spangled Banner\" the official national anthem.", "rev. 02/16", "English"],
+  # 99 When do we celebrate Independence Day?
+    ["When do we celebrate Independence Day?\n1) February 16\n2) January 1\n3) July 4\n4) November 10\n5) June 22\n6) August 5\n7) November 15", "3", "3 - In the United States, we celebrate Independence Day on July 4 to mark the anniversary of the adoption of the Declaration of Independence.", "rev. 02/16", "English"],
+
+    ["July 3rd is Independence Day.\n1) True\n2) False", "2", "2 - In the United States, we celebrate Independence Day on July 4 to mark the anniversary of the adoption of the Declaration of Independence.", "rev. 02/16", "English"],
+  # 100 Name two national U.S. holidays.
+    ["Name two national U.S. holidays.\n1) New Year's and Valentine's Day\n2) Labor & Women's Day\n3) Presidents' & Memorandum Day\n4) Thanksgiving & Christmas", "4", "4 - Our National Holidays are: New Year's Day, Martin Luther King, Jr. Day, Presidents' Day, Memorial Day, Independence Day, Labor Day, Columbus Day, Veterans Day, Thanksgiving and Christmas", "rev. 02/16", "English"],
+
+    ["Independence Day and Halloween are two national holidays.\n1) True\n2) False", "2", "2 - Our National Holidays are: New Year's Day, Martin Luther King, Jr. Day, Presidents' Day, Memorial Day, Independence Day, Labor Day, Columbus Day, Veterans Day, Thanksgiving and Christmas", "rev. 02/16", "English"],
+    
+    ["Presidents' Day and Veterans Day are two national holidays.\n1) True\n2) False", "1", "1 - Our National Holidays are: New Year's Day, Martin Luther King, Jr. Day, Presidents' Day, Memorial Day, Independence Day, Labor Day, Columbus Day, Veterans Day, Thanksgiving and Christmas", "rev. 02/16", "English"],
+
+    ["Labor Day and Martin Luther King, Jr. Day are two national holidays.\n1) True\n2) False", "1", "1 - Our National Holidays are: New Year's Day, Martin Luther King, Jr. Day, Presidents' Day, Memorial Day, Independence Day, Labor Day, Columbus Day, Veterans Day, Thanksgiving and Christmas", "rev. 02/16", "English"],
+
+    ["Memorial Day and Malcolm X Day are two national holidays.\n1) True\n2) False", "2", "2 - Our National Holidays are: New Year's Day, Martin Luther King, Jr. Day, Presidents' Day, Memorial Day, Independence Day, Labor Day, Columbus Day, Veterans Day, Thanksgiving and Christmas", "rev. 02/16", "English"]
   ]
 
   us_naturalization_en_questions.each do | body, correct_answer, explanation, version, language |
