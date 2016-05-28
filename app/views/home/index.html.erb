@@ -27,7 +27,8 @@
   <div class="section values">
     <h3 class="section-heading subjects_scroll">Choose Any Subject</h3>
     <div class="row">
-      <div class="one-half column">
+      <div class="twelve columns">
+      <!-- <div class="one-half column"> -->
         <div class="service">
           <div class="service-icon-box">
             <%= image_tag("us_dept_homeland_security.png", class: "service-icon") %>
@@ -37,13 +38,13 @@
         </div>
       </div>
       <div class="one-half column">
-        <div class="service">
+        <!-- <div class="service">
           <div class="service-icon-box">
             <%= image_tag("us_dept_homeland_security.png", class: "service-icon") %>
           </div>
           <h4 class="service-heading">Preguntas Para Examen de Naturalización EE.UU.<br>(Español)</h4>
           <p class="service-description">Educación Cívica (Historia y Gobierno) es necesario para pasar el Examen de Naturalización de EE.UU.<br><br>Prepárate con preguntas enviados a tu móvil via mensaje de texto.</p>
-        </div>
+        </div> -->
       </div>
     </div>
     <h1 class = "up_arrow scrollup up_arrow_position1"><a>&#10095</a></h1>
@@ -51,22 +52,56 @@
 
   
   <div class="section pricing">
-    <h3 class="section-heading pricing_scroll">Simple Pricing = $9.95</h3>
+    <h3 class="section-heading pricing_scroll">Simple Pricing</h3>
     <div class="row">
-      <div class="six columns">
+      <!-- <div class="twelve columns"> -->
       <!-- <div class="one-half column"> -->
-        <p class="section-description u-max-full-width">No pricing tiers, No confusion.<br><br>Your decision to keep your mind active should be easy.<br><br>Simply register and subscribe to the subject you want to stay prepped for via Text Message/SMS studying.</p><br><br>
-      </div>
-      <div class="five columns">
+        <p class="section-description u-max-full-width">Your decision to keep your mind active should be easy.<br><br>Simply register and subscribe to the subject you want to stay prepped for via Text Message/SMS studying.</p><br><br>
+      <!-- </div> -->
+    </div>
+    <div class="row">
+      <div class="four columns">
       <!-- <div class="one-half column"> -->
         <ul class="active-tb">
-          <li class="pricing_info pricing_title">Monthly Subscription</li>
+          <li class="pricing_info pricing_title pricing_cost">Monthly Subscription</li>
           <li class="pricing_info">Choose One Subject</li>
           <li class="pricing_info">Switch Subjects Anytime</li>
           <li class="pricing_info">5 SMS Questions Sent Daily</li>
           <li class="pricing_info">Analyze Your Reponse History</li>
           <li class="pricing_info pricing_cost">$9.95 per Month</li>
-          <li><%= link_to("Register", new_user_registration_path, class: "button button-primary pricing_btn") %></li>
+          <li><%= link_to("Choose", new_user_registration_path, class: "button button-primary pricing_btn") %></li>
+        </ul>
+      </div>
+      <div class="four columns">
+      <!-- <div class="one-half column"> -->
+        <ul class="active-tb">
+          <li class="pricing_info pricing_title pricing_cost">Bi-Annual Subscription</li>
+          <!-- <li class="pricing_info">Choose One Subject</li> -->
+          <!-- <li class="pricing_info">Switch Subjects Anytime</li> -->
+          <!-- <li class="pricing_info">5 SMS Questions Sent Daily</li> -->
+          <!-- <li class="pricing_info">Analyze Your Reponse History</li> -->
+          <li class="pricing_info">All The Benefits of Our Monthly Subscription</li>
+          <li class="pricing_info">GREAT VALUE</li>
+          <li class="pricing_info">10% Discount</li>
+          <li class="pricing_info">*Monthly Price Based on 6-Month Subscription</li>
+          <li class="pricing_info pricing_cost">$8.95 per Month*</li>
+          <li><%= link_to("Choose", new_user_registration_path, class: "button button-primary pricing_btn") %></li>
+        </ul>
+      </div>
+      <div class="four columns">
+      <!-- <div class="one-half column"> -->
+        <ul class="active-tb">
+          <li class="pricing_info pricing_title pricing_cost">One Year Subscription</li>
+          <!-- <li class="pricing_info">Choose One Subject</li> -->
+          <!-- <li class="pricing_info">Switch Subjects Anytime</li> -->
+          <!-- <li class="pricing_info">5 SMS Questions Sent Daily</li> -->
+          <!-- <li class="pricing_info">Analyze Your Reponse History</li> -->
+          <li class="pricing_info">All The Benefits of Our Monthly Subscription</li>
+          <li class="pricing_info">BEST VALUE</li>
+          <li class="pricing_info">15% Discount</li>
+          <li class="pricing_info">*Monthly Price Based on a Yearly Subscription</li>
+          <li class="pricing_info pricing_cost">$8.45 per Month*</li>
+          <li><%= link_to("Choose", new_user_registration_path, class: "button button-primary pricing_btn") %></li>
         </ul>
       </div>
     </div>
@@ -77,6 +112,7 @@
   <div class="section categories">
     <h3 class="section-heading process_scroll">SMS Questions Sent To Your Phone</h3>
     <div class="row">
+          <!-- <li class="pricing_info">Analyze Your Reponse History</li> -->
       <div class="six columns category feature_list">
         <ol>
           <div class="row">

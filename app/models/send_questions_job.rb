@@ -80,7 +80,7 @@ class SendQuestionsJob
 
     subscription_nums_to_text.each do |number_to_send_to|
       user_id = Profile.where(mobile_phone: number_to_send_to).first.user_id
-      message_to_send = Question.where(subject_id: Subscription.where(user_id: user_id).map{|s| s.subject_id}).map{|q| q.body}.sample
+      message_to_send = Question.where(active: true, subject_id: Subscription.where(user_id: user_id).map{|s| s.subject_id}).map{|q| q.body}.sample
       question_id = Question.where(body: message_to_send).first.id
       question_version = Question.where(body: message_to_send).first.version
 
