@@ -7,7 +7,7 @@ class SendQuestionsJob
   include Delayed::RecurringJob
   # run_every 3.days
   # run_every 1.day
-  run_every 3.minutes
+  # run_every 3.minutes
 
   # run_at '06:20PM'
   # run_at '06:21PM'
@@ -45,23 +45,23 @@ class SendQuestionsJob
   # # run_at '10:30AM'
   # run_at '11:00AM'
   # # run_at '11:30AM'
-  # run_at '12:00PM'
+  run_at '12:00PM'
   # # run_at '12:30PM'
   # run_at '01:00PM'
   # # run_at '01:30PM'
-  # run_at '02:00PM'
+  run_at '02:00PM'
   # # run_at '02:30PM'
   # run_at '03:00PM'
   # # run_at '03:30PM'
-  # run_at '04:00PM'
+  run_at '04:00PM'
   # # run_at '04:30PM'
   # run_at '05:00PM'
   # # run_at '05:30PM'
-  # run_at '06:00PM'
+  run_at '06:00PM'
   # # run_at '06:30PM'
   # run_at '07:00PM'
   # # run_at '07:30PM'
-  # run_at '08:00PM'
+  run_at '08:00PM'
   # # run_at '08:30PM'
   # run_at '09:00PM'
   # # run_at '09:30PM'
