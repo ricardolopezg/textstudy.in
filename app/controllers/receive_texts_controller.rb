@@ -38,7 +38,7 @@ class ReceiveTextsController < ApplicationController
             r.Message "You can only respond once per question."
           end
       else
-          r.Message "Please send only the number of your response. For Example, type 1 for choice 1."   
+        r.Message "Please send only the number of your response. For Example, type 1 for choice 1."    
       end
     end
 
