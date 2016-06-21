@@ -13,6 +13,7 @@ gem 'delayed_job_active_record'
 gem 'devise'
 gem 'twilio-ruby'
 gem 'sinch_sms', '~> 2.1'
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use SCSS for stylesheets
