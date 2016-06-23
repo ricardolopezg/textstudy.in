@@ -23,7 +23,7 @@ class ReceiveTextsController < ApplicationController
     # user_last_received_question = Question.where(id: Response.where(to_number: from).last.question_id).first.body
 
     @twiml = Twilio::TwiML::Response.new do |r|
-      if body == correct_answer && "1" || body == correct_answer && "2" || body == correct_answer && "3" || body == correct_answer && "4" || body == correct_answer && "5" || body == correct_answer && "6" || body == correct_answer && "7" || body == correct_answer && "8" || body == correct_answer && "9" || body == correct_answer && "10"
+      if body == correct_answer || body == correct_answer || body == correct_answer || body == correct_answer || body == correct_answer || body == correct_answer || body == correct_answer || body == correct_answer || body == correct_answer || body == correct_answer
           if user_response.nil?
             r.Message "Correct."
             Response.where(to_number: from).last.update_attributes(user_response: body, response_status: "Correct")
