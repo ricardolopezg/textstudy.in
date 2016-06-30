@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160523172641) do
+ActiveRecord::Schema.define(version: 20160629205918) do
+
+  create_table "charges", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "plan"
+    t.date     "expiration"
+    t.string   "status"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "stripe_customer_id"
+    t.integer  "amount"
+  end
+
+  add_index "charges", ["user_id"], name: "index_charges_on_user_id"
 
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer  "priority",   default: 0, null: false

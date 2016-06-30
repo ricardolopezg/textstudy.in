@@ -44,6 +44,11 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def billing
+    @charge = current_user.charges.last
+    @history = Stripe::Charge.list(:customer => @charge.stripe_customer_id)
+  end
+
 
 private
   def profile_params

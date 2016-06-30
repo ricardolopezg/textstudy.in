@@ -17,9 +17,13 @@
       <p class="icon fi-credit-card"></p>
       <p class="item">Billing</p>
     </a> -->
-    <a href="/profiles/<%= current_user.profile.id %>/contact" class="menu_item " rel="nofollow">
+    <a href="/profiles/<%= current_user.profile.id %>/contact" class="menu_item" rel="nofollow">
       <p class="icon fi-mail"></p>
       <p class="item">Support</p>
+    </a>
+    <a href="/profiles/<%= current_user.profile.id %>/billing" class="menu_item" rel="nofollow">
+      <p class="icon fi-credit-card"></p>
+      <p class="item">Payment</p>
     </a>
     <a href="/users/sign_out" class="menu_item log_out_nav_link" id="signOut" rel="nofollow" data-method="delete">
       <p class="icon fi-power"></p>

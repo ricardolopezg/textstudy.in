@@ -18,6 +18,7 @@
       get :dashboard
       get :subjects
       get :billing
+      post :billing
       get :contact
     end
   end
@@ -29,6 +30,13 @@
     end
   end
   resources :sinch
+  resources :charges do
+    collection do
+      post :annual
+      post :bi_annual
+      post :monthly
+    end
+  end
 
   
   # You can have the root of your site routed with "root"

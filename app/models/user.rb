@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   has_many :responses, dependent: :destroy
   has_one :profile, dependent: :destroy
 
+  has_many :charges
+
   after_create :build_default_profile, :build_user_subscriptions
 
 
