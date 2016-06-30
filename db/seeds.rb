@@ -60,7 +60,7 @@
 
     ["The Constitution currently has 10 amendments.\n1) True\n2) False", "2", "2 - The first 10 amendments to the Constitution are called the Bill of Rights. They were added in 1791. Since then, 17 more amendments have been added.", "rev. 02/16", "English"],
   # 8 What did the Declaration of Independence do?
-    ["What did the Declaration of Independence do?n\1) announced our independence from Great Britain n\2) declared our war against Great Britainn\3) create fireworks", "1", "1 - In the Declaration of Independence, Jefferson wrote a list of complaints the colonists had against the King of England. He ended with the statement that the colonies are, and should be, free and independent states.", "rev. 02/16", "English"],
+    ["What did the Declaration of Independence do?\n1) announced our independence from Great Britain\n2) declared our war against Great Britain\n3) create fireworks", "1", "1 - In the Declaration of Independence, Jefferson wrote a list of complaints the colonists had against the King of England. He ended with the statement that the colonies are, and should be, free and independent states.", "rev. 02/16", "English"],
 
     ["The Declaration of Independence stated the US was free from Great Britain by announcing and declaring independence.\n1) True\n2) False", "1", "1 - In the Declaration of Independence, Jefferson wrote a list of complaints the colonists had against the King of England. He ended with the statement that the colonies are, and should be, free and independent states.", "rev. 02/16", "English"],
 
@@ -288,7 +288,7 @@
   # 53 What is one promise you make when you become a United States citizen?
     ["What is one promise you make when you become a US citizen?\n1) give up loyalty to other countries\n2) obey US laws\n3) be loyal to the US\n4) All of the above", "4", "4 - All Promises:\n- give up loyalty to other countries\n- defend the Constitution and laws of the US\n- obey the laws of the US\n- serve in the U.S. military (if needed)\n- serve (do important work for) the nation (if needed)\n- be loyal to the United States", "rev. 02/16", "English"],
     
-    ["What is one promise you make when you become a US citizen?\n1) serve in the U.S. military (if needed)\n2) disobey US laws\n3) work every day\n4)  read US laws", "1", "1 - All Promises:\n- give up loyalty to other countries\n- defend the Constitution and laws of the US\n- obey the laws of the US\n- serve in the U.S. military (if needed)\n- serve (do important work for) the nation (if needed)\n- be loyal to the United States", "rev. 02/16", "English"],
+    ["What is one promise you make when you become a US citizen?\n1) serve in the U.S. military (if needed)\n2) disobey US laws\n3) work every day\n4) read US laws", "1", "1 - All Promises:\n- give up loyalty to other countries\n- defend the Constitution and laws of the US\n- obey the laws of the US\n- serve in the U.S. military (if needed)\n- serve (do important work for) the nation (if needed)\n- be loyal to the United States", "rev. 02/16", "English"],
 
     ["What is one promise you make when you become a US citizen?\n1) refuse to serve in the military\n2) defend the US Constitution\n3) serve the nation\n4) 2 and 3", "4", "4 - All Promises:\n- give up loyalty to other countries\n- defend the Constitution and laws of the US\n- obey the laws of the US\n- serve in the U.S. military (if needed)\n- serve (do important work for) the nation (if needed)\n- be loyal to the United States", "rev. 02/16", "English"],
   # 54 How old do citizens have to be to vote for President?

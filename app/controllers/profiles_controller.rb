@@ -8,7 +8,7 @@ class ProfilesController < ApplicationController
 
   def dashboard
     @current_user = User.find(current_user.id)
-    @responses = Response.where(user_id: @current_user).order('id DESC').paginate(page: params[:page], per_page: 5)
+    @responses = Response.where(user_id: @current_user).order('id DESC').paginate(page: params[:page], per_page: 10)
     
     # if params[:search]
     #   @responses = Response.where(user_id: @current_user).search(params[:search]).order('id DESC').paginate(page: params[:page], per_page: 5).joins(:questions, :subjects)
