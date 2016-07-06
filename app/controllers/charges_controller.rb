@@ -1,7 +1,4 @@
 class ChargesController < ApplicationController
-  def index
-  end
-
   def new
     @plan = params[:plan]
     if @plan == "Annual"
@@ -13,15 +10,19 @@ class ChargesController < ApplicationController
     end
   end
 
+  # need if/else for logic for not creating multiple customers
+  # probably include a redirect if certain conditions are met
+
   def create
     @plan = params[:plan]
     token = params[:stripeToken]
     email = params[:stripeEmail]
 
+    #create customer independent of charge
     customer = Stripe::Customer.create(
       :email => email,
       :source => token,
-      :plan => @plan 
+      :plan => @plan
     )
 
     if @plan == "Annual"
@@ -35,7 +36,7 @@ class ChargesController < ApplicationController
       amount = 995
     end
       
-    Charge.create(
+    charge = Charge.create(
       user_id: current_user.id,
       plan: @plan,
       expiration: (DateTime.now + time_lapse).to_date,
@@ -44,7 +45,9 @@ class ChargesController < ApplicationController
       amount: amount
     )
 
-    redirect_to billing_profile_path(current_user.id)
+    if charge.save
+      redirect_to billing_profile_path(current_user.id)
+    end
 
     rescue Stripe::CardError => e
       flash[:error] = e.message
