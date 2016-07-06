@@ -1,7 +1,87 @@
 <div id="content_container">
   <div class="pricing center">
-    <% if @charge.status == "Active" %>
+    <div class="row">
+      <h3>Current Card Info</h3>
+      <!-- Create Customer or Display Last 4 Here -->
+      <% if @stripe_customer_id.present? %>
+      <!-- Display Last 4 and option to change -->
+        <p class="section-description u-max-full-width">
+          <span>Current Card Last 4:</span> <%= @customer.sources.data.first.last4 %>
+        </p>
+        <%= link_to("Change Card", process_customer_profiles_path, class: "button button-primary pricing_btn", id: "card-button") %>
+
+        <%= form_tag process_customer_profiles_path do %>
+          <article>
+            <% if flash[:error].present? %>
+              <div id="error_explanation">
+                <p><%= flash[:error] %></p>
+              </div>
+            <% end %>
+
+          </article>
+
+          <script src="https://checkout.stripe.com/checkout.js"></script>
+
+          <script>
+            var handler = StripeCheckout.configure({
+              key: '<%= Rails.configuration.stripe[:publishable_key] %>',
+              // image: '/img/documentation/checkout/marketplace.png',
+              locale: 'auto',
+              email: '<%= current_user.email %>',
+              token: function(response) {
+                // You can access the token ID with `token.id`.
+                // Get the token ID to your server-side code for use.
+                var tokenInput = $("<input type=hidden name=stripeToken />").val(response.id);
+                var emailInput = $("<input type=hidden name=stripeEmail />").val(response.email);
+                 $("form").append(tokenInput).append(emailInput).submit();
+              }
+            });
+
+            $('#card-button').on('click', function(e) {
+              // Open Checkout with further options:
+              handler.open({
+                name: 'TEXT PREP',
+                description: 'Change Credit Card',
+                // email: '<%= current_user.email %>',
+                allowRememberMe: false
+              });
+              e.preventDefault();
+            });
+
+            // Close Checkout on page navigation:
+            $(window).on('popstate', function() {
+              handler.close();
+            });
+          </script>
+        <% end %>
+
+      <% else %>
+      <!-- Button to form to enter info -->
+        <%= link_to("Add Card", customer_profiles_path, class: "button button-primary pricing_btn") %>
+        <%= form_tag process_customer_profiles_path do %>
+          <article>
+            <% if flash[:error].present? %>
+              <div id="error_explanation">
+                <p><%= flash[:error] %></p>
+              </div>
+            <% end %>
+
+          </article>
+
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-description="Please Enter Your Card Info"
+                  data-locale="auto"
+                  data-email="<%= current_user.email %>"></script>
+        <% end %>
+
+
+      <% end %>
+    </div>
+
+    <% if @charge.present? && @charge.status == "Active" %>
       <div class="row">
+        <h3>Current Plan Info</h3>
         <p class="section-description u-max-full-width">     
           <span>Current Plan:</span> <%= @charge.plan %>
           <br>
@@ -68,8 +148,4 @@
       </div>
     <% end %>
   </div>
-
-
-
-
 </div>

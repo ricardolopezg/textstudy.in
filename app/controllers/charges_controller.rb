@@ -57,8 +57,8 @@ class ChargesController < ApplicationController
 
   def edit
     if current_user.charges.present?
-      stripe_id = current_user.charges.last.stripe_id
-      customer = Stripe::Customer.retrieve(stripe_id)
+      stripe_customer_id = current_user.charges.last.stripe_customer_id
+      customer = Stripe::Customer.retrieve(stripe_customer_id)
     else
       customer = Stripe::Customer.create(
         :email => email,

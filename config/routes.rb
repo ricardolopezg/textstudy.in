@@ -21,6 +21,10 @@
       post :billing
       get :contact
     end
+    collection do 
+      get :customer
+      post :process_customer
+    end
   end
   resources :send_texts
   resources :receive_texts
