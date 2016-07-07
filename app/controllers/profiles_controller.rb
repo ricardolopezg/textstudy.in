@@ -63,16 +63,23 @@ class ProfilesController < ApplicationController
     email = params[:stripeEmail]
 
     #if customer exists i just want to u;date their card info only!!! - not create another one
-    customer = Stripe::Customer.create(
-      :email => email,
-      :source => token
-    )
 
     profile = current_user.profile
+    
+    if profile.stripe_customer_id.blank?
 
-    profile.update(
-      stripe_customer_id: customer.id
-    )
+      customer = Stripe::Customer.create(
+        :email => email,
+        :source => token
+      )
+
+    else
+      customer = Stripe::Customer.retrieve(profile.stripe_customer_id)
+      customer.source = token
+      customer.save
+    end
+
+    profile.update(stripe_customer_id: customer.id)
 
     if profile.save
       redirect_to billing_profile_path(current_user.id)
