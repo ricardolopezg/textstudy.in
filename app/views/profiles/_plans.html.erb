@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="four columns">
+    <ul class="active-tb">
+      <li class="pricing_info pricing_title pricing_cost">Monthly Subscription</li>
+      <li class="pricing_info">Choose One Subject</li>
+      <li class="pricing_info">Switch Subjects Anytime</li>
+      <li class="pricing_info">5 SMS Questions Sent Daily</li>
+      <li class="pricing_info">Analyze Your Reponse History</li>
+      <li class="pricing_info pricing_cost">$9.95 per Month</li>
+      <li><%= link_to("Choose", plan_profiles_path(:plan => "Monthly"), class: "button button-primary pricing_btn plan_btn", id: "monthly_button", method: :post) %></li>
+    </ul>
+  </div>
+
+  <div class="four columns">
+    <ul class="active-tb">
+      <li class="pricing_info pricing_title pricing_cost">Bi-Annual Subscription</li>
+      <li class="pricing_info">All The Benefits of Our Monthly Subscription</li>
+      <li class="pricing_info">GREAT VALUE</li>
+      <li class="pricing_info">10% Discount</li>
+      <li class="pricing_info">*Monthly Price Based on 6-Month Subscription</li>
+      <li class="pricing_info pricing_cost">$8.95 per Month*</li>
+      <li><%= link_to("Choose", plan_profiles_path(:plan => "Bi-Annual"), class: "button button-primary pricing_btn plan_btn", id: "bi_annual_button", method: :post) %></li>
+    </ul>
+  </div>
+
+  <div class="four columns">
+    <ul class="active-tb">
+      <li class="pricing_info pricing_title pricing_cost">One Year Subscription</li>
+      <li class="pricing_info">All The Benefits of Our Monthly Subscription</li>
+      <li class="pricing_info">BEST VALUE</li>
+      <li class="pricing_info">15% Discount</li>
+      <li class="pricing_info">*Monthly Price Based on a Yearly Subscription</li>
+      <li class="pricing_info pricing_cost">$8.45 per Month*</li>
+      <li><%= link_to("Choose", plan_profiles_path(:plan => "Annual"), class: "button button-primary pricing_btn plan_btn", id: "annual_button", method: :post) %></li>
+    </ul>
+  </div>
+</div>

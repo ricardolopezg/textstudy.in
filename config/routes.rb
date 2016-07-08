@@ -20,9 +20,11 @@
       get :contact
     end
     collection do 
-      post :customer
       get :billing
+      post :customer
       post :plan
+      post :cancel
+      post :reactivate
     end
   end
   resources :send_texts

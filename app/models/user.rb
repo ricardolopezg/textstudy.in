@@ -30,10 +30,14 @@ private
       billing_state: "Click to edit Billing State", 
       billing_zip: "Click to edit Billing Zip", 
       billing_country: "Click to edit Billing Country", 
-      birthday: "Click to edit Birthday"
+      birthday: "Click to edit Birthday",
+      plan: nil,
+      status: "created",
+      stripe_customer_id: nil
       )
   end
 
+  # change this to onl create subsciption when a use signs up
   def build_user_subscriptions
     Subject.all.each do |s| 
       s.id
