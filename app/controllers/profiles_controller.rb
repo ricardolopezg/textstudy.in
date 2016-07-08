@@ -44,10 +44,62 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def billing
+    profile = current_user.profile
+    if profile.status == 'active'
+      @active = true
+      @history = Stripe::Charge.list(:customer => profile.stripe_customer_id)
+  
+      @customer = Stripe::Customer.retrieve(profile.  stripe_customer_id)
+      @plan = profile.plan
+    end
+
+  end
+
+  def customer
+    token = params[:stripeToken]
+    email = params[:stripeEmail]
+
+    #if customer exists i just want to u;date their card info only!!! - not create another one
+
+    profile = current_user.profile
+    
+    if profile.stripe_customer_id.blank?
+
+      customer = Stripe::Customer.create(
+        :email => email,
+        :source => token
+      )
+
+    else
+      customer = Stripe::Customer.retrieve(profile.stripe_customer_id)
+      customer.source = token
+      customer.save
+    end
+
+    profile.update(stripe_customer_id: customer.id)
+
+    if profile.save
+      redirect_to billing_profiles_path
+    end
+
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
+      redirect_to redirect_to billing_profiles_path
+  end
+
+  def plan
+    profile = current_user.profile
+
+
+
+
+    profile.status = 'active'
+  end
 
 private
   def profile_params
-    params.require(:profile).permit(:fname, :lname, :mobile_phone, :alt_phone, :billing_phone, :billing_address1, :billing_address2, :billing_city, :billing_state, :billing_zip, :billing_country, :birthday, :avatar)
+    params.require(:profile).permit(:fname, :lname, :mobile_phone, :alt_phone, :billing_phone, :billing_address1, :billing_address2, :billing_city, :billing_state, :billing_zip, :billing_country, :birthday, :avatar, :stripe_customer_id, :plan, :status)
   end
   
   def subscription_params

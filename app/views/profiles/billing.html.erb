@@ -1,15 +1,176 @@
 <div id="content_container">
+  <div class="pricing center">
+    <div class="row">
+      <h3>Current Card Info</h3>
+      <!-- Create Customer or Display Last 4 Here -->
+      <% if @active %>
+      <!-- Display Last 4 and option to change -->
+        <p class="section-description u-max-full-width">
+          <span>Current Card Last 4:</span> <%= @customer.sources.data.first.last4 %>
+        </p>
+        <%= link_to("Change Card", customer_profiles_path, class: "button button-primary pricing_btn", id: "card-button") %>
+
+        <%= form_tag customer_profiles_path do %>
+          <article>
+            <% if flash[:error].present? %>
+              <div id="error_explanation">
+                <p><%= flash[:error] %></p>
+              </div>
+            <% end %>
+          </article>
+
+          <script src="https://checkout.stripe.com/checkout.js"></script>
+          <script>
+            var handler = StripeCheckout.configure({
+              key: '<%= Rails.configuration.stripe[:publishable_key] %>',
+              // image: '/img/documentation/checkout/marketplace.png',
+              locale: 'auto',
+              email: '<%= current_user.email %>',
+              token: function(response) {
+                // You can access the token ID with `token.id`.
+                // Get the token ID to your server-side code for use.
+                var tokenInput = $("<input type=hidden name=stripeToken />").val(response.id);
+                var emailInput = $("<input type=hidden name=stripeEmail />").val(response.email);
+                 $("form").append(tokenInput).append(emailInput).submit();
+              }
+            });
+
+            $('#card-button').on('click', function(e) {
+              // Open Checkout with further options:
+              handler.open({
+                name: 'TEXT PREP',
+                description: 'Change Credit Card',
+                allowRememberMe: false
+              });
+              e.preventDefault();
+            });
+
+            // Close Checkout on page navigation:
+            $(window).on('popstate', function() {
+              handler.close();
+            });
+          </script>
+
+        <% end %>
+
+      <% else %>
+        <p class="section-description u-max-full-width center">
+          Looks like you need to add a credit card!
+        </p>
+        <%= link_to("Add Card", customer_profiles_path, class: "button button-primary pricing_btn") %>
+        <%= form_tag customer_profiles_path do %>
+          <article>
+            <% if flash[:error].present? %>
+              <div id="error_explanation">
+                <p><%= flash[:error] %></p>
+              </div>
+            <% end %>
+          </article>
+
+          <script src="https://checkout.stripe.com/checkout.js"></script>
+          <script>
+            var handler = StripeCheckout.configure({
+              key: '<%= Rails.configuration.stripe[:publishable_key] %>',
+              // image: '/img/documentation/checkout/marketplace.png',
+              locale: 'auto',
+              email: '<%= current_user.email %>',
+              token: function(response) {
+                // You can access the token ID with `token.id`.
+                // Get the token ID to your server-side code for use.
+                var tokenInput = $("<input type=hidden name=stripeToken />").val(response.id);
+                var emailInput = $("<input type=hidden name=stripeEmail />").val(response.email);
+                 $("form").append(tokenInput).append(emailInput).submit();
+              }
+            });
+
+            $('#card-button').on('click', function(e) {
+              // Open Checkout with further options:
+              handler.open({
+                name: 'TEXT PREP',
+                description: 'Add Credit Card',
+                allowRememberMe: false
+              });
+              e.preventDefault();
+            });
+
+            // Close Checkout on page navigation:
+            $(window).on('popstate', function() {
+              handler.close();
+            });
+          </script>
+        <% end %>
 
 
+      <% end %>
+    </div>
 
+    <% if @customer.present? %>
+      <div class="row">
+        <h3>Current Plan Info</h3>
+        <p class="section-description u-max-full-width">     
+          <span>Current Plan:</span> <%= @plan %>
+          <br>
+          <span>Expires:</span> calculate this
+          <br>
+          <%= link_to("Upgrade/Cancel Plan", plan_profiles_path, class: "button button-primary pricing_btn") %>
+        </p>
 
+        <p class="section-description u-max-full-width">
+          <table>
+            <tr class="title">
+              <th>No.</th>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Plan</th>
+            </tr>
 
+            <% @history.each.with_index(1) do |h, i| %>
+              <tr>
+                <th><%= i %></th>
+                <th><%= Time.at(h.created).strftime("%-m/%-d/%y") %></th>
+                <th><%= number_to_currency(h.amount.to_i / 100.00) %></th>
+                <th><%= h.statement_descriptor %></th>
+              </tr>
+            <% end %>
+        </p>
+      </div>
+    <% elsif @active %>
 
-
-</div> <!-- END CONTENT_CONTAINER  -->
-
-
-<!-- <div class="two columns footer_art_signed_in">
-  <%= image_tag("big5-icon-grid-black-rhinoceros-adam-whitcroft.png", class: "footer_glyph_rhino") %>
-  <p class = "art_credit">art by: Adam Whitcroft</p>
-</div> -->
+      <div class="row">
+        <div class="four columns">
+          <ul class="active-tb">
+            <li class="pricing_info pricing_title pricing_cost">Monthly Subscription</li>
+            <li class="pricing_info">Choose One Subject</li>
+            <li class="pricing_info">Switch Subjects Anytime</li>
+            <li class="pricing_info">5 SMS Questions Sent Daily</li>
+            <li class="pricing_info">Analyze Your Reponse History</li>
+            <li class="pricing_info pricing_cost">$9.95 per Month</li>
+            <li><%= link_to("Choose", new_charge_path(:plan => "Monthly"), class: "button button-primary pricing_btn") %></li>
+          </ul>
+        </div>
+        <div class="four columns">
+          <ul class="active-tb">
+            <li class="pricing_info pricing_title pricing_cost">Bi-Annual Subscription</li>
+            <li class="pricing_info">All The Benefits of Our Monthly Subscription</li>
+            <li class="pricing_info">GREAT VALUE</li>
+            <li class="pricing_info">10% Discount</li>
+            <li class="pricing_info">*Monthly Price Based on 6-Month Subscription</li>
+            <li class="pricing_info pricing_cost">$8.95 per Month*</li>
+            <li><%= link_to("Choose", new_charge_path(:plan => "Bi-Annual"), class: "button button-primary pricing_btn") %></li>
+          </ul>
+        </div>
+        <div class="four columns">
+          <ul class="active-tb">
+            <li class="pricing_info pricing_title pricing_cost">One Year Subscription</li>
+            <li class="pricing_info">All The Benefits of Our Monthly Subscription</li>
+            <li class="pricing_info">BEST VALUE</li>
+            <li class="pricing_info">15% Discount</li>
+            <li class="pricing_info">*Monthly Price Based on a Yearly Subscription</li>
+            <li class="pricing_info pricing_cost">$8.45 per Month*</li>
+            <li><%= link_to("Choose", new_charge_path(:plan => "Annual"), class: "button button-primary pricing_btn") %></li>
+          </ul>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
