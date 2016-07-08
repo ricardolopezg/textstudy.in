@@ -17,13 +17,12 @@
     member do 
       get :dashboard
       get :subjects
-      get :billing
-      post :billing
       get :contact
     end
     collection do 
-      get :customer
-      post :process_customer
+      post :customer
+      get :billing
+      post :plan
     end
   end
   resources :send_texts

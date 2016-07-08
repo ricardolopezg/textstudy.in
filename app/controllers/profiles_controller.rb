@@ -45,20 +45,18 @@ class ProfilesController < ApplicationController
   end
 
   def billing
-    # old
-    @charge = current_user.charges.last
-    @history = Stripe::Charge.list(:customer => @charge.stripe_customer_id) if @charge.present?
+    profile = current_user.profile
+    if profile.status == 'active'
+      @active = true
+      @history = Stripe::Charge.list(:customer => profile.stripe_customer_id)
   
-    # new
-    @stripe_customer_id = current_user.profile.stripe_customer_id
-    @customer = Stripe::Customer.retrieve(@stripe_customer_id) if @stripe_customer_id.present?
+      @customer = Stripe::Customer.retrieve(profile.  stripe_customer_id)
+      @plan = profile.plan
+    end
 
   end
 
   def customer
-  end
-
-  def process_customer
     token = params[:stripeToken]
     email = params[:stripeEmail]
 
@@ -82,18 +80,26 @@ class ProfilesController < ApplicationController
     profile.update(stripe_customer_id: customer.id)
 
     if profile.save
-      redirect_to billing_profile_path(current_user.id)
+      redirect_to billing_profiles_path
     end
 
     rescue Stripe::CardError => e
       flash[:error] = e.message
-      redirect_to redirect_to billing_profile_path(current_user.id)
+      redirect_to redirect_to billing_profiles_path
   end
 
+  def plan
+    profile = current_user.profile
+
+
+
+
+    profile.status = 'active'
+  end
 
 private
   def profile_params
-    params.require(:profile).permit(:fname, :lname, :mobile_phone, :alt_phone, :billing_phone, :billing_address1, :billing_address2, :billing_city, :billing_state, :billing_zip, :billing_country, :birthday, :avatar, :stripe_customer_id)
+    params.require(:profile).permit(:fname, :lname, :mobile_phone, :alt_phone, :billing_phone, :billing_address1, :billing_address2, :billing_city, :billing_state, :billing_zip, :billing_country, :birthday, :avatar, :stripe_customer_id, :plan, :status)
   end
   
   def subscription_params

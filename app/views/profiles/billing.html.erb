@@ -3,25 +3,23 @@
     <div class="row">
       <h3>Current Card Info</h3>
       <!-- Create Customer or Display Last 4 Here -->
-      <% if @stripe_customer_id.present? %>
+      <% if @active %>
       <!-- Display Last 4 and option to change -->
         <p class="section-description u-max-full-width">
           <span>Current Card Last 4:</span> <%= @customer.sources.data.first.last4 %>
         </p>
-        <%= link_to("Change Card", process_customer_profiles_path, class: "button button-primary pricing_btn", id: "card-button") %>
+        <%= link_to("Change Card", customer_profiles_path, class: "button button-primary pricing_btn", id: "card-button") %>
 
-        <%= form_tag process_customer_profiles_path do %>
+        <%= form_tag customer_profiles_path do %>
           <article>
             <% if flash[:error].present? %>
               <div id="error_explanation">
                 <p><%= flash[:error] %></p>
               </div>
             <% end %>
-
           </article>
 
           <script src="https://checkout.stripe.com/checkout.js"></script>
-
           <script>
             var handler = StripeCheckout.configure({
               key: '<%= Rails.configuration.stripe[:publishable_key] %>',
@@ -56,20 +54,20 @@
         <% end %>
 
       <% else %>
-      <!-- Button to form to enter info -->
+        <p class="section-description u-max-full-width center">
+          Looks like you need to add a credit card!
+        </p>
         <%= link_to("Add Card", customer_profiles_path, class: "button button-primary pricing_btn") %>
-        <%= form_tag process_customer_profiles_path do %>
+        <%= form_tag customer_profiles_path do %>
           <article>
             <% if flash[:error].present? %>
               <div id="error_explanation">
                 <p><%= flash[:error] %></p>
               </div>
             <% end %>
-
           </article>
 
           <script src="https://checkout.stripe.com/checkout.js"></script>
-
           <script>
             var handler = StripeCheckout.configure({
               key: '<%= Rails.configuration.stripe[:publishable_key] %>',
@@ -106,15 +104,15 @@
       <% end %>
     </div>
 
-    <% if @charge.present? && @charge.status == "Active" %>
+    <% if @customer.present? %>
       <div class="row">
         <h3>Current Plan Info</h3>
         <p class="section-description u-max-full-width">     
-          <span>Current Plan:</span> <%= @charge.plan %>
+          <span>Current Plan:</span> <%= @plan %>
           <br>
-          <span>Expires:</span> <%= @charge.expiration.strftime("%B %-d, %Y") %>
+          <span>Expires:</span> calculate this
           <br>
-          <%= link_to("Upgrade/Cancel Plan", edit_charge_path(@charge), class: "button button-primary pricing_btn") %>
+          <%= link_to("Upgrade/Cancel Plan", plan_profiles_path, class: "button button-primary pricing_btn") %>
         </p>
 
         <p class="section-description u-max-full-width">
@@ -136,7 +134,7 @@
             <% end %>
         </p>
       </div>
-    <% else %>
+    <% elsif @active %>
 
       <div class="row">
         <div class="four columns">

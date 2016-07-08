@@ -46,7 +46,7 @@ class ChargesController < ApplicationController
     )
 
     if charge.save
-      redirect_to billing_profile_path(current_user.id)
+      redirect_to billing_profiles_path
     end
 
     rescue Stripe::CardError => e

@@ -21,7 +21,7 @@
       <p class="icon fi-mail"></p>
       <p class="item">Support</p>
     </a>
-    <a href="/profiles/<%= current_user.profile.id %>/billing" class="menu_item" rel="nofollow">
+    <a href="/profiles/billing" class="menu_item" rel="nofollow">
       <p class="icon fi-credit-card"></p>
       <p class="item">Payment</p>
     </a>
@@ -37,7 +37,7 @@
   <p class="logo_signed_in">TEXT PREP</p>
   <% if current_page?(contact_profile_path(current_user.profile.id)) %>
     <h3 class="text-center">Contact Support</h3>
-  <% elsif current_page?(billing_profile_path(current_user.profile.id)) %>
+  <% elsif current_page?(billing_profiles_path) %>
     <h3 class="text-center">Billing Info</h3>
   <% elsif current_page?(dashboard_profile_path(current_user.profile.id)) %>
     <h3 class="text-center">Dashboard</h3>
