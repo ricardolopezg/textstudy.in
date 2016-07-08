@@ -46,11 +46,12 @@ class ProfilesController < ApplicationController
 
   def billing
     profile = current_user.profile
+    @customer = Stripe::Customer.retrieve(profile.  stripe_customer_id) if profile.stripe_customer_id.present?
+
     if profile.status == 'active'
       @active = true
-      @history = Stripe::Charge.list(:customer => profile.stripe_customer_id)
-  
-      @customer = Stripe::Customer.retrieve(profile.  stripe_customer_id)
+      # @history = Stripe::Charge.list(:customer => profile.stripe_customer_id)
+      @history = @customer.subscriptions.data
       @plan = profile.plan
     end
 
@@ -59,8 +60,6 @@ class ProfilesController < ApplicationController
   def customer
     token = params[:stripeToken]
     email = params[:stripeEmail]
-
-    #if customer exists i just want to u;date their card info only!!! - not create another one
 
     profile = current_user.profile
     
@@ -71,17 +70,19 @@ class ProfilesController < ApplicationController
         :source => token
       )
 
+      profile.update(
+        stripe_customer_id: customer.id,
+        status: 'paid'
+      )
+
+
     else
       customer = Stripe::Customer.retrieve(profile.stripe_customer_id)
       customer.source = token
       customer.save
     end
 
-    profile.update(stripe_customer_id: customer.id)
-
-    if profile.save
-      redirect_to billing_profiles_path
-    end
+    redirect_to billing_profiles_path
 
     rescue Stripe::CardError => e
       flash[:error] = e.message
@@ -90,11 +91,34 @@ class ProfilesController < ApplicationController
 
   def plan
     profile = current_user.profile
+    customer = Stripe::Customer.retrieve(profile.stripe_customer_id)
 
+    @plan = params[:plan]
 
+    Stripe::Subscription.create(
+      :customer => customer.id,
+      :plan => @plan
+    )
 
+    profile.update(
+      status: 'active',
+      plan: @plan
+    )
 
-    profile.status = 'active'
+    redirect_to billing_profiles_path
+  end
+
+  def cancel
+    profile = current_user.profile
+    customer = Stripe::Customer.retrieve(profile.stripe_customer_id)
+
+    subscription = Stripe::Subscription.retrieve(customer.subscriptions.data.first.id)
+
+    subscription.delete(:at_period_end => true)
+    # profile model needs to be updated when 'at_period_end' gets triggered.
+    # but...how?...webhooks? script based on timestamp?
+
+    redirect_to billing_profiles_path
   end
 
 private
