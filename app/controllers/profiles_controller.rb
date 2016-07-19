@@ -119,6 +119,7 @@ class ProfilesController < ApplicationController
       status: 'active',
       plan: @plan
     )
+<<<<<<< HEAD
 
     redirect_to billing_profiles_path
   end
@@ -135,6 +136,7 @@ class ProfilesController < ApplicationController
   end
 
   def reactivate
+
     profile = current_user.profile
     customer = Stripe::Customer.retrieve(profile.stripe_customer_id)
 
