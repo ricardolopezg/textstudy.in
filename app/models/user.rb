@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   has_one :profile, dependent: :destroy
 
   after_create :build_default_profile, :build_user_subscriptions
+  after_create :subscribe_user_to_mailing_list
 
 
 private
@@ -41,5 +42,34 @@ private
       Subscription.create(user_id: User.last.id, subject_id: s.id, active: false)
     end
   end 
+
+  def subscribe_user_to_mailing_list
+    # SubscribeUserToMailingListJob.perform_later(self)
+    require 'gibbon'
+    gibbon = Gibbon::Request.new
+    gibbon.api_key = ENV["MAILCHIMP_API_KEY"]
+    gibbon.timeout = 15
+    # gibbon.throws_exceptions = true
+    # gibbon.lists.subscribe({
+    #   :id => ENV["MAILCHIMP_MASTER_LIST"], 
+    #   :email => {
+    #     :email => user.email
+    #     }, 
+    #   :double_optin => false
+    # })
+
+    gibbon.lists(ENV["MAILCHIMP_MASTER_LIST"]).members.create(
+      body: {
+        email_address: self.email, 
+        status: "subscribed" 
+        # merge_fields: {
+          # FNAME: "First Name", 
+          # LNAME: "Last Name"
+        # }
+      }
+    )
+  end
+
+  # handle_asynchronously :subscribe_user_to_mailing_list
 
 end
