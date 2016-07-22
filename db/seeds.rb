@@ -66,7 +66,7 @@
 
     ["The Declaration of Independence states that nobody is created equal and have \"certain unalienable rights.\"\n1) True\n2) False", "2", "2 - The Declaration of Independence states that all people are created equal and have \"certain unalienable rights.\"", "rev. 02/16", "English"],
   # 9 What are two rights in the Declaration of Independence?
-    ["What are two rights in the Declaration of Independence?\n1) life and freedom\n2) life and liberty \n3) pursuit of joy and life \n4) joy and the pursuit of life", "2", "2 - The Declaration of Independence lists 3 rights that are considered to be natural & \"unalienable\": the right to life, liberty and the pursuit of happiness.", "rev. 02/16", "English"],
+    ["What are two rights in the Declaration of Independence?\n1) life and freedom\n2) life and liberty\n3) pursuit of joy and life\n4) joy and the pursuit of life", "2", "2 - The Declaration of Independence lists 3 rights that are considered to be natural & \"unalienable\": the right to life, liberty and the pursuit of happiness.", "rev. 02/16", "English"],
 
     ["The Founding Fathers believed in the right to life, liberty, and the pursuit of happiness.\n1) True\n2) False", "1", "1 - The Declaration of Independence lists 3 rights that are considered to be natural & \"unalienable\": the right to life, liberty and the pursuit of happiness.", "rev. 02/16", "English"],
 
