@@ -16,7 +16,11 @@
             <!-- active:  -->
             <!-- <span id="subscription_status_<%= s.id %>"><%= s.active %></span> -->
             <% if s.active == false %>
-              <h5><%= link_to "Activate", active_subscription_path(s.id), id: "activate_link_#{s.id}", class: "activate_link", method: :patch, remote: true %></h5>
+              <% if @status == "active" %>
+                <h5><%= link_to "Activate", active_subscription_path(s.id), id: "activate_link_#{s.id}", class: "activate_link", method: :patch, remote: true %></h5>
+              <% else %>
+                <h5><%= link_to "You need to add a card or pick a plan!", billing_profiles_path, class: "button button-primary pricing_btn plan_btn", method: :get %></h5>
+              <% end %>
             <% else %>
               <h5><%= link_to "Deactivate", active_subscription_path(s.id), id: "deactivate_link_#{s.id}", class: "deactivate_link", method: :patch, remote: true %></h5>
           <% end %>

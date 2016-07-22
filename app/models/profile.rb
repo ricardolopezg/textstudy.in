@@ -33,6 +33,13 @@ class Profile < ActiveRecord::Base
   #   end
   # end
 
+  PLANS = %w( Monthly Bi-Annual Annual )
+
+  validates :plan, inclusion:{in: PLANS, message: "Don't Mess Around With Plans!"}, allow_nil: true
+
+  STATUSES = %w( created verified paid active inactive deleted )
+
+  validates :status, inclusion:{in: STATUSES, message: "Status Error Message from the model"}
 end
 
 

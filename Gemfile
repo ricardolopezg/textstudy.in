@@ -16,6 +16,8 @@ gem 'sinch_sms', '~> 2.1'
 gem 'gibbon'
 gem 'mandrill-api'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+gem 'stripe', '1.46.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use SCSS for stylesheets
