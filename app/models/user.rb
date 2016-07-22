@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
   has_many :charges
 
   after_create :build_default_profile, :build_user_subscriptions
+  after_create :subscribe_user_to_mailing_list
+  after_create :send_welcome_email_to_user
 
 
 private
@@ -47,5 +49,44 @@ private
       Subscription.create(user_id: User.last.id, subject_id: s.id, active: false)
     end
   end 
+
+  def subscribe_user_to_mailing_list
+    # SubscribeUserToMailingListJob.perform_later(self)
+    require 'gibbon'
+    gibbon = Gibbon::Request.new
+    gibbon.api_key = ENV["MAILCHIMP_API_KEY"]
+    gibbon.timeout = 15
+    # gibbon.throws_exceptions = true
+
+    gibbon.lists(ENV["MAILCHIMP_MASTER_LIST"]).members.create(
+      body: {
+        email_address: self.email, 
+        status: "subscribed" 
+
+        # Not doing fname and lname here because profile has generic names at time username is created
+        # This can be remedied by FORCING the user to input those fields 
+        # Possible put fname fields and lname fields in user table?
+        # merge_fields: {
+        #   FNAME: self.profile.fname, 
+        #   LNAME: self.profile.lname
+        # }
+
+      }
+    )
+  end
+
+  def send_welcome_email_to_user
+    # UserMailer.welcome_email(self).deliver_later
+    require 'mandrill'
+    mandrill = Mandrill::API.new(ENV["MANDRILL_API_KEY"])
+    template_name = "new-user-welcome"
+    template_content = nil
+    message = {
+      :to => [{:email  => self.email}],
+      :from_email =>"support@textprep.co"  
+    }  
+    sending = mandrill.messages.send_template template_name, template_content, message  
+    puts sending
+  end
 
 end
