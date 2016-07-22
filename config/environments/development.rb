@@ -69,5 +69,5 @@ Rails.application.configure do
   # Rails.config.action_mailer.perform_deliveries = true
   # ActionMailer::Base.default_content_type = "text/html"
   
-  
+  config.assets.cache_store = :null_store  # Disables the Asset cache
 end
