@@ -119,8 +119,7 @@ class ProfilesController < ApplicationController
       status: 'active',
       plan: @plan
     )
-<<<<<<< HEAD
-
+    
     redirect_to billing_profiles_path
   end
 
