@@ -1,5 +1,6 @@
 class Subscription < ActiveRecord::Base
   belongs_to :user
+  belongs_to :subject
   validate :check_activations, on: :update
   # validates_uniqueness_of :active, if: :active,  conditions: -> { where.(user_id: current_user.id) }
   # validates_uniqueness_of :active, if: :active
@@ -10,11 +11,6 @@ class Subscription < ActiveRecord::Base
       errors.add(:active, "Deactive other subscription first")
     end
   end  
-
-
-
-
-
 
   twilio_sid = ENV["TWILIO_ACCOUNT_SID_1"]
   twilio_token = ENV["TWILIO_AUTH_TOKEN_1"]

@@ -17,11 +17,23 @@ class ProfilesController < ApplicationController
     # end
   end
 
-  
   def subjects
     @subjects = Subject.all
     @current_user_subscriptions = Subscription.where(user_id: current_user.id)
     @current_user_subscription_true = Subscription.where(user_id: current_user.id, active: true)
+
+    profile = current_user.profile
+
+    if profile.stripe_customer_id.present?
+      @customer = Stripe::Customer.retrieve(profile.stripe_customer_id)
+    end
+
+    if @customer.subscriptions.data.present?
+      @history = @customer.subscriptions.data
+      @status = @history.first.status
+      @plan = @history.first.plan.name
+    end
+
   end
 
   def edit
@@ -44,10 +56,101 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def billing
+    profile = current_user.profile
+
+    if profile.stripe_customer_id.present?
+      @customer = Stripe::Customer.retrieve(profile.stripe_customer_id)
+    end
+
+    if @customer.subscriptions.data.last.status == "active"
+      @active = true
+      # @history = Stripe::Charge.list(:customer => profile.stripe_customer_id)
+      @history = @customer.subscriptions.data
+      @plan = @history.first.plan.name
+    end
+
+  end
+
+  def customer
+    token = params[:stripeToken]
+    email = params[:stripeEmail]
+
+    profile = current_user.profile
+    
+    if profile.stripe_customer_id.blank?
+
+      customer = Stripe::Customer.create(
+        :email => email,
+        :source => token
+      )
+
+      profile.update(
+        stripe_customer_id: customer.id,
+        status: 'paid'
+      )
+
+
+    else
+      customer = Stripe::Customer.retrieve(profile.stripe_customer_id)
+      customer.source = token
+      customer.save
+    end
+
+    redirect_to billing_profiles_path
+
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
+      redirect_to redirect_to billing_profiles_path
+  end
+
+  def plan
+    profile = current_user.profile
+    customer = Stripe::Customer.retrieve(profile.stripe_customer_id)
+
+    @plan = params[:plan]
+
+    Stripe::Subscription.create(
+      :customer => customer.id,
+      :plan => @plan
+    )
+
+    profile.update(
+      status: 'active',
+      plan: @plan
+    )
+<<<<<<< HEAD
+
+    redirect_to billing_profiles_path
+  end
+
+  def cancel
+    profile = current_user.profile
+    customer = Stripe::Customer.retrieve(profile.stripe_customer_id)
+
+    subscription = Stripe::Subscription.retrieve(customer.subscriptions.data.first.id)
+
+    subscription.delete(:at_period_end => true)
+
+    redirect_to billing_profiles_path
+  end
+
+  def reactivate
+
+    profile = current_user.profile
+    customer = Stripe::Customer.retrieve(profile.stripe_customer_id)
+
+    subscription = Stripe::Subscription.retrieve(customer.subscriptions.data.first.id)
+
+    subscription.plan = subscription.plan.name
+    subscription.save
+
+    redirect_to billing_profiles_path
+  end
 
 private
   def profile_params
-    params.require(:profile).permit(:fname, :lname, :mobile_phone, :alt_phone, :billing_phone, :billing_address1, :billing_address2, :billing_city, :billing_state, :billing_zip, :billing_country, :birthday, :avatar)
+    params.require(:profile).permit(:fname, :lname, :mobile_phone, :alt_phone, :billing_phone, :billing_address1, :billing_address2, :billing_city, :billing_state, :billing_zip, :billing_country, :birthday, :avatar, :stripe_customer_id, :plan, :status)
   end
   
   def subscription_params

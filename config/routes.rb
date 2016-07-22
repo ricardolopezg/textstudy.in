@@ -17,8 +17,14 @@
     member do 
       get :dashboard
       get :subjects
-      get :billing
       get :contact
+    end
+    collection do 
+      get :billing
+      post :customer
+      post :plan
+      post :cancel
+      post :reactivate
     end
   end
   resources :send_texts
@@ -29,6 +35,13 @@
     end
   end
   resources :sinch
+  resources :charges do
+    collection do
+      post :annual
+      post :bi_annual
+      post :monthly
+    end
+  end
 
   
   # You can have the root of your site routed with "root"
