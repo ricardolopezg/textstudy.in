@@ -326,7 +326,7 @@
     
     ["People of Africa were taken to America and sold as slaves by the 1700s.\n1) True\n2) False", "1", "1 - By 1700, many Africans were brought to American colonies as slaves. Men, women & children were brought against their will & separated from their families.", "rev. 02/16", "English"],
   # 61 Why did the colonists fight the British?
-    ["Why did the colonists fight the British?\n1) high taxes\n2) the British army stayed in their houses (boarding, quartering)\n3)no self-govt\n4) all of the above", "4", "4 - Colonists were taxed without consent, had nobody to represent their needs & ideas to the govt, & were forced to let soldiers sleep & eat in their homes.", "rev. 02/16", "English"],
+    ["Why did the colonists fight the British?\n1) high taxes\n2) the British army stayed in their houses (boarding, quartering)\n3) no self-govt\n4) all of the above", "4", "4 - Colonists were taxed without consent, had nobody to represent their needs & ideas to the govt, & were forced to let soldiers sleep & eat in their homes.", "rev. 02/16", "English"],
 
     ["The colonists fought the British because they paid high taxes and had no representation and had no self-government.\n1) True\n2) False", "1", "1 - Reasons:\n1) high taxes (taxation without representation)\n2) the British army stayed in their houses (boarding, quartering)\n3) they didn't have self-govt", "rev. 02/16", "English"],
     
