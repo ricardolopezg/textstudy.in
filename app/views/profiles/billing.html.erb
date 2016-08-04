@@ -100,7 +100,6 @@
               Looks like you need to select a plan!
             </p>
           </div>
-<<<<<<< HEAD
           <%= render "profiles/plans" %>
         <% else %>
 
@@ -117,10 +116,11 @@
                 <%= link_to("Enable Auto-Renew", reactivate_profiles_path, class: "button button-primary pricing_btn plan_btn", method: :post) %>
               <% else %>
 
-                <%= link_to("Disable Auto-Renew", cancel_profiles_path, class: "button button-primary pricing_btn plan_btn", method: :post) %>
+                <%= link_to("Disable Auto-Renew of Current Plan", cancel_profiles_path, class: "button button-primary pricing_btn plan_btn", method: :post) %>
+
               <% end %>
             </p>     
-          </div>
+          </div>    
 
           <div class="row">            
             <h3>History</h3>
@@ -133,76 +133,6 @@
                   <th>Amount</th>
                 </tr>
 
-=======
-          <div class="row">
-            <div class="four columns">
-              <ul class="active-tb">
-                <li class="pricing_info pricing_title pricing_cost">Monthly Subscription</li>
-                <li class="pricing_info">Choose One Subject</li>
-                <li class="pricing_info">Switch Subjects Anytime</li>
-                <li class="pricing_info">5 SMS Questions Sent Daily</li>
-                <li class="pricing_info">Analyze Your Reponse History</li>
-                <li class="pricing_info pricing_cost">$9.95 per Month</li>
-                <li><%= link_to("Choose", plan_profiles_path(:plan => "Monthly"), class: "button button-primary pricing_btn plan_btn", id: "monthly_button", method: :post) %></li>
-              </ul>
-            </div>
-
-            <div class="four columns">
-              <ul class="active-tb">
-                <li class="pricing_info pricing_title pricing_cost">Bi-Annual Subscription</li>
-                <li class="pricing_info">All The Benefits of Our Monthly Subscription</li>
-                <li class="pricing_info">GREAT VALUE</li>
-                <li class="pricing_info">10% Discount</li>
-                <li class="pricing_info">*Monthly Price Based on 6-Month Subscription</li>
-                <li class="pricing_info pricing_cost">$8.95 per Month*</li>
-                <li><%= link_to("Choose", plan_profiles_path(:plan => "Bi-Annual"), class: "button button-primary pricing_btn plan_btn", id: "bi_annual_button", method: :post) %></li>
-              </ul>
-            </div>
-
-            <div class="four columns">
-              <ul class="active-tb">
-                <li class="pricing_info pricing_title pricing_cost">One Year Subscription</li>
-                <li class="pricing_info">All The Benefits of Our Monthly Subscription</li>
-                <li class="pricing_info">BEST VALUE</li>
-                <li class="pricing_info">15% Discount</li>
-                <li class="pricing_info">*Monthly Price Based on a Yearly Subscription</li>
-                <li class="pricing_info pricing_cost">$8.45 per Month*</li>
-                <li><%= link_to("Choose", plan_profiles_path(:plan => "Annual"), class: "button button-primary pricing_btn plan_btn", id: "annual_button", method: :post) %></li>
-              </ul>
-            </div>
-          </div>
-
-        <% else %>
-
-          <div class="row center">
-            <h3>Current Plan Info</h3>
-            <p class="section-description u-max-full-width center">     
-              <span>Current Plan:</span> <%= @plan %>
-              <br>
-            </p>
-            <p class="section-description u-max-full-width center">
-              <% if @history.first.cancel_at_period_end == true %>
-                <strong>Please note, your plan will terminate on <%= Time.at(@history.first.current_period_end).strftime("%-m/%-d/%y") %> and will NOT be renewed.</strong>
-                <%= link_to("reactivate plan button needs to be configured - don't click this", billing_profiles_path, class: "button button-primary pricing_btn plan_btn", method: :post) %>
-              <% else %>
-
-                <%= link_to("Cancel Current Plan", cancel_profiles_path, class: "button button-primary pricing_btn plan_btn", method: :post) %>
-              <% end %>
-            </p>     
-          </div>
-
-          <div class="row">            
-            <h3>History</h3>
-            <p class="section-description u-max-full-width">
-              <table>
-                <tr class="title">
-                  <th>No.</th>
-                  <th>Date</th>
-                  <th>Plan</th>
-                  <th>Amount</th>
-                </tr>
-
->>>>>>> 354036dfff6c8574de43de14f6e425e381fb8e70
                 <% @history.each.with_index(1) do |h, i| %>
                   <tr>
                     <td><%= i %></td>

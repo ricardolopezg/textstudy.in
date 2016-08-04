@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :subjects, through: :subscriptions
 
   has_many :responses, dependent: :destroy
+
   has_one :profile, dependent: :destroy
 
   has_many :charges
@@ -15,6 +16,7 @@ class User < ActiveRecord::Base
   after_create :build_default_profile, :build_user_subscriptions
   after_create :subscribe_user_to_mailing_list
   after_create :send_welcome_email_to_user
+  after_destroy :remove_user_from_mailing_list
 
 
 private
@@ -58,7 +60,7 @@ private
     gibbon.timeout = 15
     # gibbon.throws_exceptions = true
 
-    gibbon.lists(ENV["MAILCHIMP_MASTER_LIST"]).members.create(
+    gibbon.lists(ENV["MAILCHIMP_MASTER_LIST"]).members(Digest::MD5.hexdigest(self.email.downcase)).upsert(
       body: {
         email_address: self.email, 
         status: "subscribed" 
@@ -87,6 +89,18 @@ private
     }  
     sending = mandrill.messages.send_template template_name, template_content, message  
     puts sending
+  end
+
+  def remove_user_from_mailing_list
+    require 'gibbon'
+    gibbon = Gibbon::Request.new
+    gibbon.api_key = ENV["MAILCHIMP_API_KEY"]
+    gibbon.timeout = 15
+    gibbon.lists(ENV["MAILCHIMP_MASTER_LIST"]).members(Digest::MD5.hexdigest(self.email.downcase)).update(
+        body: {
+          status: "unsubscribed" 
+        }
+      )
   end
 
 end

@@ -63,7 +63,7 @@ class ProfilesController < ApplicationController
       @customer = Stripe::Customer.retrieve(profile.stripe_customer_id)
     end
 
-    if @customer.subscriptions.data.last.status == "active"
+    if @customer && @customer.subscriptions.data.count >= 1 && @customer.subscriptions.data.last.status == "active"
       @active = true
       # @history = Stripe::Charge.list(:customer => profile.stripe_customer_id)
       @history = @customer.subscriptions.data
@@ -119,8 +119,12 @@ class ProfilesController < ApplicationController
       status: 'active',
       plan: @plan
     )
-    
+
     redirect_to billing_profiles_path
+
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
+      redirect_to redirect_to billing_profiles_path
   end
 
   def cancel
@@ -145,6 +149,10 @@ class ProfilesController < ApplicationController
     subscription.save
 
     redirect_to billing_profiles_path
+  end
+
+  def change_plan
+    
   end
 
 private
