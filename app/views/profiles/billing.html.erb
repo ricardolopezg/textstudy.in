@@ -106,39 +106,46 @@
           <div class="row center">
             <h3>Current Plan Info</h3>
             <p class="section-description u-max-full-width center">     
-              <strong>Current Plan:</strong> <%= @plan %>
+              <strong>Current Plan:</strong> <%= @customer.subscriptions.data.first.plan.name %>
               <br>
-              <strong>Active Until:</strong> <%= Time.at(@history.first.current_period_end).strftime("%B %-d, %Y") %>
+              <strong>Active Until:</strong> <%= Time.at(@customer.subscriptions.data.first.current_period_end).strftime("%B %-d, %Y") %>
             </p>
             <p class="section-description u-max-full-width center">
-              <% if @history.first.cancel_at_period_end == true %>
-                <strong>Please note, your plan will terminate on <%= Time.at(@history.first.current_period_end).strftime("%-m/%-d/%y") %> and will NOT be renewed.</strong>
+              <% if @customer.subscriptions.data.first.cancel_at_period_end == true %>
+                <strong>Please note, your plan will terminate on <%= Time.at(@customer.subscriptions.data.first.current_period_end).strftime("%-m/%-d/%y") %> and will NOT be renewed.</strong>
                 <%= link_to("Enable Auto-Renew", reactivate_profiles_path, class: "button button-primary pricing_btn plan_btn", method: :post) %>
               <% else %>
 
                 <%= link_to("Disable Auto-Renew of Current Plan", cancel_profiles_path, class: "button button-primary pricing_btn plan_btn", method: :post) %>
+
+                <%= link_to("Change Plan", change_plan_profiles_path, class: "button button-primary pricing_btn plan_btn", method: :get) %>
 
               <% end %>
             </p>     
           </div>    
 
           <div class="row">            
-            <h3>History</h3>
+            <h3>Invoice History</h3>
             <p class="section-description u-max-full-width">
               <table>
                 <tr class="title">
                   <th>No.</th>
                   <th>Date</th>
-                  <th>Plan</th>
                   <th>Amount</th>
+                  <th>Description</th>
                 </tr>
 
                 <% @history.each.with_index(1) do |h, i| %>
                   <tr>
                     <td><%= i %></td>
-                    <td><%= Time.at(h.created).strftime("%-m/%-d/%y") %></td>
-                    <td><%= h.plan.name %></td>
-                    <td><%= number_to_currency(h.plan.amount.to_i / 100.00) %></td>
+                    <td><%= Time.at(h.date).strftime("%-m/%-d/%y") %></td>
+                    <td><%= number_to_currency(h.total.to_i / 100.00) %></td>
+                    <td>
+                      <% h.lines.data.each do |line| %>
+                        <%= line.description ||= "Subscription to #{line.plan.name} Plan (#{line.plan.statement_descriptor})" %><br>
+                      <% end %>
+                    </td>
+
                   </tr>
                 <% end %>
               </table>

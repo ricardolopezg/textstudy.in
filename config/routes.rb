@@ -25,6 +25,8 @@
       post :plan
       post :cancel
       post :reactivate
+      get :change_plan
+      post :update_plan
     end
   end
   resources :send_texts
