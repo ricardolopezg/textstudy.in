@@ -26,13 +26,13 @@ class ProfilesController < ApplicationController
 
     if profile.stripe_customer_id.present?
       @customer = Stripe::Customer.retrieve(profile.stripe_customer_id)
+      if @customer.subscriptions.data.present?
+        @history = @customer.subscriptions.data
+        @status = @history.first.status
+        @plan = @history.first.plan.name
+      end
     end
 
-    if @customer.subscriptions.data.present?
-      @history = @customer.subscriptions.data
-      @status = @history.first.status
-      @plan = @history.first.plan.name
-    end
 
   end
 
@@ -63,11 +63,11 @@ class ProfilesController < ApplicationController
       @customer = Stripe::Customer.retrieve(profile.stripe_customer_id)
     end
 
-    if @customer.subscriptions.data.last.status == "active"
+    if @customer && @customer.subscriptions.data.count >= 1 && @customer.subscriptions.data.last.status == "active"
       @active = true
       # @history = Stripe::Charge.list(:customer => profile.stripe_customer_id)
-      @history = @customer.subscriptions.data
-      @plan = @history.first.plan.name
+      @history = @customer.invoices
+      # @plan = @history.first.plan.name
     end
 
   end
@@ -119,8 +119,12 @@ class ProfilesController < ApplicationController
       status: 'active',
       plan: @plan
     )
-    
+
     redirect_to billing_profiles_path
+
+    rescue Stripe::CardError => e
+      flash[:error] = e.message
+      redirect_to redirect_to billing_profiles_path
   end
 
   def cancel
@@ -135,7 +139,6 @@ class ProfilesController < ApplicationController
   end
 
   def reactivate
-
     profile = current_user.profile
     customer = Stripe::Customer.retrieve(profile.stripe_customer_id)
 
@@ -143,6 +146,29 @@ class ProfilesController < ApplicationController
 
     subscription.plan = subscription.plan.name
     subscription.save
+
+    redirect_to billing_profiles_path
+  end
+
+  def change_plan
+    profile = current_user.profile
+    @plan = profile.plan
+    # proration_date = Time.now.to_i
+  end
+
+  def update_plan
+    profile = current_user.profile
+    customer = Stripe::Customer.retrieve(profile.stripe_customer_id)
+
+    subscription = Stripe::Subscription.retrieve(customer.subscriptions.data.first.id)
+
+    plan = params[:plan]
+    subscription.plan = plan
+    # subscription.prorate = false
+    # How can we delay the invoice till end of plan
+    subscription.save
+
+    profile.update(plan: plan)
 
     redirect_to billing_profiles_path
   end
